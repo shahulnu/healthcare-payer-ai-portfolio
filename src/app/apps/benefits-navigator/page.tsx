@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SourceCode } from "@/components/SourceCode";
 import { MEMBERS, PLANS } from "@/lib/benefits/data";
 import evalSummary from "@/lib/benefits/eval-summary.json";
 
@@ -24,6 +25,9 @@ export default function BenefitsCaseStudy() {
           <Link href="/apps/benefits-navigator/demo" className="btn">
             Run the demo
           </Link>
+          <a href="#code" className="btn ghost">
+            View the code
+          </a>
         </div>
       </section>
 
@@ -193,6 +197,8 @@ export default function BenefitsCaseStudy() {
           </div>
         </div>
       </section>
+
+      <SourceCode slug="benefits-navigator" />
     </div>
   );
 }

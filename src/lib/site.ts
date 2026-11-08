@@ -9,6 +9,19 @@ export const SITE = {
   github: "https://github.com/shahulnu",
   resumeUrl: "/resume.pdf",
   yearsExperience: "20+",
+  repos: {
+    site: "https://github.com/shahulnu/healthcare-payer-ai-portfolio",
+    services: "https://github.com/shahulnu/healthcare-payer-ai-services",
+  },
+};
+
+/** Where each demo's code lives in the two repos, by app slug. */
+export const CODE_PATHS: Record<string, { engine: string; java: string }> = {
+  "prior-auth-copilot": { engine: "pa", java: "pa-engine-java" },
+  "denial-appeals-assistant": { engine: "appeals", java: "appeals-engine-java" },
+  "benefits-navigator": { engine: "benefits", java: "benefits-engine-java" },
+  "payment-integrity-radar": { engine: "pi", java: "pi-engine-java" },
+  "hcc-evidence-finder": { engine: "hcc", java: "hcc-engine-java" },
 };
 
 export interface AppEntry {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SourceCode } from "@/components/SourceCode";
 import { CLAIMS } from "@/lib/appeals/claims";
 import evalSummary from "@/lib/appeals/eval-summary.json";
 
@@ -22,6 +23,9 @@ export default function AppealsCaseStudy() {
           <Link href="/apps/denial-appeals-assistant/demo" className="btn">
             Run the demo
           </Link>
+          <a href="#code" className="btn ghost">
+            View the code
+          </a>
         </div>
       </section>
 
@@ -184,6 +188,8 @@ export default function AppealsCaseStudy() {
           </div>
         </div>
       </section>
+
+      <SourceCode slug="denial-appeals-assistant" />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SourceCode } from "@/components/SourceCode";
 import evalSummary from "@/lib/hcc/eval-summary.json";
 
 export const metadata: Metadata = { title: "HCC Evidence Finder" };
@@ -22,6 +23,9 @@ export default function HccCaseStudy() {
           <Link href="/apps/hcc-evidence-finder/demo" className="btn">
             Run the demo
           </Link>
+          <a href="#code" className="btn ghost">
+            View the code
+          </a>
         </div>
       </section>
 
@@ -184,6 +188,8 @@ export default function HccCaseStudy() {
           </div>
         </div>
       </section>
+
+      <SourceCode slug="hcc-evidence-finder" />
     </div>
   );
 }

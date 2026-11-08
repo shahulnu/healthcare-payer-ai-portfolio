@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SourceCode } from "@/components/SourceCode";
 import { SCREEN } from "@/lib/pi/detect";
 import evalSummary from "@/lib/pi/eval-summary.json";
 
@@ -22,6 +23,9 @@ export default function RadarCaseStudy() {
           <Link href="/apps/payment-integrity-radar/demo" className="btn">
             Run the demo
           </Link>
+          <a href="#code" className="btn ghost">
+            View the code
+          </a>
         </div>
       </section>
 
@@ -184,6 +188,8 @@ export default function RadarCaseStudy() {
           </div>
         </div>
       </section>
+
+      <SourceCode slug="payment-integrity-radar" />
     </div>
   );
 }

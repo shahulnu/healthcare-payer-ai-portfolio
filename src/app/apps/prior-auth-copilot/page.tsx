@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SourceCode } from "@/components/SourceCode";
 import { CASES } from "@/lib/pa/cases";
 import evalSummary from "@/lib/pa/eval-summary.json";
 
@@ -22,6 +23,9 @@ export default function PriorAuthCaseStudy() {
           <Link href="/apps/prior-auth-copilot/demo" className="btn">
             Run the demo
           </Link>
+          <a href="#code" className="btn ghost">
+            View the code
+          </a>
         </div>
       </section>
 
@@ -191,6 +195,8 @@ export default function PriorAuthCaseStudy() {
           </div>
         </div>
       </section>
+
+      <SourceCode slug="prior-auth-copilot" />
     </div>
   );
 }
