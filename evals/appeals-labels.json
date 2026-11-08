@@ -1,0 +1,16 @@
+{
+  "note": "Labels for the synthetic denied claims. Expand with real-world denial patterns (and a billing specialist's labels) before quoting results.",
+  "claims": {
+    "CLM-88310427": {
+      "2": { "action": "appeal", "category": "medical_necessity" },
+      "3": { "action": "no_action", "category": "documentation" }
+    },
+    "CLM-88412290": {
+      "2": { "action": "corrected_claim", "category": "coding" }
+    },
+    "CLM-87990314": {
+      "1": { "action": "appeal", "category": "timely_filing" },
+      "2": { "action": "appeal", "category": "timely_filing" }
+    }
+  }
+}

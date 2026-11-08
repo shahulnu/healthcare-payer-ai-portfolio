@@ -1,0 +1,197 @@
+{
+  "memberId": "M-20431",
+  "planName": "SilverChoice PPO 3500 (sample)",
+  "questionId": "Q-PPO-OON-PT",
+  "question": "What would I pay to see an out-of-network physical therapist?",
+  "mode": "replay",
+  "replaySource": "live",
+  "model": "claude-opus-5-5",
+  "status": "answered",
+  "answer": "You would likely pay about $170 per visit with an out-of-network physical therapist. This is an estimate based on the plan's allowed amount. You haven't met your $7,000 out-of-network deductible yet, so you pay the full allowed amount for now. After you meet it, you pay 50% coinsurance. The therapist can also bill you for the difference between what they charge and the allowed amount. This is called balance billing. Those extra charges don't count toward your deductible or out-of-pocket limit. Your plan covers up to 30 therapy visits per calendar year, counting all therapies together. In-network physical therapy costs a $60 copay per visit, so seeing an in-network therapist would cost you less.",
+  "escalationReason": null,
+  "citations": [
+    {
+      "sectionId": "SBC-5",
+      "doc": "SBC",
+      "page": 3,
+      "title": "Rehabilitation services",
+      "quote": "$60 copay per visit in-network; 50% coinsurance after the deductible out-of-network",
+      "verified": true
+    },
+    {
+      "sectionId": "SBC-5",
+      "doc": "SBC",
+      "page": 3,
+      "title": "Rehabilitation services",
+      "quote": "Coverage is limited to 30 visits per calendar year for all therapies combined.",
+      "verified": true
+    },
+    {
+      "sectionId": "SBC-1",
+      "doc": "SBC",
+      "page": 1,
+      "title": "Deductible and out-of-pocket limit",
+      "quote": "Your out-of-network deductible is $7,000 per person.",
+      "verified": true
+    },
+    {
+      "sectionId": "EOC-6.1",
+      "doc": "EOC",
+      "page": 52,
+      "title": "Out-of-network providers and balance billing",
+      "quote": "Balance-billed amounts do not count toward your deductible or out-of-pocket limit.",
+      "verified": true
+    }
+  ],
+  "estimates": [
+    {
+      "serviceId": "pt_visit",
+      "serviceName": "Physical therapy visit",
+      "network": "out",
+      "allowedAmount": 170,
+      "covered": true,
+      "deductiblePortion": 170,
+      "coinsurancePortion": 0,
+      "copay": 0,
+      "memberPays": 170,
+      "planPays": 0,
+      "notes": [
+        "Limited to 30 visits per calendar year.",
+        "The provider may also balance bill the difference between their charge and the allowed amount."
+      ]
+    }
+  ],
+  "numberCheck": {
+    "found": [
+      "$170",
+      "$7,000",
+      "$60"
+    ],
+    "unsupported": []
+  },
+  "toolCalls": [
+    {
+      "name": "get_plan_sections",
+      "input": {
+        "section_ids": [
+          "SBC-1",
+          "SBC-5",
+          "EOC-4.2",
+          "EOC-6.1"
+        ]
+      },
+      "output": [
+        {
+          "id": "SBC-1",
+          "doc": "SBC",
+          "page": 1,
+          "title": "Deductible and out-of-pocket limit",
+          "text": "Your in-network deductible is $3,500 per person. Your out-of-network deductible is $7,000 per person. The deductible does not apply to preventive care or to primary care, specialist and urgent care copays. Your in-network out-of-pocket limit is $8,000 per person, and the out-of-network limit is $16,000. Copays, coinsurance and amounts you pay toward the deductible count toward the out-of-pocket limit. Premiums, balance-billed charges and services this plan doesn't cover do not."
+        },
+        {
+          "id": "SBC-5",
+          "doc": "SBC",
+          "page": 3,
+          "title": "Rehabilitation services",
+          "text": "Outpatient physical, occupational and speech therapy: $60 copay per visit in-network; 50% coinsurance after the deductible out-of-network. Coverage is limited to 30 visits per calendar year for all therapies combined."
+        },
+        {
+          "id": "EOC-4.2",
+          "doc": "EOC",
+          "page": 38,
+          "title": "Prior authorization",
+          "text": "Some services need approval from the plan before you receive them. Your in-network provider requests prior authorization for you. Services that need prior authorization include CT, PET and MRI scans, inpatient admissions that are not emergencies, and outpatient surgery. If you use an out-of-network provider, you are responsible for getting prior authorization. Without it, the plan may reduce or deny payment."
+        },
+        {
+          "id": "EOC-6.1",
+          "doc": "EOC",
+          "page": 52,
+          "title": "Out-of-network providers and balance billing",
+          "text": "Out-of-network providers have no contract with the plan and may bill you for the difference between their charge and the plan's allowed amount. This is called balance billing. Balance-billed amounts do not count toward your deductible or out-of-pocket limit. The No Surprises Act protects you from balance billing for emergency care and for certain care at in-network facilities."
+        }
+      ]
+    },
+    {
+      "name": "estimate_cost",
+      "input": {
+        "service_id": "pt_visit",
+        "network": "out"
+      },
+      "output": {
+        "serviceId": "pt_visit",
+        "serviceName": "Physical therapy visit",
+        "network": "out",
+        "allowedAmount": 170,
+        "covered": true,
+        "deductiblePortion": 170,
+        "coinsurancePortion": 0,
+        "copay": 0,
+        "memberPays": 170,
+        "planPays": 0,
+        "notes": [
+          "Limited to 30 visits per calendar year.",
+          "The provider may also balance bill the difference between their charge and the allowed amount."
+        ]
+      }
+    }
+  ],
+  "trace": [
+    {
+      "name": "Member + plan lookup",
+      "detail": "SilverChoice PPO 3500 (sample), 8 sections"
+    },
+    {
+      "name": "Agent loop (replay)",
+      "detail": "Re-ran 2 recorded tool calls; loaded recorded live answer"
+    },
+    {
+      "name": "Citation + number check",
+      "detail": "4 of 4 quotes verified; 3 dollar amounts, 0 unsupported"
+    }
+  ],
+  "raw": {
+    "toolCalls": [
+      {
+        "name": "get_plan_sections",
+        "input": {
+          "section_ids": [
+            "SBC-1",
+            "SBC-5",
+            "EOC-4.2",
+            "EOC-6.1"
+          ]
+        }
+      },
+      {
+        "name": "estimate_cost",
+        "input": {
+          "service_id": "pt_visit",
+          "network": "out"
+        }
+      }
+    ],
+    "submission": {
+      "answer": "You would likely pay about $170 per visit with an out-of-network physical therapist. This is an estimate based on the plan's allowed amount. You haven't met your $7,000 out-of-network deductible yet, so you pay the full allowed amount for now. After you meet it, you pay 50% coinsurance. The therapist can also bill you for the difference between what they charge and the allowed amount. This is called balance billing. Those extra charges don't count toward your deductible or out-of-pocket limit. Your plan covers up to 30 therapy visits per calendar year, counting all therapies together. In-network physical therapy costs a $60 copay per visit, so seeing an in-network therapist would cost you less.",
+      "citations": [
+        {
+          "section_id": "SBC-5",
+          "quote": "$60 copay per visit in-network; 50% coinsurance after the deductible out-of-network"
+        },
+        {
+          "section_id": "SBC-5",
+          "quote": "Coverage is limited to 30 visits per calendar year for all therapies combined."
+        },
+        {
+          "section_id": "SBC-1",
+          "quote": "Your out-of-network deductible is $7,000 per person."
+        },
+        {
+          "section_id": "EOC-6.1",
+          "quote": "Balance-billed amounts do not count toward your deductible or out-of-pocket limit."
+        }
+      ],
+      "needs_human": false,
+      "escalation_reason": ""
+    }
+  }
+}

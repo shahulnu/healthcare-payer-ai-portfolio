@@ -1,0 +1,178 @@
+{
+  "claimId": "CLM-87990314",
+  "mode": "replay",
+  "replaySource": "live",
+  "model": "claude-opus-5-5",
+  "summary": "Both lines ($263.00 total) were denied for timely filing because the resubmission on 2026-09-30 came after the 2026-07-14 deadline. Both look recoverable by appeal: the plan's 277CA dated 2025-07-22 shows the original claim was accepted within the limit, and the policy names that document as acceptable proof. The practice needs to pull the actual 277CA report to attach, since the billing log entry alone is not the acknowledgment the policy asks for.",
+  "findings": [
+    {
+      "line": 1,
+      "code": "99396",
+      "billed": 245,
+      "denialCodes": [
+        "CO-29"
+      ],
+      "explanation": "The plan denied this preventive visit as filed too late. The claim it processed (26273-002950) was sent on 2026-09-30, after the 365-day limit that ended 2026-07-14 for the 2025-07-14 visit. The practice's history shows the plan accepted the original claim on 2025-07-22, which was inside the limit.",
+      "category": "timely_filing",
+      "modelAction": "appeal",
+      "action": "appeal",
+      "strength": "moderate",
+      "evidence": [
+        {
+          "docId": "sub-1",
+          "quote": "277CA received from plan: claim accepted for adjudication. Payer claim control number 25203-114872.",
+          "fromRecord": true,
+          "verified": true
+        },
+        {
+          "docId": "DEMO-ADM-010",
+          "quote": "The plan will reconsider a claim denied for timely filing when the provider submits proof that the original claim was received within the filing limit.",
+          "fromRecord": false,
+          "verified": true
+        },
+        {
+          "docId": "DEMO-ADM-010",
+          "quote": "Acceptable proof is a claim acknowledgment (277CA) from the plan showing the payer claim control number and an acceptance date within the filing limit.",
+          "fromRecord": false,
+          "verified": true
+        }
+      ],
+      "nextSteps": "Submit a timely filing reconsideration with a copy of the plan's actual 277CA dated 2025-07-22 showing control number 25203-114872. The billing system log entry alone is not the acknowledgment. Do not use the clearinghouse batch 7731 send report, because the policy does not accept send-only reports.",
+      "downgraded": false
+    },
+    {
+      "line": 2,
+      "code": "36415",
+      "billed": 18,
+      "denialCodes": [
+        "CO-29"
+      ],
+      "explanation": "The plan denied the venipuncture as filed too late for the same reason as line 1: the resubmitted claim arrived after the 365-day limit. The original claim was accepted by the plan on 2025-07-22, within the limit.",
+      "category": "timely_filing",
+      "modelAction": "appeal",
+      "action": "appeal",
+      "strength": "moderate",
+      "evidence": [
+        {
+          "docId": "sub-1",
+          "quote": "277CA received from plan: claim accepted for adjudication. Payer claim control number 25203-114872.",
+          "fromRecord": true,
+          "verified": true
+        },
+        {
+          "docId": "DEMO-ADM-010",
+          "quote": "Claims must be received within 365 days of the date of service.",
+          "fromRecord": false,
+          "verified": true
+        },
+        {
+          "docId": "DEMO-ADM-010",
+          "quote": "Acceptable proof is a claim acknowledgment (277CA) from the plan showing the payer claim control number and an acceptance date within the filing limit.",
+          "fromRecord": false,
+          "verified": true
+        }
+      ],
+      "nextSteps": "Include this line in the same reconsideration as line 1, with the 2025-07-22 277CA for control number 25203-114872 attached as proof of timely receipt.",
+      "downgraded": false
+    }
+  ],
+  "recoverable": 263,
+  "correctedClaim": null,
+  "letter": {
+    "text": "[DATE]\n\nAppeals Department\n\nRe: Appeal of timely filing denial\nMember ID: M-71442\nClaim number: CLM-87990314\nPayer claim number: 26273-002950\nOriginal payer claim control number: 25203-114872\nDate of service: 2025-07-14\nRemittance date: 2026-10-16\n\nTo the Appeals Department:\n\n[PRACTICE NAME] requests reconsideration of the following lines, both denied for timely filing:\n\nLine 1: 99396, preventive visit, billed $245.00, denied CO-29\nLine 2: 36415, routine venipuncture, billed $18.00, denied CO-29\n\nThe plan's timely filing policy, DEMO-ADM-010, states: \"Claims must be received within 365 days of the date of service.\" For the 2025-07-14 date of service, that limit ended 2026-07-14. Claim 26273-002950 was resubmitted on 2026-09-30, after the limit. However, the original claim reached the plan well within the limit.\n\nOur submission history shows the claim was sent on 2025-07-18. On 2025-07-22 it records: \"277CA received from plan: claim accepted for adjudication. Payer claim control number 25203-114872.\" This acceptance date is inside the 365-day filing limit. On 2025-12-09, a status inquiry found that the plan had no claim on file under that control number. After follow-up, we resubmitted the claim, and it received the new number 26273-002950.\n\nPolicy DEMO-ADM-010 states: \"The plan will reconsider a claim denied for timely filing when the provider submits proof that the original claim was received within the filing limit.\" It also states: \"Acceptable proof is a claim acknowledgment (277CA) from the plan showing the payer claim control number and an acceptance date within the filing limit.\" The plan's 277CA acceptance of the original claim, dated 2025-07-22 under control number 25203-114872, is that proof. It shows the plan's own acceptance, not just a record that the claim was sent.\n\nWe ask the plan to reverse the CO-29 denials on lines 1 and 2 and process both lines for payment. Please contact our office if you need anything further.\n\nSincerely,\n\n[PROVIDER NAME, CREDENTIALS]\n[PRACTICE NAME]\n\nEnclosures:\n1. Remittance for claim CLM-87990314 / payer claim number 26273-002950, dated 2026-10-16\n2. Claim submission history (practice billing system), dated 2026-10-20",
+    "quotes": 4,
+    "quotesVerified": 4
+  },
+  "redactions": [
+    {
+      "label": "Name",
+      "count": 1
+    },
+    {
+      "label": "Date of birth",
+      "count": 1
+    },
+    {
+      "label": "Account number",
+      "count": 1
+    }
+  ],
+  "trace": [
+    {
+      "name": "Remittance + policy lookup",
+      "detail": "2 of 2 lines denied; DEMO-ADM-010"
+    },
+    {
+      "name": "Identifier redaction",
+      "detail": "3 identifiers removed from 1 documents"
+    },
+    {
+      "name": "Denial analysis (replay)",
+      "detail": "Loaded recorded live output"
+    },
+    {
+      "name": "Evidence check + recommendation",
+      "detail": "6 of 6 quotes found verbatim; 0 lines downgraded"
+    },
+    {
+      "name": "Appeal letter (replay)",
+      "detail": "Loaded recorded live output"
+    },
+    {
+      "name": "Letter quote check",
+      "detail": "4 of 4 quoted passages found in the records or policy"
+    }
+  ],
+  "raw": {
+    "analysis": {
+      "lines": [
+        {
+          "line": 1,
+          "category": "timely_filing",
+          "explanation": "The plan denied this preventive visit as filed too late. The claim it processed (26273-002950) was sent on 2026-09-30, after the 365-day limit that ended 2026-07-14 for the 2025-07-14 visit. The practice's history shows the plan accepted the original claim on 2025-07-22, which was inside the limit.",
+          "action": "appeal",
+          "addresses_denial_reason": true,
+          "evidence": [
+            {
+              "doc_id": "sub-1",
+              "quote": "277CA received from plan: claim accepted for adjudication. Payer claim control number 25203-114872."
+            },
+            {
+              "doc_id": "DEMO-ADM-010",
+              "quote": "The plan will reconsider a claim denied for timely filing when the provider submits proof that the original claim was received within the filing limit."
+            },
+            {
+              "doc_id": "DEMO-ADM-010",
+              "quote": "Acceptable proof is a claim acknowledgment (277CA) from the plan showing the payer claim control number and an acceptance date within the filing limit."
+            }
+          ],
+          "next_steps": "Submit a timely filing reconsideration with a copy of the plan's actual 277CA dated 2025-07-22 showing control number 25203-114872. The billing system log entry alone is not the acknowledgment. Do not use the clearinghouse batch 7731 send report, because the policy does not accept send-only reports."
+        },
+        {
+          "line": 2,
+          "category": "timely_filing",
+          "explanation": "The plan denied the venipuncture as filed too late for the same reason as line 1: the resubmitted claim arrived after the 365-day limit. The original claim was accepted by the plan on 2025-07-22, within the limit.",
+          "action": "appeal",
+          "addresses_denial_reason": true,
+          "evidence": [
+            {
+              "doc_id": "sub-1",
+              "quote": "277CA received from plan: claim accepted for adjudication. Payer claim control number 25203-114872."
+            },
+            {
+              "doc_id": "DEMO-ADM-010",
+              "quote": "Claims must be received within 365 days of the date of service."
+            },
+            {
+              "doc_id": "DEMO-ADM-010",
+              "quote": "Acceptable proof is a claim acknowledgment (277CA) from the plan showing the payer claim control number and an acceptance date within the filing limit."
+            }
+          ],
+          "next_steps": "Include this line in the same reconsideration as line 1, with the 2025-07-22 277CA for control number 25203-114872 attached as proof of timely receipt."
+        }
+      ],
+      "summary": "Both lines ($263.00 total) were denied for timely filing because the resubmission on 2026-09-30 came after the 2026-07-14 deadline. Both look recoverable by appeal: the plan's 277CA dated 2025-07-22 shows the original claim was accepted within the limit, and the policy names that document as acceptable proof. The practice needs to pull the actual 277CA report to attach, since the billing log entry alone is not the acknowledgment the policy asks for."
+    },
+    "letter": "[DATE]\n\nAppeals Department\n\nRe: Appeal of timely filing denial\nMember ID: M-71442\nClaim number: CLM-87990314\nPayer claim number: 26273-002950\nOriginal payer claim control number: 25203-114872\nDate of service: 2025-07-14\nRemittance date: 2026-10-16\n\nTo the Appeals Department:\n\n[PRACTICE NAME] requests reconsideration of the following lines, both denied for timely filing:\n\nLine 1: 99396, preventive visit, billed $245.00, denied CO-29\nLine 2: 36415, routine venipuncture, billed $18.00, denied CO-29\n\nThe plan's timely filing policy, DEMO-ADM-010, states: \"Claims must be received within 365 days of the date of service.\" For the 2025-07-14 date of service, that limit ended 2026-07-14. Claim 26273-002950 was resubmitted on 2026-09-30, after the limit. However, the original claim reached the plan well within the limit.\n\nOur submission history shows the claim was sent on 2025-07-18. On 2025-07-22 it records: \"277CA received from plan: claim accepted for adjudication. Payer claim control number 25203-114872.\" This acceptance date is inside the 365-day filing limit. On 2025-12-09, a status inquiry found that the plan had no claim on file under that control number. After follow-up, we resubmitted the claim, and it received the new number 26273-002950.\n\nPolicy DEMO-ADM-010 states: \"The plan will reconsider a claim denied for timely filing when the provider submits proof that the original claim was received within the filing limit.\" It also states: \"Acceptable proof is a claim acknowledgment (277CA) from the plan showing the payer claim control number and an acceptance date within the filing limit.\" The plan's 277CA acceptance of the original claim, dated 2025-07-22 under control number 25203-114872, is that proof. It shows the plan's own acceptance, not just a record that the claim was sent.\n\nWe ask the plan to reverse the CO-29 denials on lines 1 and 2 and process both lines for payment. Please contact our office if you need anything further.\n\nSincerely,\n\n[PROVIDER NAME, CREDENTIALS]\n[PRACTICE NAME]\n\nEnclosures:\n1. Remittance for claim CLM-87990314 / payer claim number 26273-002950, dated 2026-10-16\n2. Claim submission history (practice billing system), dated 2026-10-20"
+  }
+}

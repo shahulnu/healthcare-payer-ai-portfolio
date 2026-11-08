@@ -1,0 +1,294 @@
+{
+  "memberId": "M-70112",
+  "mode": "replay",
+  "replaySource": "live",
+  "model": "claude-opus-5-5",
+  "hccModel": "CMS-HCC V28",
+  "summary": "The submitted E11.9 conflicts with the provider's documentation of diabetes with diabetic CKD; E11.22 plus N18.4 are supported instead, along with E78.5 for hyperlipidemia. I50.9 is not supported because heart failure appears only in a non-acceptable RN telephone call; the coder may consider whether a provider evaluation of heart failure exists elsewhere. No embedded instructions requesting codes were found in the chart.",
+  "findings": [
+    {
+      "code": "E11.9",
+      "description": "Type 2 diabetes without complications",
+      "hcc": "38",
+      "hccName": "Diabetes with Glycemic, Unspecified, or No Complications",
+      "submitted": true,
+      "modelAssessment": "not_supported",
+      "disposition": "review_deletion",
+      "codeNote": null,
+      "meatMet": [
+        "A"
+      ],
+      "evidence": [
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "Type 2 diabetes with diabetic chronic kidney disease.",
+          "verified": true,
+          "acceptableSource": true
+        }
+      ],
+      "rationale": "The provider documents diabetes with diabetic chronic kidney disease, so a code for diabetes without complications contradicts the note; E11.22 fits instead."
+    },
+    {
+      "code": "I50.9",
+      "description": "Heart failure, unspecified",
+      "hcc": "226",
+      "hccName": "Heart Failure, Except End-Stage and Acute",
+      "submitted": true,
+      "modelAssessment": "not_supported",
+      "disposition": "review_deletion",
+      "codeNote": null,
+      "meatMet": [],
+      "evidence": [
+        {
+          "element": "M",
+          "docId": "enc-2",
+          "quote": "Patient called about ankle swelling and says her heart failure is acting up.",
+          "verified": true,
+          "acceptableSource": false
+        }
+      ],
+      "rationale": "Heart failure appears only as a patient report in an RN telephone call, which is not an acceptable encounter, and the provider visit does not mention it."
+    },
+    {
+      "code": "E11.22",
+      "description": "Type 2 diabetes with diabetic chronic kidney disease",
+      "hcc": "37",
+      "hccName": "Diabetes with Chronic Complications",
+      "submitted": false,
+      "modelAssessment": "supported",
+      "disposition": "add",
+      "codeNote": null,
+      "meatMet": [
+        "A",
+        "E",
+        "T"
+      ],
+      "evidence": [
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "Type 2 diabetes with diabetic chronic kidney disease.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "E",
+          "docId": "enc-1",
+          "quote": "A1c 8.2, not at goal.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "T",
+          "docId": "enc-1",
+          "quote": "Increase insulin glargine to 24 units nightly.",
+          "verified": true,
+          "acceptableSource": true
+        }
+      ],
+      "rationale": "In an acceptable visit, the provider explicitly links type 2 diabetes to chronic kidney disease, evaluates the A1c and adjusts insulin."
+    },
+    {
+      "code": "N18.4",
+      "description": "Chronic kidney disease, stage 4",
+      "hcc": "327",
+      "hccName": "Chronic Kidney Disease, Severe 4",
+      "submitted": false,
+      "modelAssessment": "supported",
+      "disposition": "add",
+      "codeNote": null,
+      "meatMet": [
+        "A",
+        "E",
+        "T"
+      ],
+      "evidence": [
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "Chronic kidney disease stage 4.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "E",
+          "docId": "enc-1",
+          "quote": "eGFR 24.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "T",
+          "docId": "enc-1",
+          "quote": "Nephrology follow-up in 6 weeks.",
+          "verified": true,
+          "acceptableSource": true
+        }
+      ],
+      "rationale": "The provider documents CKD stage 4 with lab evaluation and a nephrology follow-up plan."
+    },
+    {
+      "code": "E78.5",
+      "description": "Hyperlipidemia, unspecified",
+      "hcc": null,
+      "hccName": null,
+      "submitted": false,
+      "modelAssessment": "supported",
+      "disposition": "no_hcc",
+      "codeNote": null,
+      "meatMet": [
+        "A",
+        "T"
+      ],
+      "evidence": [
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "Hyperlipidemia.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "T",
+          "docId": "enc-1",
+          "quote": "Continue atorvastatin.",
+          "verified": true,
+          "acceptableSource": true
+        }
+      ],
+      "rationale": "The provider assesses hyperlipidemia and continues statin therapy."
+    }
+  ],
+  "counts": {
+    "add": 2,
+    "confirmed": 0,
+    "superseded": 0,
+    "review_deletion": 2,
+    "query_provider": 0,
+    "no_hcc": 1,
+    "no_action": 0
+  },
+  "redactions": [
+    {
+      "label": "Name",
+      "count": 2
+    },
+    {
+      "label": "Date of birth",
+      "count": 2
+    },
+    {
+      "label": "MRN",
+      "count": 2
+    },
+    {
+      "label": "Phone",
+      "count": 1
+    }
+  ],
+  "trace": [
+    {
+      "name": "Identifier redaction",
+      "detail": "7 identifiers removed from 2 documents"
+    },
+    {
+      "name": "Chart review (replay)",
+      "detail": "Loaded recorded live output"
+    },
+    {
+      "name": "Quote check + HCC map + hierarchy",
+      "detail": "10 of 10 quotes verified; 0 findings adjusted by code"
+    }
+  ],
+  "raw": {
+    "conditions": [
+      {
+        "icd10": "E11.9",
+        "assessment": "not_supported",
+        "evidence": [
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "Type 2 diabetes with diabetic chronic kidney disease."
+          }
+        ],
+        "rationale": "The provider documents diabetes with diabetic chronic kidney disease, so a code for diabetes without complications contradicts the note; E11.22 fits instead."
+      },
+      {
+        "icd10": "E11.22",
+        "assessment": "supported",
+        "evidence": [
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "Type 2 diabetes with diabetic chronic kidney disease."
+          },
+          {
+            "element": "E",
+            "doc_id": "enc-1",
+            "quote": "A1c 8.2, not at goal."
+          },
+          {
+            "element": "T",
+            "doc_id": "enc-1",
+            "quote": "Increase insulin glargine to 24 units nightly."
+          }
+        ],
+        "rationale": "In an acceptable visit, the provider explicitly links type 2 diabetes to chronic kidney disease, evaluates the A1c and adjusts insulin."
+      },
+      {
+        "icd10": "N18.4",
+        "assessment": "supported",
+        "evidence": [
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "Chronic kidney disease stage 4."
+          },
+          {
+            "element": "E",
+            "doc_id": "enc-1",
+            "quote": "eGFR 24."
+          },
+          {
+            "element": "T",
+            "doc_id": "enc-1",
+            "quote": "Nephrology follow-up in 6 weeks."
+          }
+        ],
+        "rationale": "The provider documents CKD stage 4 with lab evaluation and a nephrology follow-up plan."
+      },
+      {
+        "icd10": "E78.5",
+        "assessment": "supported",
+        "evidence": [
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "Hyperlipidemia."
+          },
+          {
+            "element": "T",
+            "doc_id": "enc-1",
+            "quote": "Continue atorvastatin."
+          }
+        ],
+        "rationale": "The provider assesses hyperlipidemia and continues statin therapy."
+      },
+      {
+        "icd10": "I50.9",
+        "assessment": "not_supported",
+        "evidence": [
+          {
+            "element": "M",
+            "doc_id": "enc-2",
+            "quote": "Patient called about ankle swelling and says her heart failure is acting up."
+          }
+        ],
+        "rationale": "Heart failure appears only as a patient report in an RN telephone call, which is not an acceptable encounter, and the provider visit does not mention it."
+      }
+    ],
+    "summary": "The submitted E11.9 conflicts with the provider's documentation of diabetes with diabetic CKD; E11.22 plus N18.4 are supported instead, along with E78.5 for hyperlipidemia. I50.9 is not supported because heart failure appears only in a non-acceptable RN telephone call; the coder may consider whether a provider evaluation of heart failure exists elsewhere. No embedded instructions requesting codes were found in the chart."
+  }
+}

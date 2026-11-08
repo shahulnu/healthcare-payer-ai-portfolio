@@ -1,0 +1,42 @@
+{
+  "memberId": "M-20431",
+  "planName": "SilverChoice PPO 3500 (sample)",
+  "questionId": "Q-PPO-CLAIM",
+  "question": "Was my claim from last Tuesday paid?",
+  "mode": "replay",
+  "replaySource": "live",
+  "model": "claude-opus-5-5",
+  "status": "escalated",
+  "answer": "I can't check whether your claim from last Tuesday was paid. I can only see your plan documents. They explain what your plan covers, but they don't show individual claims or payments. I'm passing your question to a member services team member who can look up the claim. They can tell you its status, how much was paid and anything you might owe. To help them find it faster, have the provider's name and the date of service ready.",
+  "escalationReason": "The member is asking about the status of a specific claim. Claim records aren't in the plan documents or tools, so a representative needs to look it up in the claims system.",
+  "citations": [],
+  "estimates": [],
+  "numberCheck": {
+    "found": [],
+    "unsupported": []
+  },
+  "toolCalls": [],
+  "trace": [
+    {
+      "name": "Member + plan lookup",
+      "detail": "SilverChoice PPO 3500 (sample), 8 sections"
+    },
+    {
+      "name": "Agent loop (replay)",
+      "detail": "Re-ran 0 recorded tool calls; loaded recorded live answer"
+    },
+    {
+      "name": "Citation + number check",
+      "detail": "0 of 0 quotes verified; 0 dollar amounts, 0 unsupported"
+    }
+  ],
+  "raw": {
+    "toolCalls": [],
+    "submission": {
+      "answer": "I can't check whether your claim from last Tuesday was paid. I can only see your plan documents. They explain what your plan covers, but they don't show individual claims or payments. I'm passing your question to a member services team member who can look up the claim. They can tell you its status, how much was paid and anything you might owe. To help them find it faster, have the provider's name and the date of service ready.",
+      "citations": [],
+      "needs_human": true,
+      "escalation_reason": "The member is asking about the status of a specific claim. Claim records aren't in the plan documents or tools, so a representative needs to look it up in the claims system."
+    }
+  }
+}

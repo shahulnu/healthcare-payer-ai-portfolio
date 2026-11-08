@@ -1,0 +1,95 @@
+[
+  {
+    "id": "DEMO-IMG-014",
+    "title": "MRI of the lumbar spine for low back pain",
+    "serviceCodes": [
+      "72148"
+    ],
+    "benefit": "medical",
+    "sourceNote": "Illustrative policy written for this portfolio demo.",
+    "criteria": [
+      {
+        "id": "C1",
+        "text": "Documented diagnosis of lumbar radiculopathy or low back pain.",
+        "guidance": "Look for an assessment or diagnosis naming lumbar radiculopathy, sciatica or low back pain."
+      },
+      {
+        "id": "C2",
+        "text": "At least 6 weeks of conservative therapy (physical therapy, NSAIDs or activity modification) within the past 6 months.",
+        "guidance": "Dates or durations of PT, medication trials or home exercise. Count weeks from the documented start date."
+      },
+      {
+        "id": "C3",
+        "text": "Objective neurologic finding on exam, or radicular symptoms that persist despite conservative therapy.",
+        "guidance": "Positive straight-leg raise, dermatomal sensory loss, weakness or reflex change; or persistent leg pain after therapy."
+      },
+      {
+        "id": "C4",
+        "text": "No MRI of the lumbar spine in the prior 12 months.",
+        "guidance": "Check the claims history for CPT 72148, 72149 or 72158 in the last 12 months."
+      }
+    ]
+  },
+  {
+    "id": "DEMO-ORT-007",
+    "title": "Total knee arthroplasty",
+    "serviceCodes": [
+      "27447"
+    ],
+    "benefit": "medical",
+    "sourceNote": "Illustrative policy written for this portfolio demo.",
+    "criteria": [
+      {
+        "id": "C1",
+        "text": "Radiographic evidence of advanced osteoarthritis (Kellgren-Lawrence grade 3 or 4) of the affected knee.",
+        "guidance": "Imaging report naming KL grade 3 or 4, or bone-on-bone / severe joint-space narrowing."
+      },
+      {
+        "id": "C2",
+        "text": "At least 12 weeks of documented nonsurgical treatment (physical therapy, NSAIDs, injections, bracing or weight loss).",
+        "guidance": "Dates or durations of each modality. Total the documented duration."
+      },
+      {
+        "id": "C3",
+        "text": "Pain or functional limitation that interferes with activities of daily living.",
+        "guidance": "Statements about walking distance, stairs, work or self-care limits, or a functional score."
+      },
+      {
+        "id": "C4",
+        "text": "BMI below 40, or documented medical optimization if BMI is 40 or above.",
+        "guidance": "Most recent BMI in the record."
+      },
+      {
+        "id": "C5",
+        "text": "No active infection in or around the knee.",
+        "guidance": "Exam or history stating no infection, no open wounds, no fever."
+      }
+    ]
+  },
+  {
+    "id": "DEMO-RX-031",
+    "title": "Semaglutide (Wegovy) for chronic weight management",
+    "serviceCodes": [
+      "00169-4525"
+    ],
+    "benefit": "pharmacy",
+    "sourceNote": "Illustrative policy written for this portfolio demo.",
+    "criteria": [
+      {
+        "id": "C1",
+        "text": "Member is 18 or older with BMI of 30 or above, or BMI of 27 or above with at least one weight-related condition (e.g. hypertension, dyslipidemia, type 2 diabetes).",
+        "guidance": "Most recent BMI and the problem list."
+      },
+      {
+        "id": "C2",
+        "text": "Currently participating in a reduced-calorie diet and increased physical activity program, documented by the prescriber.",
+        "guidance": "A named program or a specific description of the diet and activity plan with a start date."
+      },
+      {
+        "id": "C3",
+        "text": "Not used together with another GLP-1 receptor agonist.",
+        "guidance": "Pharmacy history and medication list for liraglutide, dulaglutide, tirzepatide or other semaglutide products."
+      }
+    ]
+  }
+]

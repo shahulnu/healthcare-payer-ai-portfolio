@@ -1,0 +1,194 @@
+{
+  "source": "live",
+  "note": "Recorded from a live run on 2026-11-01.",
+  "model": "claude-opus-5-5",
+  "cases": {
+    "PA-2026-01487": {
+      "criteria": [
+        {
+          "id": "C1",
+          "status": "met",
+          "evidence": [
+            {
+              "doc_id": "note-1",
+              "quote": "Assessment: Left lumbar radiculopathy, likely S1, not improving after 8 weeks of physical therapy and NSAIDs."
+            }
+          ],
+          "rationale": "The assessment names left lumbar radiculopathy, which matches the requested diagnosis M54.16."
+        },
+        {
+          "id": "C2",
+          "status": "met",
+          "evidence": [
+            {
+              "doc_id": "note-1",
+              "quote": "Started physical therapy on 08/10/2026, 2x weekly, and has completed 14 sessions."
+            },
+            {
+              "doc_id": "note-1",
+              "quote": "Taking naproxen 500 mg BID since 08/04/2026 with partial relief."
+            },
+            {
+              "doc_id": "claims-1",
+              "quote": "2026-08-10 to 2026-09-30  97110 x14  Therapeutic exercise  M54.16"
+            }
+          ],
+          "rationale": "Measured to the 10/02/2026 note date, PT from 08/10/2026 spans about 7.6 weeks and naproxen from 08/04/2026 spans about 8.4 weeks. Both exceed 6 weeks and fall within the past 6 months. Claims corroborate 14 PT sessions."
+        },
+        {
+          "id": "C3",
+          "status": "met",
+          "evidence": [
+            {
+              "doc_id": "note-1",
+              "quote": "Positive straight-leg raise on the left at 40 degrees."
+            },
+            {
+              "doc_id": "note-1",
+              "quote": "Decreased sensation over the left lateral foot (S1 dermatome)."
+            },
+            {
+              "doc_id": "note-1",
+              "quote": "Leg pain persists despite therapy and now limits walking to about one block."
+            }
+          ],
+          "rationale": "The exam documents a positive straight-leg raise, S1 dermatomal sensory loss and a diminished left ankle reflex. Leg pain also persists despite therapy."
+        },
+        {
+          "id": "C4",
+          "status": "met",
+          "evidence": [
+            {
+              "doc_id": "claims-1",
+              "quote": "No claims for CPT 72148, 72149 or 72158 in this period."
+            }
+          ],
+          "rationale": "The 24-month claims history shows no lumbar MRI. The only lumbar imaging is an X-ray (72100) on 2026-07-22."
+        }
+      ],
+      "summary": "This is a request for a lumbar spine MRI without contrast (CPT 72148) for left lumbar radiculopathy in a 54-year-old member. All four criteria appear met: documented radiculopathy, about 7.6 weeks of PT plus about 8.4 weeks of naproxen, objective neurologic findings with persistent leg pain, and no lumbar MRI in claims history. No gaps were identified for the reviewer's attention."
+    },
+    "PA-2026-01502": {
+      "criteria": [
+        {
+          "id": "C1",
+          "status": "met",
+          "evidence": [
+            {
+              "doc_id": "xray-1",
+              "quote": "Kellgren-Lawrence grade 4."
+            },
+            {
+              "doc_id": "xray-1",
+              "quote": "Severe medial joint-space narrowing with bone-on-bone contact."
+            }
+          ],
+          "rationale": "The right knee X-ray report documents Kellgren-Lawrence grade 4 with bone-on-bone contact."
+        },
+        {
+          "id": "C2",
+          "status": "not_met",
+          "evidence": [
+            {
+              "doc_id": "note-1",
+              "quote": "Started physical therapy on 08/20/2026 and completed 6 weeks."
+            },
+            {
+              "doc_id": "note-1",
+              "quote": "Meloxicam 15 mg daily since 08/20/2026."
+            },
+            {
+              "doc_id": "note-1",
+              "quote": "One corticosteroid injection on 09/12/2026 with 2 weeks of relief."
+            }
+          ],
+          "rationale": "The earliest documented nonsurgical treatment began 08/20/2026. From then to the 10/15/2026 note is 56 days, about 8 weeks. That is short of the required 12 weeks. No earlier conservative treatment is documented, even though pain is reported for 3 years."
+        },
+        {
+          "id": "C3",
+          "status": "met",
+          "evidence": [
+            {
+              "doc_id": "note-1",
+              "quote": "can no longer walk more than 2 blocks or kneel at church."
+            },
+            {
+              "doc_id": "note-1",
+              "quote": "Pain with stairs and standing"
+            }
+          ],
+          "rationale": "The note documents limits on walking distance, stairs, standing and kneeling, which interfere with daily activities."
+        },
+        {
+          "id": "C4",
+          "status": "met",
+          "evidence": [
+            {
+              "doc_id": "note-1",
+              "quote": "Vitals: BMI 34.1."
+            }
+          ],
+          "rationale": "The most recent BMI is 34.1, which is below 40."
+        },
+        {
+          "id": "C5",
+          "status": "met",
+          "evidence": [
+            {
+              "doc_id": "note-1",
+              "quote": "No erythema, warmth or effusion. Skin intact. No history of joint infection."
+            }
+          ],
+          "rationale": "The exam shows no signs of infection, the skin is intact, and there is no history of joint infection. Fever is not explicitly addressed."
+        }
+      ],
+      "summary": "This is a request for a right total knee arthroplasty (CPT 27447) for primary osteoarthritis in a 67-year-old male. Criteria C1 (KL grade 4 on X-ray), C3 (functional limitation), C4 (BMI 34.1) and C5 (no signs of infection) are met. C2 is not met: documented conservative treatment began 08/20/2026, about 8 weeks before the 10/15/2026 consult, so the reviewer may want to ask whether any earlier nonsurgical treatment was given during the 3-year pain history."
+    },
+    "PA-2026-01519": {
+      "criteria": [
+        {
+          "id": "C1",
+          "status": "met",
+          "evidence": [
+            {
+              "doc_id": "note-1",
+              "quote": "Vitals: Height 5'5\", weight 171 lb, BMI 28.4."
+            },
+            {
+              "doc_id": "note-1",
+              "quote": "Problem list: Essential hypertension. Overweight. Prediabetes (A1c 6.0)."
+            },
+            {
+              "doc_id": "note-1",
+              "quote": "46 y/o F here to discuss weight."
+            }
+          ],
+          "rationale": "Member is 46 years old with a BMI of 28.4, which is 27 or above. She also has a documented weight-related condition, essential hypertension, treated with lisinopril."
+        },
+        {
+          "id": "C2",
+          "status": "insufficient",
+          "evidence": [
+            {
+              "doc_id": "note-1",
+              "quote": "Discussed diet and exercise."
+            }
+          ],
+          "rationale": "The note only says diet and exercise were discussed. It does not name a program, describe a specific reduced-calorie diet or activity plan, or give a start date. Current participation is therefore not documented."
+        },
+        {
+          "id": "C3",
+          "status": "met",
+          "evidence": [
+            {
+              "doc_id": "rx-1",
+              "quote": "No GLP-1 receptor agonist claims in this period."
+            }
+          ],
+          "rationale": "The 12-month pharmacy history shows only lisinopril and explicitly states there are no GLP-1 receptor agonist claims. The clinical note mentions no other GLP-1 agents."
+        }
+      ],
+      "summary": "Expedited request for Wegovy (semaglutide) 0.25 mg for a 46-year-old member with BMI 28.4 and hypertension. C1 (age/BMI with comorbidity) and C3 (no concurrent GLP-1 use) are met. C2 needs attention: the note says only that diet and exercise were discussed, with no specific program, plan, or start date documented."
+    }
+  }
+}

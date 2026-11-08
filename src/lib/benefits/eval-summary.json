@@ -1,0 +1,11 @@
+{
+  "mode": "live",
+  "model": "claude-opus-5-5",
+  "runAt": "2026-11-03T13:29:42.561Z",
+  "questions": 9,
+  "routingAccuracy": 1,
+  "costAccuracy": 1,
+  "citationVerifiedRate": 1,
+  "unsupportedShown": 0,
+  "totalCostUsd": 0.3029
+}

@@ -1,0 +1,150 @@
+{
+  "caseId": "PA-2026-01519",
+  "policyId": "DEMO-RX-031",
+  "policyTitle": "Semaglutide (Wegovy) for chronic weight management",
+  "mode": "replay",
+  "model": "claude-opus-5-5",
+  "route": "request_info",
+  "routeReason": "C2 lack supporting documentation. Ask the provider for records before review.",
+  "summary": "Expedited request for Wegovy (semaglutide) 0.25 mg for a 46-year-old member with BMI 28.4 and hypertension. C1 (age/BMI with comorbidity) and C3 (no concurrent GLP-1 use) are met. C2 needs attention: the note says only that diet and exercise were discussed, with no specific program, plan, or start date documented.",
+  "criteria": [
+    {
+      "id": "C1",
+      "text": "Member is 18 or older with BMI of 30 or above, or BMI of 27 or above with at least one weight-related condition (e.g. hypertension, dyslipidemia, type 2 diabetes).",
+      "modelStatus": "met",
+      "status": "met",
+      "evidence": [
+        {
+          "docId": "note-1",
+          "quote": "Vitals: Height 5'5\", weight 171 lb, BMI 28.4.",
+          "verified": true
+        },
+        {
+          "docId": "note-1",
+          "quote": "Problem list: Essential hypertension. Overweight. Prediabetes (A1c 6.0).",
+          "verified": true
+        },
+        {
+          "docId": "note-1",
+          "quote": "46 y/o F here to discuss weight.",
+          "verified": true
+        }
+      ],
+      "rationale": "Member is 46 years old with a BMI of 28.4, which is 27 or above. She also has a documented weight-related condition, essential hypertension, treated with lisinopril.",
+      "downgraded": false
+    },
+    {
+      "id": "C2",
+      "text": "Currently participating in a reduced-calorie diet and increased physical activity program, documented by the prescriber.",
+      "modelStatus": "insufficient",
+      "status": "insufficient",
+      "evidence": [
+        {
+          "docId": "note-1",
+          "quote": "Discussed diet and exercise.",
+          "verified": true
+        }
+      ],
+      "rationale": "The note only says diet and exercise were discussed. It does not name a program, describe a specific reduced-calorie diet or activity plan, or give a start date. Current participation is therefore not documented.",
+      "downgraded": false
+    },
+    {
+      "id": "C3",
+      "text": "Not used together with another GLP-1 receptor agonist.",
+      "modelStatus": "met",
+      "status": "met",
+      "evidence": [
+        {
+          "docId": "rx-1",
+          "quote": "No GLP-1 receptor agonist claims in this period.",
+          "verified": true
+        }
+      ],
+      "rationale": "The 12-month pharmacy history shows only lisinopril and explicitly states there are no GLP-1 receptor agonist claims. The clinical note mentions no other GLP-1 agents.",
+      "downgraded": false
+    }
+  ],
+  "redactions": [
+    {
+      "label": "Name",
+      "count": 1
+    },
+    {
+      "label": "Date of birth",
+      "count": 1
+    },
+    {
+      "label": "MRN",
+      "count": 1
+    },
+    {
+      "label": "Phone",
+      "count": 1
+    }
+  ],
+  "trace": [
+    {
+      "name": "Policy lookup",
+      "detail": "DEMO-RX-031 matched on NDC 00169-4525"
+    },
+    {
+      "name": "Identifier redaction",
+      "detail": "4 identifiers removed from 2 documents"
+    },
+    {
+      "name": "Criteria evaluation (replay)",
+      "detail": "Loaded recorded live output"
+    },
+    {
+      "name": "Citation check + routing",
+      "detail": "5 of 5 quotes found verbatim; 0 criteria downgraded"
+    }
+  ],
+  "decisionDueBy": "2026-10-31T16:20:00.000Z",
+  "raw": {
+    "criteria": [
+      {
+        "id": "C1",
+        "status": "met",
+        "evidence": [
+          {
+            "doc_id": "note-1",
+            "quote": "Vitals: Height 5'5\", weight 171 lb, BMI 28.4."
+          },
+          {
+            "doc_id": "note-1",
+            "quote": "Problem list: Essential hypertension. Overweight. Prediabetes (A1c 6.0)."
+          },
+          {
+            "doc_id": "note-1",
+            "quote": "46 y/o F here to discuss weight."
+          }
+        ],
+        "rationale": "Member is 46 years old with a BMI of 28.4, which is 27 or above. She also has a documented weight-related condition, essential hypertension, treated with lisinopril."
+      },
+      {
+        "id": "C2",
+        "status": "insufficient",
+        "evidence": [
+          {
+            "doc_id": "note-1",
+            "quote": "Discussed diet and exercise."
+          }
+        ],
+        "rationale": "The note only says diet and exercise were discussed. It does not name a program, describe a specific reduced-calorie diet or activity plan, or give a start date. Current participation is therefore not documented."
+      },
+      {
+        "id": "C3",
+        "status": "met",
+        "evidence": [
+          {
+            "doc_id": "rx-1",
+            "quote": "No GLP-1 receptor agonist claims in this period."
+          }
+        ],
+        "rationale": "The 12-month pharmacy history shows only lisinopril and explicitly states there are no GLP-1 receptor agonist claims. The clinical note mentions no other GLP-1 agents."
+      }
+    ],
+    "summary": "Expedited request for Wegovy (semaglutide) 0.25 mg for a 46-year-old member with BMI 28.4 and hypertension. C1 (age/BMI with comorbidity) and C3 (no concurrent GLP-1 use) are met. C2 needs attention: the note says only that diet and exercise were discussed, with no specific program, plan, or start date documented."
+  }
+}

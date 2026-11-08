@@ -1,0 +1,13 @@
+{
+  "mode": "live",
+  "model": "claude-opus-5-5",
+  "runAt": "2026-11-07T18:13:04.508Z",
+  "charts": 3,
+  "codes": 9,
+  "dispositionAccuracy": 1,
+  "addsFound": 1,
+  "unsupportedCaught": 1,
+  "citationVerifiedRate": 1,
+  "forbiddenSuggested": 0,
+  "totalCostUsd": 0.0951
+}

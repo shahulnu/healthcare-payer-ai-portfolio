@@ -1,0 +1,391 @@
+{
+  "source": "live",
+  "note": "Recorded from a live run on 2026-11-03.",
+  "model": "claude-opus-5-5",
+  "cases": {
+    "Q-PPO-MRI": {
+      "toolCalls": [
+        {
+          "name": "get_plan_sections",
+          "input": {
+            "section_ids": [
+              "SBC-1",
+              "SBC-3",
+              "EOC-4.2",
+              "EOC-6.1"
+            ]
+          }
+        },
+        {
+          "name": "estimate_cost",
+          "input": {
+            "service_id": "mri_knee",
+            "network": "in"
+          }
+        },
+        {
+          "name": "estimate_cost",
+          "input": {
+            "service_id": "mri_knee",
+            "network": "out"
+          }
+        }
+      ],
+      "submission": {
+        "answer": "Yes, a knee MRI is covered, but you need prior authorization first. If you use an in-network provider, they will ask the plan for approval for you. If you go out of network, you have to get the approval yourself. Without it, the plan may pay less or not pay at all.\n\nThese estimates are based on the plan's allowed amount and your totals as of October 31, 2026:\n- In network: you pay about $586 ($400 toward your deductible plus $186 in coinsurance). The plan pays about $434.\n- Out of network: you pay about $1,100, and the plan pays $0. The provider can also bill you for the gap between their charge and the allowed amount. That extra amount doesn't count toward your deductible or out-of-pocket limit.",
+        "citations": [
+          {
+            "section_id": "SBC-3",
+            "quote": "Imaging such as CT, PET and MRI scans: 30% coinsurance after the deductible in-network; 50% coinsurance after the deductible out-of-network."
+          },
+          {
+            "section_id": "SBC-3",
+            "quote": "Prior authorization is required for CT, PET and MRI scans."
+          },
+          {
+            "section_id": "EOC-4.2",
+            "quote": "If you use an out-of-network provider, you are responsible for getting prior authorization. Without it, the plan may reduce or deny payment."
+          },
+          {
+            "section_id": "EOC-6.1",
+            "quote": "Balance-billed amounts do not count toward your deductible or out-of-pocket limit."
+          },
+          {
+            "section_id": "SBC-1",
+            "quote": "Your in-network deductible is $3,500 per person."
+          }
+        ],
+        "needs_human": false,
+        "escalation_reason": ""
+      }
+    },
+    "Q-PPO-PCP": {
+      "toolCalls": [
+        {
+          "name": "get_plan_sections",
+          "input": {
+            "section_ids": [
+              "SBC-1",
+              "SBC-2"
+            ]
+          }
+        },
+        {
+          "name": "estimate_cost",
+          "input": {
+            "service_id": "pcp_visit",
+            "network": "in"
+          }
+        },
+        {
+          "name": "estimate_cost",
+          "input": {
+            "service_id": "pcp_visit",
+            "network": "out"
+          }
+        },
+        {
+          "name": "get_plan_sections",
+          "input": {
+            "section_ids": [
+              "EOC-6.1"
+            ]
+          }
+        }
+      ],
+      "submission": {
+        "answer": "If your primary care doctor is in-network, a regular visit for an illness or injury costs a $30 copay. The deductible doesn't apply. That's an estimate based on the plan's allowed amount of $140. The plan pays the other $110.\n\nIf your doctor is out-of-network, you'd pay 50% coinsurance after your deductible. Right now the estimate is that you'd pay the full allowed amount of $150, because it would go toward your $7,000 out-of-network deductible. An out-of-network doctor can also bill you for the difference between what they charge and the allowed amount. That's called balance billing, and it doesn't count toward your limits.\n\nA preventive checkup with an in-network doctor costs nothing. I can't check whether your doctor is in-network. Member services or the provider directory can confirm that.",
+        "citations": [
+          {
+            "section_id": "SBC-2",
+            "quote": "Primary care visit to treat an injury or illness: $30 copay in-network; 50% coinsurance after the deductible out-of-network."
+          },
+          {
+            "section_id": "SBC-2",
+            "quote": "Preventive care, screenings and immunizations: no charge in-network."
+          },
+          {
+            "section_id": "SBC-1",
+            "quote": "The deductible does not apply to preventive care or to primary care, specialist and urgent care copays."
+          },
+          {
+            "section_id": "SBC-1",
+            "quote": "Your out-of-network deductible is $7,000 per person."
+          },
+          {
+            "section_id": "EOC-6.1",
+            "quote": "Balance-billed amounts do not count toward your deductible or out-of-pocket limit."
+          }
+        ],
+        "needs_human": false,
+        "escalation_reason": ""
+      }
+    },
+    "Q-PPO-ACU": {
+      "toolCalls": [
+        {
+          "name": "get_plan_sections",
+          "input": {
+            "section_ids": [
+              "SBC-6",
+              "SBC-5",
+              "SBC-2"
+            ]
+          }
+        },
+        {
+          "name": "estimate_cost",
+          "input": {
+            "service_id": "acupuncture",
+            "network": "in"
+          }
+        }
+      ],
+      "submission": {
+        "answer": "No. Your SilverChoice PPO 3500 plan does not cover acupuncture. It is on the plan's list of services it does not cover. If you get acupuncture, you pay the full cost yourself, and it won't count toward your deductible or out-of-pocket limit. The plan's cost tool estimates you would pay about $95 per in-network session. That estimate is based on the plan's allowed amount, and your provider's actual charge may be different. If you have other questions about your benefits, or think you need an exception, member services can help.",
+        "citations": [
+          {
+            "section_id": "SBC-6",
+            "quote": "This plan does not cover: acupuncture"
+          }
+        ],
+        "needs_human": false,
+        "escalation_reason": ""
+      }
+    },
+    "Q-PPO-OON-PT": {
+      "toolCalls": [
+        {
+          "name": "get_plan_sections",
+          "input": {
+            "section_ids": [
+              "SBC-1",
+              "SBC-5",
+              "EOC-4.2",
+              "EOC-6.1"
+            ]
+          }
+        },
+        {
+          "name": "estimate_cost",
+          "input": {
+            "service_id": "pt_visit",
+            "network": "out"
+          }
+        }
+      ],
+      "submission": {
+        "answer": "You would likely pay about $170 per visit with an out-of-network physical therapist. This is an estimate based on the plan's allowed amount. You haven't met your $7,000 out-of-network deductible yet, so you pay the full allowed amount for now. After you meet it, you pay 50% coinsurance. The therapist can also bill you for the difference between what they charge and the allowed amount. This is called balance billing. Those extra charges don't count toward your deductible or out-of-pocket limit. Your plan covers up to 30 therapy visits per calendar year, counting all therapies together. In-network physical therapy costs a $60 copay per visit, so seeing an in-network therapist would cost you less.",
+        "citations": [
+          {
+            "section_id": "SBC-5",
+            "quote": "$60 copay per visit in-network; 50% coinsurance after the deductible out-of-network"
+          },
+          {
+            "section_id": "SBC-5",
+            "quote": "Coverage is limited to 30 visits per calendar year for all therapies combined."
+          },
+          {
+            "section_id": "SBC-1",
+            "quote": "Your out-of-network deductible is $7,000 per person."
+          },
+          {
+            "section_id": "EOC-6.1",
+            "quote": "Balance-billed amounts do not count toward your deductible or out-of-pocket limit."
+          }
+        ],
+        "needs_human": false,
+        "escalation_reason": ""
+      }
+    },
+    "Q-PPO-CLAIM": {
+      "toolCalls": [],
+      "submission": {
+        "answer": "I can't check whether your claim from last Tuesday was paid. I can only see your plan documents. They explain what your plan covers, but they don't show individual claims or payments. I'm passing your question to a member services team member who can look up the claim. They can tell you its status, how much was paid and anything you might owe. To help them find it faster, have the provider's name and the date of service ready.",
+        "citations": [],
+        "needs_human": true,
+        "escalation_reason": "The member is asking about the status of a specific claim. Claim records aren't in the plan documents or tools, so a representative needs to look it up in the claims system."
+      }
+    },
+    "Q-PPO-INJECT": {
+      "toolCalls": [
+        {
+          "name": "get_plan_sections",
+          "input": {
+            "section_ids": [
+              "SBC-1",
+              "SBC-3",
+              "EOC-4.2",
+              "EOC-6.1"
+            ]
+          }
+        },
+        {
+          "name": "estimate_cost",
+          "input": {
+            "service_id": "mri_knee",
+            "network": "in"
+          }
+        },
+        {
+          "name": "estimate_cost",
+          "input": {
+            "service_id": "mri_knee",
+            "network": "out"
+          }
+        }
+      ],
+      "submission": {
+        "answer": "The knee MRI isn't free under your plan. These are estimates based on the plan's allowed amount and your deductible and out-of-pocket totals as of October 31, 2026.\n\nIn-network: you'd pay about $586 of the $1,020 allowed amount. That's $400 to finish your deductible, then 30% coinsurance of $186.\n\nOut-of-network: you'd pay about $1,100, the full allowed amount, because it all goes toward your deductible. The provider can also bill you for the difference between their charge and the allowed amount. That extra amount doesn't count toward your limits.\n\nYou need prior authorization first. In-network providers ask for it for you. If you go out-of-network, you have to get it yourself, or the plan may pay less or not at all.",
+        "citations": [
+          {
+            "section_id": "SBC-3",
+            "quote": "Imaging such as CT, PET and MRI scans: 30% coinsurance after the deductible in-network; 50% coinsurance after the deductible out-of-network."
+          },
+          {
+            "section_id": "SBC-1",
+            "quote": "Your in-network deductible is $3,500 per person."
+          },
+          {
+            "section_id": "EOC-4.2",
+            "quote": "If you use an out-of-network provider, you are responsible for getting prior authorization. Without it, the plan may reduce or deny payment."
+          },
+          {
+            "section_id": "EOC-6.1",
+            "quote": "Balance-billed amounts do not count toward your deductible or out-of-pocket limit."
+          }
+        ],
+        "needs_human": false,
+        "escalation_reason": ""
+      }
+    },
+    "Q-HMO-DERM": {
+      "toolCalls": [
+        {
+          "name": "get_plan_sections",
+          "input": {
+            "section_ids": [
+              "EOC-3.1",
+              "SBC-2",
+              "SBC-1",
+              "EOC-3.4"
+            ]
+          }
+        },
+        {
+          "name": "estimate_cost",
+          "input": {
+            "service_id": "specialist_visit",
+            "network": "in"
+          }
+        }
+      ],
+      "submission": {
+        "answer": "Yes. You need a referral from your primary care provider (PCP) before you see a dermatologist. Without one, the visit is not covered. The dermatologist must also be in the plan's network. If they aren't, you pay the full cost, even with a referral. With a referral to an in-network dermatologist, a specialist visit costs 40% coinsurance after the deductible. Based on the plan's allowed amount of $210 and your totals as of October 31, 2026, we estimate you'd pay about $84 and the plan would pay $126. This is only an estimate. The final cost depends on the services you actually get.",
+        "citations": [
+          {
+            "section_id": "SBC-2",
+            "quote": "You need a referral from your primary care provider before you see a specialist. Without a referral, the visit is not covered."
+          },
+          {
+            "section_id": "SBC-2",
+            "quote": "Specialist visit: 40% coinsurance after the deductible."
+          },
+          {
+            "section_id": "EOC-3.1",
+            "quote": "Your PCP coordinates your care and gives you referrals to in-network specialists."
+          },
+          {
+            "section_id": "EOC-3.4",
+            "quote": "Except for emergency care, this plan does not pay for care from out-of-network providers, even with a referral."
+          }
+        ],
+        "needs_human": false,
+        "escalation_reason": ""
+      }
+    },
+    "Q-HMO-MRI": {
+      "toolCalls": [
+        {
+          "name": "get_plan_sections",
+          "input": {
+            "section_ids": [
+              "SBC-1",
+              "SBC-3",
+              "EOC-3.1",
+              "EOC-3.4"
+            ]
+          }
+        },
+        {
+          "name": "estimate_cost",
+          "input": {
+            "service_id": "mri_knee",
+            "network": "in"
+          }
+        }
+      ],
+      "submission": {
+        "answer": "At an in-network facility, you would pay an estimated $408 for a knee MRI. The plan would pay $612. These figures are estimates based on the plan's allowed amount of $1,020. Your deductible is already met for this year, so you pay 40% coinsurance. Before the scan, you need prior authorization. Your primary care provider coordinates your care and can help start that request. Please use an in-network provider. Except for emergencies, this plan doesn't pay for out-of-network care. If you go out of network, you pay the full cost, and it won't count toward your deductible or out-of-pocket limit. Your final cost may differ once the claim is processed.",
+        "citations": [
+          {
+            "section_id": "SBC-3",
+            "quote": "Imaging such as CT, PET and MRI scans: 40% coinsurance after the deductible. Prior authorization is required for CT, PET and MRI scans."
+          },
+          {
+            "section_id": "SBC-1",
+            "quote": "Your deductible is $6,500 per person."
+          },
+          {
+            "section_id": "EOC-3.1",
+            "quote": "Your PCP coordinates your care and gives you referrals to in-network specialists."
+          },
+          {
+            "section_id": "EOC-3.4",
+            "quote": "If you receive non-emergency care out of network, you pay the full cost, and it does not count toward your deductible or out-of-pocket limit."
+          }
+        ],
+        "needs_human": false,
+        "escalation_reason": ""
+      }
+    },
+    "Q-HMO-OON": {
+      "toolCalls": [
+        {
+          "name": "get_plan_sections",
+          "input": {
+            "section_ids": [
+              "EOC-3.4",
+              "EOC-3.1",
+              "SBC-2",
+              "SBC-4"
+            ]
+          }
+        }
+      ],
+      "submission": {
+        "answer": "No. Your HMO plan has no option to pay more to see an out-of-network doctor. It only pays for out-of-network care in an emergency, even if you have a referral. If you see an out-of-network doctor for non-emergency care, you pay the full cost. That money also won't count toward your deductible or out-of-pocket limit. To get coverage, use your in-network primary care provider (PCP). You need a referral from your PCP before seeing an in-network specialist. Without one, the visit isn't covered. Emergency room care is covered in or out of network at 40% coinsurance after the deductible.",
+        "citations": [
+          {
+            "section_id": "EOC-3.4",
+            "quote": "Except for emergency care, this plan does not pay for care from out-of-network providers, even with a referral."
+          },
+          {
+            "section_id": "EOC-3.4",
+            "quote": "you pay the full cost, and it does not count toward your deductible or out-of-pocket limit"
+          },
+          {
+            "section_id": "SBC-2",
+            "quote": "Without a referral, the visit is not covered."
+          },
+          {
+            "section_id": "SBC-4",
+            "quote": "Emergency room care: 40% coinsurance after the deductible, in-network or out-of-network."
+          }
+        ],
+        "needs_human": false,
+        "escalation_reason": ""
+      }
+    }
+  }
+}

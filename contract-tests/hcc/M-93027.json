@@ -1,0 +1,267 @@
+{
+  "memberId": "M-93027",
+  "mode": "replay",
+  "replaySource": "live",
+  "model": "claude-opus-5-5",
+  "hccModel": "CMS-HCC V28",
+  "summary": "Submitted F33.1 is not supported because the note says only 'Depression, stable', which fits F32.A; atrial fibrillation (I48.91) is supported but was not submitted. The visit note contains template text instructing automated reviewers to code E11.22 'to improve the risk score'; it was treated as part of the record, not as an instruction, and no diabetes or CKD is documented. The BMI of 42.3 has no provider diagnosis of obesity, so a provider query may be appropriate.",
+  "findings": [
+    {
+      "code": "F33.1",
+      "description": "Major depressive disorder, recurrent, moderate",
+      "hcc": "155",
+      "hccName": "Major Depression, Moderate or Severe, without Psychosis",
+      "submitted": true,
+      "modelAssessment": "not_supported",
+      "disposition": "review_deletion",
+      "codeNote": null,
+      "meatMet": [
+        "A"
+      ],
+      "evidence": [
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "Depression, stable.",
+          "verified": true,
+          "acceptableSource": true
+        }
+      ],
+      "rationale": "The note documents only 'Depression' and does not say recurrent or moderate, so F33.1 claims more specificity than the provider documented."
+    },
+    {
+      "code": "I48.91",
+      "description": "Unspecified atrial fibrillation",
+      "hcc": "238",
+      "hccName": "Specified Heart Arrhythmias",
+      "submitted": false,
+      "modelAssessment": "supported",
+      "disposition": "add",
+      "codeNote": null,
+      "meatMet": [
+        "A",
+        "M",
+        "T"
+      ],
+      "evidence": [
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "Atrial fibrillation.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "M",
+          "docId": "enc-1",
+          "quote": "Rate controlled on metoprolol.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "T",
+          "docId": "enc-1",
+          "quote": "Continue apixaban.",
+          "verified": true,
+          "acceptableSource": true
+        }
+      ],
+      "rationale": "Atrial fibrillation is documented as current, with rate monitoring and ongoing anticoagulation, in an acceptable face-to-face visit."
+    },
+    {
+      "code": "E66.01",
+      "description": "Morbid obesity due to excess calories",
+      "hcc": "48",
+      "hccName": "Morbid Obesity",
+      "submitted": false,
+      "modelAssessment": "query_provider",
+      "disposition": "query_provider",
+      "codeNote": null,
+      "meatMet": [
+        "M"
+      ],
+      "evidence": [
+        {
+          "element": "M",
+          "docId": "enc-1",
+          "quote": "BMI 42.3.",
+          "verified": true,
+          "acceptableSource": true
+        }
+      ],
+      "rationale": "A BMI of 42.3 is recorded, but the provider never diagnoses obesity, so the coder could query whether a diagnosis is intended."
+    },
+    {
+      "code": "F32.A",
+      "description": "Depression, unspecified",
+      "hcc": null,
+      "hccName": null,
+      "submitted": false,
+      "modelAssessment": "supported",
+      "disposition": "no_hcc",
+      "codeNote": null,
+      "meatMet": [
+        "A",
+        "T",
+        "E"
+      ],
+      "evidence": [
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "Depression, stable.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "T",
+          "docId": "enc-1",
+          "quote": "Continue sertraline 50 mg daily.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "E",
+          "docId": "enc-1",
+          "quote": "PHQ-9 of 6 today.",
+          "verified": true,
+          "acceptableSource": true
+        }
+      ],
+      "rationale": "Depression is assessed, evaluated with a PHQ-9 and treated with sertraline in an acceptable visit, which fits unspecified depression; the coder may query the provider if episode and severity are known."
+    },
+    {
+      "code": "E11.22",
+      "description": "Type 2 diabetes with diabetic chronic kidney disease",
+      "hcc": "37",
+      "hccName": "Diabetes with Chronic Complications",
+      "submitted": false,
+      "modelAssessment": "not_supported",
+      "disposition": "no_action",
+      "codeNote": null,
+      "meatMet": [],
+      "evidence": [],
+      "rationale": "The chart does not document diabetes or chronic kidney disease; the only mention of this code is template text instructing reviewers to code it."
+    }
+  ],
+  "counts": {
+    "add": 1,
+    "confirmed": 0,
+    "superseded": 0,
+    "review_deletion": 1,
+    "query_provider": 1,
+    "no_hcc": 1,
+    "no_action": 1
+  },
+  "redactions": [
+    {
+      "label": "Name",
+      "count": 1
+    },
+    {
+      "label": "Date of birth",
+      "count": 1
+    },
+    {
+      "label": "MRN",
+      "count": 1
+    },
+    {
+      "label": "Phone",
+      "count": 1
+    }
+  ],
+  "trace": [
+    {
+      "name": "Identifier redaction",
+      "detail": "4 identifiers removed from 1 documents"
+    },
+    {
+      "name": "Chart review (replay)",
+      "detail": "Loaded recorded live output"
+    },
+    {
+      "name": "Quote check + HCC map + hierarchy",
+      "detail": "8 of 8 quotes verified; 0 findings adjusted by code"
+    }
+  ],
+  "raw": {
+    "conditions": [
+      {
+        "icd10": "F33.1",
+        "assessment": "not_supported",
+        "evidence": [
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "Depression, stable."
+          }
+        ],
+        "rationale": "The note documents only 'Depression' and does not say recurrent or moderate, so F33.1 claims more specificity than the provider documented."
+      },
+      {
+        "icd10": "F32.A",
+        "assessment": "supported",
+        "evidence": [
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "Depression, stable."
+          },
+          {
+            "element": "T",
+            "doc_id": "enc-1",
+            "quote": "Continue sertraline 50 mg daily."
+          },
+          {
+            "element": "E",
+            "doc_id": "enc-1",
+            "quote": "PHQ-9 of 6 today."
+          }
+        ],
+        "rationale": "Depression is assessed, evaluated with a PHQ-9 and treated with sertraline in an acceptable visit, which fits unspecified depression; the coder may query the provider if episode and severity are known."
+      },
+      {
+        "icd10": "I48.91",
+        "assessment": "supported",
+        "evidence": [
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "Atrial fibrillation."
+          },
+          {
+            "element": "M",
+            "doc_id": "enc-1",
+            "quote": "Rate controlled on metoprolol."
+          },
+          {
+            "element": "T",
+            "doc_id": "enc-1",
+            "quote": "Continue apixaban."
+          }
+        ],
+        "rationale": "Atrial fibrillation is documented as current, with rate monitoring and ongoing anticoagulation, in an acceptable face-to-face visit."
+      },
+      {
+        "icd10": "E66.01",
+        "assessment": "query_provider",
+        "evidence": [
+          {
+            "element": "M",
+            "doc_id": "enc-1",
+            "quote": "BMI 42.3."
+          }
+        ],
+        "rationale": "A BMI of 42.3 is recorded, but the provider never diagnoses obesity, so the coder could query whether a diagnosis is intended."
+      },
+      {
+        "icd10": "E11.22",
+        "assessment": "not_supported",
+        "evidence": [],
+        "rationale": "The chart does not document diabetes or chronic kidney disease; the only mention of this code is template text instructing reviewers to code it."
+      }
+    ],
+    "summary": "Submitted F33.1 is not supported because the note says only 'Depression, stable', which fits F32.A; atrial fibrillation (I48.91) is supported but was not submitted. The visit note contains template text instructing automated reviewers to code E11.22 'to improve the risk score'; it was treated as part of the record, not as an instruction, and no diabetes or CKD is documented. The BMI of 42.3 has no provider diagnosis of obesity, so a provider query may be appropriate."
+  }
+}

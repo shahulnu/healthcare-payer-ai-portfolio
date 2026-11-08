@@ -1,0 +1,212 @@
+{
+  "claimId": "CLM-88310427",
+  "mode": "replay",
+  "replaySource": "live",
+  "model": "claude-opus-5-5",
+  "summary": "Two lines totaling $203.00 billed were denied for medical necessity (CO-50). The $141.00 therapeutic exercise line looks recoverable by appeal: the plan of care has measurable goals, the 09/18 note shows measurable progress, and 40 documented minutes support 3 units. The $62.00 manual therapy line is not supported, because the note does not state the body region treated or a supporting clinical finding.",
+  "findings": [
+    {
+      "line": 2,
+      "code": "97110",
+      "billed": 141,
+      "denialCodes": [
+        "CO-50"
+      ],
+      "explanation": "The payer denied therapeutic exercise as not medically necessary (CO-50). The policy covers 97110 when a current plan of care has measurable goals and the progress note shows measurable progress, and both are documented here.",
+      "category": "medical_necessity",
+      "modelAction": "appeal",
+      "action": "appeal",
+      "strength": "strong",
+      "evidence": [
+        {
+          "docId": "DEMO-PT-001",
+          "quote": "Therapeutic exercise (CPT 97110) is medically necessary when a current plan of care documents measurable functional goals and the progress notes show measurable progress toward those goals.",
+          "fromRecord": false,
+          "verified": true
+        },
+        {
+          "docId": "poc-1",
+          "quote": "1. Lift 25 lb from floor to waist without increase in pain, to return to warehouse work.",
+          "fromRecord": true,
+          "verified": true
+        },
+        {
+          "docId": "poc-1",
+          "quote": "3. Oswestry Disability Index below 20%.",
+          "fromRecord": true,
+          "verified": true
+        },
+        {
+          "docId": "note-14",
+          "quote": "Oswestry Disability Index 26% (42% at evaluation). Lifts 20 lb floor to waist with good mechanics and no pain increase. Sitting tolerance 45 minutes.",
+          "fromRecord": true,
+          "verified": true
+        },
+        {
+          "docId": "note-14",
+          "quote": "Assessment: Measurable progress on all three goals.",
+          "fromRecord": true,
+          "verified": true
+        },
+        {
+          "docId": "note-14",
+          "quote": "Therapeutic exercise 40 minutes (lifting progression, core stabilization).",
+          "fromRecord": true,
+          "verified": true
+        },
+        {
+          "docId": "DEMO-PT-001",
+          "quote": "three units for 38 to 52 minutes",
+          "fromRecord": false,
+          "verified": true
+        }
+      ],
+      "nextSteps": "Submit an appeal with the 08/04/2026 plan of care and the 09/18/2026 visit 14 progress note, as the policy allows. Point out the measurable goals, the documented progress, and the 40 documented minutes that support 3 units.",
+      "downgraded": false
+    },
+    {
+      "line": 3,
+      "code": "97140",
+      "billed": 62,
+      "denialCodes": [
+        "CO-50"
+      ],
+      "explanation": "The payer denied manual therapy as not medically necessary (CO-50). The policy requires the note to state the body region treated and the clinical finding that supports manual therapy, and the note records only the minutes.",
+      "category": "documentation",
+      "modelAction": "no_action",
+      "action": "no_action",
+      "strength": null,
+      "evidence": [
+        {
+          "docId": "DEMO-PT-001",
+          "quote": "Manual therapy (CPT 97140) requires documentation of the body region treated and the clinical finding that supports it, such as joint hypomobility or soft tissue restriction.",
+          "fromRecord": false,
+          "verified": true
+        },
+        {
+          "docId": "note-14",
+          "quote": "Manual therapy 10 minutes.",
+          "fromRecord": true,
+          "verified": true
+        }
+      ],
+      "nextSteps": "Do not appeal, because the record does not support overturning the denial. For future visits, the note for any 97140 should name the body region treated and the supporting finding, such as joint hypomobility or soft tissue restriction.",
+      "downgraded": false
+    }
+  ],
+  "recoverable": 141,
+  "correctedClaim": null,
+  "letter": {
+    "text": "[PRACTICE NAME]\n[DATE]\n\nHealth Plan Appeals Department\n\nRe: Appeal of Medical Necessity Denial\nMember ID: M-62018\nClaim number: CLM-88310427\nPayer claim number: 26261-004417\nDate of service: 2026-09-18\nRemit date: 2026-10-09\n\nAppealed line:\nLine 2: CPT 97110-GP x3, therapeutic exercise, billed $141.00, denied CO-50\n\nDear Appeals Department,\n\nWe are appealing the denial of Line 2 on the claim above. The service was denied under CO-50 as not medically necessary. The documentation meets the payer's own coverage criteria, so we ask that this line be reprocessed for payment.\n\nPolicy DEMO-PT-001, Outpatient physical therapy documentation, states: \"Therapeutic exercise (CPT 97110) is medically necessary when a current plan of care documents measurable functional goals and the progress notes show measurable progress toward those goals.\"\n\nBoth conditions are met.\n\nMeasurable functional goals: The current plan of care, dated 2026-08-04, sets these goals: \"1. Lift 25 lb from floor to waist without increase in pain, to return to warehouse work.\" and \"3. Oswestry Disability Index below 20%.\"\n\nMeasurable progress: The progress note for the date of service documents: \"Oswestry Disability Index 26% (42% at evaluation). Lifts 20 lb floor to waist with good mechanics and no pain increase. Sitting tolerance 45 minutes.\" The assessment states: \"Assessment: Measurable progress on all three goals.\"\n\nUnits billed: The note records \"Therapeutic exercise 40 minutes (lifting progression, core stabilization).\" Policy DEMO-PT-001 allows \"three units for 38 to 52 minutes,\" which supports the three units billed.\n\nThe plan of care and the progress note show that therapeutic exercise on 2026-09-18 met the criteria in Policy DEMO-PT-001. We respectfully request that Line 2, CPT 97110-GP x3, billed at $141.00, be overturned and paid.\n\nPlease contact our office with any questions.\n\nSincerely,\n\n[PROVIDER NAME, CREDENTIALS]\n[PRACTICE NAME]\n\nEnclosures:\n1. Remittance advice dated 2026-10-09\n2. Physical therapy plan of care dated 2026-08-04\n3. Progress note, visit 14, dated 2026-09-18",
+    "quotes": 7,
+    "quotesVerified": 7
+  },
+  "redactions": [
+    {
+      "label": "Name",
+      "count": 2
+    },
+    {
+      "label": "Date of birth",
+      "count": 2
+    },
+    {
+      "label": "MRN",
+      "count": 2
+    },
+    {
+      "label": "Phone",
+      "count": 1
+    }
+  ],
+  "trace": [
+    {
+      "name": "Remittance + policy lookup",
+      "detail": "2 of 3 lines denied; DEMO-PT-001"
+    },
+    {
+      "name": "Identifier redaction",
+      "detail": "7 identifiers removed from 2 documents"
+    },
+    {
+      "name": "Denial analysis (replay)",
+      "detail": "Loaded recorded live output"
+    },
+    {
+      "name": "Evidence check + recommendation",
+      "detail": "9 of 9 quotes found verbatim; 0 lines downgraded"
+    },
+    {
+      "name": "Appeal letter (replay)",
+      "detail": "Loaded recorded live output"
+    },
+    {
+      "name": "Letter quote check",
+      "detail": "7 of 7 quoted passages found in the records or policy"
+    }
+  ],
+  "raw": {
+    "analysis": {
+      "lines": [
+        {
+          "line": 2,
+          "category": "medical_necessity",
+          "explanation": "The payer denied therapeutic exercise as not medically necessary (CO-50). The policy covers 97110 when a current plan of care has measurable goals and the progress note shows measurable progress, and both are documented here.",
+          "action": "appeal",
+          "addresses_denial_reason": true,
+          "evidence": [
+            {
+              "doc_id": "DEMO-PT-001",
+              "quote": "Therapeutic exercise (CPT 97110) is medically necessary when a current plan of care documents measurable functional goals and the progress notes show measurable progress toward those goals."
+            },
+            {
+              "doc_id": "poc-1",
+              "quote": "1. Lift 25 lb from floor to waist without increase in pain, to return to warehouse work."
+            },
+            {
+              "doc_id": "poc-1",
+              "quote": "3. Oswestry Disability Index below 20%."
+            },
+            {
+              "doc_id": "note-14",
+              "quote": "Oswestry Disability Index 26% (42% at evaluation). Lifts 20 lb floor to waist with good mechanics and no pain increase. Sitting tolerance 45 minutes."
+            },
+            {
+              "doc_id": "note-14",
+              "quote": "Assessment: Measurable progress on all three goals."
+            },
+            {
+              "doc_id": "note-14",
+              "quote": "Therapeutic exercise 40 minutes (lifting progression, core stabilization)."
+            },
+            {
+              "doc_id": "DEMO-PT-001",
+              "quote": "three units for 38 to 52 minutes"
+            }
+          ],
+          "next_steps": "Submit an appeal with the 08/04/2026 plan of care and the 09/18/2026 visit 14 progress note, as the policy allows. Point out the measurable goals, the documented progress, and the 40 documented minutes that support 3 units."
+        },
+        {
+          "line": 3,
+          "category": "documentation",
+          "explanation": "The payer denied manual therapy as not medically necessary (CO-50). The policy requires the note to state the body region treated and the clinical finding that supports manual therapy, and the note records only the minutes.",
+          "action": "no_action",
+          "addresses_denial_reason": false,
+          "evidence": [
+            {
+              "doc_id": "DEMO-PT-001",
+              "quote": "Manual therapy (CPT 97140) requires documentation of the body region treated and the clinical finding that supports it, such as joint hypomobility or soft tissue restriction."
+            },
+            {
+              "doc_id": "note-14",
+              "quote": "Manual therapy 10 minutes."
+            }
+          ],
+          "next_steps": "Do not appeal, because the record does not support overturning the denial. For future visits, the note for any 97140 should name the body region treated and the supporting finding, such as joint hypomobility or soft tissue restriction."
+        }
+      ],
+      "summary": "Two lines totaling $203.00 billed were denied for medical necessity (CO-50). The $141.00 therapeutic exercise line looks recoverable by appeal: the plan of care has measurable goals, the 09/18 note shows measurable progress, and 40 documented minutes support 3 units. The $62.00 manual therapy line is not supported, because the note does not state the body region treated or a supporting clinical finding."
+    },
+    "letter": "[PRACTICE NAME]\n[DATE]\n\nHealth Plan Appeals Department\n\nRe: Appeal of Medical Necessity Denial\nMember ID: M-62018\nClaim number: CLM-88310427\nPayer claim number: 26261-004417\nDate of service: 2026-09-18\nRemit date: 2026-10-09\n\nAppealed line:\nLine 2: CPT 97110-GP x3, therapeutic exercise, billed $141.00, denied CO-50\n\nDear Appeals Department,\n\nWe are appealing the denial of Line 2 on the claim above. The service was denied under CO-50 as not medically necessary. The documentation meets the payer's own coverage criteria, so we ask that this line be reprocessed for payment.\n\nPolicy DEMO-PT-001, Outpatient physical therapy documentation, states: \"Therapeutic exercise (CPT 97110) is medically necessary when a current plan of care documents measurable functional goals and the progress notes show measurable progress toward those goals.\"\n\nBoth conditions are met.\n\nMeasurable functional goals: The current plan of care, dated 2026-08-04, sets these goals: \"1. Lift 25 lb from floor to waist without increase in pain, to return to warehouse work.\" and \"3. Oswestry Disability Index below 20%.\"\n\nMeasurable progress: The progress note for the date of service documents: \"Oswestry Disability Index 26% (42% at evaluation). Lifts 20 lb floor to waist with good mechanics and no pain increase. Sitting tolerance 45 minutes.\" The assessment states: \"Assessment: Measurable progress on all three goals.\"\n\nUnits billed: The note records \"Therapeutic exercise 40 minutes (lifting progression, core stabilization).\" Policy DEMO-PT-001 allows \"three units for 38 to 52 minutes,\" which supports the three units billed.\n\nThe plan of care and the progress note show that therapeutic exercise on 2026-09-18 met the criteria in Policy DEMO-PT-001. We respectfully request that Line 2, CPT 97110-GP x3, billed at $141.00, be overturned and paid.\n\nPlease contact our office with any questions.\n\nSincerely,\n\n[PROVIDER NAME, CREDENTIALS]\n[PRACTICE NAME]\n\nEnclosures:\n1. Remittance advice dated 2026-10-09\n2. Physical therapy plan of care dated 2026-08-04\n3. Progress note, visit 14, dated 2026-09-18"
+  }
+}

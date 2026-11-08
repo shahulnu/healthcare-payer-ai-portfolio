@@ -1,0 +1,256 @@
+{
+  "memberId": "M-20431",
+  "planName": "SilverChoice PPO 3500 (sample)",
+  "questionId": "Q-PPO-PCP",
+  "question": "How much is a regular visit with my primary care doctor?",
+  "mode": "replay",
+  "replaySource": "live",
+  "model": "claude-opus-5-5",
+  "status": "answered",
+  "answer": "If your primary care doctor is in-network, a regular visit for an illness or injury costs a $30 copay. The deductible doesn't apply. That's an estimate based on the plan's allowed amount of $140. The plan pays the other $110.\n\nIf your doctor is out-of-network, you'd pay 50% coinsurance after your deductible. Right now the estimate is that you'd pay the full allowed amount of $150, because it would go toward your $7,000 out-of-network deductible. An out-of-network doctor can also bill you for the difference between what they charge and the allowed amount. That's called balance billing, and it doesn't count toward your limits.\n\nA preventive checkup with an in-network doctor costs nothing. I can't check whether your doctor is in-network. Member services or the provider directory can confirm that.",
+  "escalationReason": null,
+  "citations": [
+    {
+      "sectionId": "SBC-2",
+      "doc": "SBC",
+      "page": 2,
+      "title": "Office visits",
+      "quote": "Primary care visit to treat an injury or illness: $30 copay in-network; 50% coinsurance after the deductible out-of-network.",
+      "verified": true
+    },
+    {
+      "sectionId": "SBC-2",
+      "doc": "SBC",
+      "page": 2,
+      "title": "Office visits",
+      "quote": "Preventive care, screenings and immunizations: no charge in-network.",
+      "verified": true
+    },
+    {
+      "sectionId": "SBC-1",
+      "doc": "SBC",
+      "page": 1,
+      "title": "Deductible and out-of-pocket limit",
+      "quote": "The deductible does not apply to preventive care or to primary care, specialist and urgent care copays.",
+      "verified": true
+    },
+    {
+      "sectionId": "SBC-1",
+      "doc": "SBC",
+      "page": 1,
+      "title": "Deductible and out-of-pocket limit",
+      "quote": "Your out-of-network deductible is $7,000 per person.",
+      "verified": true
+    },
+    {
+      "sectionId": "EOC-6.1",
+      "doc": "EOC",
+      "page": 52,
+      "title": "Out-of-network providers and balance billing",
+      "quote": "Balance-billed amounts do not count toward your deductible or out-of-pocket limit.",
+      "verified": true
+    }
+  ],
+  "estimates": [
+    {
+      "serviceId": "pcp_visit",
+      "serviceName": "Primary care office visit",
+      "network": "in",
+      "allowedAmount": 140,
+      "covered": true,
+      "deductiblePortion": 0,
+      "coinsurancePortion": 0,
+      "copay": 30,
+      "memberPays": 30,
+      "planPays": 110,
+      "notes": []
+    },
+    {
+      "serviceId": "pcp_visit",
+      "serviceName": "Primary care office visit",
+      "network": "out",
+      "allowedAmount": 150,
+      "covered": true,
+      "deductiblePortion": 150,
+      "coinsurancePortion": 0,
+      "copay": 0,
+      "memberPays": 150,
+      "planPays": 0,
+      "notes": [
+        "The provider may also balance bill the difference between their charge and the allowed amount."
+      ]
+    }
+  ],
+  "numberCheck": {
+    "found": [
+      "$30",
+      "$140",
+      "$110",
+      "$150",
+      "$7,000"
+    ],
+    "unsupported": []
+  },
+  "toolCalls": [
+    {
+      "name": "get_plan_sections",
+      "input": {
+        "section_ids": [
+          "SBC-1",
+          "SBC-2"
+        ]
+      },
+      "output": [
+        {
+          "id": "SBC-1",
+          "doc": "SBC",
+          "page": 1,
+          "title": "Deductible and out-of-pocket limit",
+          "text": "Your in-network deductible is $3,500 per person. Your out-of-network deductible is $7,000 per person. The deductible does not apply to preventive care or to primary care, specialist and urgent care copays. Your in-network out-of-pocket limit is $8,000 per person, and the out-of-network limit is $16,000. Copays, coinsurance and amounts you pay toward the deductible count toward the out-of-pocket limit. Premiums, balance-billed charges and services this plan doesn't cover do not."
+        },
+        {
+          "id": "SBC-2",
+          "doc": "SBC",
+          "page": 2,
+          "title": "Office visits",
+          "text": "Primary care visit to treat an injury or illness: $30 copay in-network; 50% coinsurance after the deductible out-of-network. Specialist visit: $60 copay in-network; 50% coinsurance after the deductible out-of-network. You do not need a referral to see a specialist. Preventive care, screenings and immunizations: no charge in-network."
+        }
+      ]
+    },
+    {
+      "name": "estimate_cost",
+      "input": {
+        "service_id": "pcp_visit",
+        "network": "in"
+      },
+      "output": {
+        "serviceId": "pcp_visit",
+        "serviceName": "Primary care office visit",
+        "network": "in",
+        "allowedAmount": 140,
+        "covered": true,
+        "deductiblePortion": 0,
+        "coinsurancePortion": 0,
+        "copay": 30,
+        "memberPays": 30,
+        "planPays": 110,
+        "notes": []
+      }
+    },
+    {
+      "name": "estimate_cost",
+      "input": {
+        "service_id": "pcp_visit",
+        "network": "out"
+      },
+      "output": {
+        "serviceId": "pcp_visit",
+        "serviceName": "Primary care office visit",
+        "network": "out",
+        "allowedAmount": 150,
+        "covered": true,
+        "deductiblePortion": 150,
+        "coinsurancePortion": 0,
+        "copay": 0,
+        "memberPays": 150,
+        "planPays": 0,
+        "notes": [
+          "The provider may also balance bill the difference between their charge and the allowed amount."
+        ]
+      }
+    },
+    {
+      "name": "get_plan_sections",
+      "input": {
+        "section_ids": [
+          "EOC-6.1"
+        ]
+      },
+      "output": [
+        {
+          "id": "EOC-6.1",
+          "doc": "EOC",
+          "page": 52,
+          "title": "Out-of-network providers and balance billing",
+          "text": "Out-of-network providers have no contract with the plan and may bill you for the difference between their charge and the plan's allowed amount. This is called balance billing. Balance-billed amounts do not count toward your deductible or out-of-pocket limit. The No Surprises Act protects you from balance billing for emergency care and for certain care at in-network facilities."
+        }
+      ]
+    }
+  ],
+  "trace": [
+    {
+      "name": "Member + plan lookup",
+      "detail": "SilverChoice PPO 3500 (sample), 8 sections"
+    },
+    {
+      "name": "Agent loop (replay)",
+      "detail": "Re-ran 4 recorded tool calls; loaded recorded live answer"
+    },
+    {
+      "name": "Citation + number check",
+      "detail": "5 of 5 quotes verified; 5 dollar amounts, 0 unsupported"
+    }
+  ],
+  "raw": {
+    "toolCalls": [
+      {
+        "name": "get_plan_sections",
+        "input": {
+          "section_ids": [
+            "SBC-1",
+            "SBC-2"
+          ]
+        }
+      },
+      {
+        "name": "estimate_cost",
+        "input": {
+          "service_id": "pcp_visit",
+          "network": "in"
+        }
+      },
+      {
+        "name": "estimate_cost",
+        "input": {
+          "service_id": "pcp_visit",
+          "network": "out"
+        }
+      },
+      {
+        "name": "get_plan_sections",
+        "input": {
+          "section_ids": [
+            "EOC-6.1"
+          ]
+        }
+      }
+    ],
+    "submission": {
+      "answer": "If your primary care doctor is in-network, a regular visit for an illness or injury costs a $30 copay. The deductible doesn't apply. That's an estimate based on the plan's allowed amount of $140. The plan pays the other $110.\n\nIf your doctor is out-of-network, you'd pay 50% coinsurance after your deductible. Right now the estimate is that you'd pay the full allowed amount of $150, because it would go toward your $7,000 out-of-network deductible. An out-of-network doctor can also bill you for the difference between what they charge and the allowed amount. That's called balance billing, and it doesn't count toward your limits.\n\nA preventive checkup with an in-network doctor costs nothing. I can't check whether your doctor is in-network. Member services or the provider directory can confirm that.",
+      "citations": [
+        {
+          "section_id": "SBC-2",
+          "quote": "Primary care visit to treat an injury or illness: $30 copay in-network; 50% coinsurance after the deductible out-of-network."
+        },
+        {
+          "section_id": "SBC-2",
+          "quote": "Preventive care, screenings and immunizations: no charge in-network."
+        },
+        {
+          "section_id": "SBC-1",
+          "quote": "The deductible does not apply to preventive care or to primary care, specialist and urgent care copays."
+        },
+        {
+          "section_id": "SBC-1",
+          "quote": "Your out-of-network deductible is $7,000 per person."
+        },
+        {
+          "section_id": "EOC-6.1",
+          "quote": "Balance-billed amounts do not count toward your deductible or out-of-pocket limit."
+        }
+      ],
+      "needs_human": false,
+      "escalation_reason": ""
+    }
+  }
+}

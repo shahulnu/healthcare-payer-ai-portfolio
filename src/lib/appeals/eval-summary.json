@@ -1,0 +1,12 @@
+{
+  "mode": "live",
+  "model": "claude-opus-5-5",
+  "runAt": "2026-11-01T13:01:04.705Z",
+  "claims": 3,
+  "lines": 5,
+  "actionAccuracy": 1,
+  "categoryAccuracy": 1,
+  "citationVerifiedRate": 1,
+  "unsupportedAppeals": 0,
+  "totalCostUsd": 0.1614
+}

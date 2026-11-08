@@ -1,0 +1,17 @@
+[
+  {
+    "id": "DEMO-PT-001",
+    "title": "Outpatient physical therapy documentation",
+    "text": "Therapeutic exercise (CPT 97110) is medically necessary when a current plan of care documents measurable functional goals and the progress notes show measurable progress toward those goals.\nManual therapy (CPT 97140) requires documentation of the body region treated and the clinical finding that supports it, such as joint hypomobility or soft tissue restriction.\nTime-based codes require the treatment minutes to be documented. One unit is billable for 8 to 22 minutes, two units for 23 to 37 minutes and three units for 38 to 52 minutes.\nA denial for medical necessity may be appealed with the plan of care and the progress note for the date of service."
+  },
+  {
+    "id": "DEMO-COD-004",
+    "title": "Evaluation and management on the same day as a minor procedure",
+    "text": "An evaluation and management (E/M) service on the same day as a minor procedure is separately payable only when the record documents a significant, separately identifiable E/M service beyond the usual evaluation before the procedure.\nThe E/M line must carry modifier 25. Without modifier 25 the E/M service is bundled into the procedure and denied with CARC 97.\nTo correct the denial, submit a replacement claim with modifier 25 on the E/M line. An appeal is not required."
+  },
+  {
+    "id": "DEMO-ADM-010",
+    "title": "Timely filing",
+    "text": "Claims must be received within 365 days of the date of service.\nThe plan will reconsider a claim denied for timely filing when the provider submits proof that the original claim was received within the filing limit.\nAcceptable proof is a claim acknowledgment (277CA) from the plan showing the payer claim control number and an acceptance date within the filing limit.\nClearinghouse reports that show only that a claim was sent, without the plan's acceptance, are not acceptable proof."
+  }
+]

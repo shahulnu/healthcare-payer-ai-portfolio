@@ -1,0 +1,345 @@
+{
+  "memberId": "M-81540",
+  "mode": "replay",
+  "replaySource": "live",
+  "model": "claude-opus-5-5",
+  "hccModel": "CMS-HCC V28",
+  "summary": "J44.9 is supported by exam, spirometry and inhaler treatment in the 2026-02-19 visit. C50.911 and I63.9 are not supported: the breast cancer is treated with no evidence of disease and the stroke is from 2023 without residual deficits, so the coder should consider Z85.3 and Z86.73 instead. The chart contained no embedded instructions requesting particular codes.",
+  "findings": [
+    {
+      "code": "C50.911",
+      "description": "Malignant neoplasm of right female breast, active",
+      "hcc": "23",
+      "hccName": "Prostate, Breast, and Other Cancers and Tumors",
+      "submitted": true,
+      "modelAssessment": "not_supported",
+      "disposition": "review_deletion",
+      "codeNote": null,
+      "meatMet": [
+        "A"
+      ],
+      "evidence": [
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "Right breast cancer treated with lumpectomy and radiation in 2019.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "Completed tamoxifen in 2024.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "No evidence of disease on last imaging.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "History of breast cancer.",
+          "verified": true,
+          "acceptableSource": true
+        }
+      ],
+      "rationale": "Breast cancer was treated, adjuvant therapy is complete and there is no evidence of disease, so the active-cancer code is not supported and Z85.3 fits instead."
+    },
+    {
+      "code": "I63.9",
+      "description": "Cerebral infarction, unspecified (acute stroke)",
+      "hcc": "249",
+      "hccName": "Ischemic or Unspecified Stroke",
+      "submitted": true,
+      "modelAssessment": "not_supported",
+      "disposition": "review_deletion",
+      "codeNote": null,
+      "meatMet": [
+        "A",
+        "E"
+      ],
+      "evidence": [
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "History of stroke in 2023 with no residual deficits, on aspirin.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "E",
+          "docId": "enc-1",
+          "quote": "Neurologic exam normal.",
+          "verified": true,
+          "acceptableSource": true
+        }
+      ],
+      "rationale": "The stroke occurred in 2023 and is documented as history without residual deficits, so the acute stroke code is not supported and Z86.73 fits instead."
+    },
+    {
+      "code": "J44.9",
+      "description": "COPD, unspecified",
+      "hcc": "280",
+      "hccName": "Chronic Obstructive Pulmonary Disease and Other Chronic Lung Disorders",
+      "submitted": true,
+      "modelAssessment": "supported",
+      "disposition": "confirmed",
+      "codeNote": null,
+      "meatMet": [
+        "E",
+        "A",
+        "M",
+        "T"
+      ],
+      "evidence": [
+        {
+          "element": "E",
+          "docId": "enc-1",
+          "quote": "Scattered expiratory wheezes bilaterally.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "COPD, moderate.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "M",
+          "docId": "enc-1",
+          "quote": "FEV1 58% of predicted on spirometry today.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "T",
+          "docId": "enc-1",
+          "quote": "Continue tiotropium daily and albuterol as needed.",
+          "verified": true,
+          "acceptableSource": true
+        }
+      ],
+      "rationale": "The provider documents current COPD with exam, spirometry, assessment and ongoing inhaler treatment in an acceptable encounter."
+    },
+    {
+      "code": "Z85.3",
+      "description": "Personal history of breast cancer",
+      "hcc": null,
+      "hccName": null,
+      "submitted": false,
+      "modelAssessment": "supported",
+      "disposition": "no_hcc",
+      "codeNote": null,
+      "meatMet": [
+        "A",
+        "M"
+      ],
+      "evidence": [
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "History of breast cancer.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "M",
+          "docId": "enc-1",
+          "quote": "Annual screening mammogram due in June.",
+          "verified": true,
+          "acceptableSource": true
+        }
+      ],
+      "rationale": "The provider documents a personal history of breast cancer with surveillance planned."
+    },
+    {
+      "code": "Z86.73",
+      "description": "Personal history of stroke without residual deficits",
+      "hcc": null,
+      "hccName": null,
+      "submitted": false,
+      "modelAssessment": "supported",
+      "disposition": "no_hcc",
+      "codeNote": null,
+      "meatMet": [
+        "A",
+        "T"
+      ],
+      "evidence": [
+        {
+          "element": "A",
+          "docId": "enc-1",
+          "quote": "History of stroke in 2023 with no residual deficits, on aspirin.",
+          "verified": true,
+          "acceptableSource": true
+        },
+        {
+          "element": "T",
+          "docId": "enc-1",
+          "quote": "Continue aspirin.",
+          "verified": true,
+          "acceptableSource": true
+        }
+      ],
+      "rationale": "The provider documents a past stroke without residual deficits, with aspirin continued."
+    }
+  ],
+  "counts": {
+    "add": 0,
+    "confirmed": 1,
+    "superseded": 0,
+    "review_deletion": 2,
+    "query_provider": 0,
+    "no_hcc": 2,
+    "no_action": 0
+  },
+  "redactions": [
+    {
+      "label": "Name",
+      "count": 1
+    },
+    {
+      "label": "Date of birth",
+      "count": 1
+    },
+    {
+      "label": "MRN",
+      "count": 1
+    },
+    {
+      "label": "Phone",
+      "count": 1
+    }
+  ],
+  "trace": [
+    {
+      "name": "Identifier redaction",
+      "detail": "4 identifiers removed from 1 documents"
+    },
+    {
+      "name": "Chart review (replay)",
+      "detail": "Loaded recorded live output"
+    },
+    {
+      "name": "Quote check + HCC map + hierarchy",
+      "detail": "14 of 14 quotes verified; 0 findings adjusted by code"
+    }
+  ],
+  "raw": {
+    "conditions": [
+      {
+        "icd10": "J44.9",
+        "assessment": "supported",
+        "evidence": [
+          {
+            "element": "E",
+            "doc_id": "enc-1",
+            "quote": "Scattered expiratory wheezes bilaterally."
+          },
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "COPD, moderate."
+          },
+          {
+            "element": "M",
+            "doc_id": "enc-1",
+            "quote": "FEV1 58% of predicted on spirometry today."
+          },
+          {
+            "element": "T",
+            "doc_id": "enc-1",
+            "quote": "Continue tiotropium daily and albuterol as needed."
+          }
+        ],
+        "rationale": "The provider documents current COPD with exam, spirometry, assessment and ongoing inhaler treatment in an acceptable encounter."
+      },
+      {
+        "icd10": "C50.911",
+        "assessment": "not_supported",
+        "evidence": [
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "Right breast cancer treated with lumpectomy and radiation in 2019."
+          },
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "Completed tamoxifen in 2024."
+          },
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "No evidence of disease on last imaging."
+          },
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "History of breast cancer."
+          }
+        ],
+        "rationale": "Breast cancer was treated, adjuvant therapy is complete and there is no evidence of disease, so the active-cancer code is not supported and Z85.3 fits instead."
+      },
+      {
+        "icd10": "Z85.3",
+        "assessment": "supported",
+        "evidence": [
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "History of breast cancer."
+          },
+          {
+            "element": "M",
+            "doc_id": "enc-1",
+            "quote": "Annual screening mammogram due in June."
+          }
+        ],
+        "rationale": "The provider documents a personal history of breast cancer with surveillance planned."
+      },
+      {
+        "icd10": "I63.9",
+        "assessment": "not_supported",
+        "evidence": [
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "History of stroke in 2023 with no residual deficits, on aspirin."
+          },
+          {
+            "element": "E",
+            "doc_id": "enc-1",
+            "quote": "Neurologic exam normal."
+          }
+        ],
+        "rationale": "The stroke occurred in 2023 and is documented as history without residual deficits, so the acute stroke code is not supported and Z86.73 fits instead."
+      },
+      {
+        "icd10": "Z86.73",
+        "assessment": "supported",
+        "evidence": [
+          {
+            "element": "A",
+            "doc_id": "enc-1",
+            "quote": "History of stroke in 2023 with no residual deficits, on aspirin."
+          },
+          {
+            "element": "T",
+            "doc_id": "enc-1",
+            "quote": "Continue aspirin."
+          }
+        ],
+        "rationale": "The provider documents a past stroke without residual deficits, with aspirin continued."
+      }
+    ],
+    "summary": "J44.9 is supported by exam, spirometry and inhaler treatment in the 2026-02-19 visit. C50.911 and I63.9 are not supported: the breast cancer is treated with no evidence of disease and the stroke is from 2023 without residual deficits, so the coder should consider Z85.3 and Z86.73 instead. The chart contained no embedded instructions requesting particular codes."
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "providerId": "PRV-SYN-2027",
+  "mode": "replay",
+  "replaySource": "live",
+  "model": "claude-opus-5-5",
+  "status": "ready",
+  "holdReasons": [],
+  "numberCheck": {
+    "found": [
+      "31.0",
+      "2026",
+      "3",
+      "12.4",
+      "2,976",
+      "2026",
+      "3",
+      "31.0",
+      "12.4",
+      "40",
+      "10.9",
+      "3.01",
+      "3.09",
+      "59",
+      "11.8",
+      "12.5",
+      "9.2",
+      "8.9",
+      "169,200",
+      "30",
+      "24.0",
+      "4",
+      "17.6"
+    ],
+    "unsupported": []
+  },
+  "languageCheck": {
+    "flagged": []
+  },
+  "citationCheck": {
+    "cited": [
+      "F-COHORT",
+      "F-VOLUME",
+      "F-units_per_visit",
+      "F-four_plus_unit_share",
+      "F-visits_per_patient",
+      "F-modifier59_rate",
+      "F-peak_day_hours",
+      "F-EXPOSURE",
+      "F-TIER",
+      "F-SAMPLE"
+    ],
+    "unknown": [],
+    "citesFlagged": true
+  },
+  "tier": "high",
+  "action": "Open a records review",
+  "brief": {
+    "headline": "PRV-SYN-2027 billed 31.0 physical therapy visits per patient in 2026 Q3, well above the peer median of 12.4, while per-visit billing measures sit near peers.",
+    "pattern": "Across 2,976 visits in 2026 Q3, this provider averaged 31.0 visits per patient against a peer median of 12.4 among 40 Physical Therapy providers (robust z-score 10.9), the only measure the screen flagged. Per-visit measures such as timed units per visit (3.01 vs. peer median 3.09), modifier 59 use (11.8% vs. 12.5%) and busiest-day billed hours (9.2 vs. 8.9) are close to peers, so the question for review is mainly the length and medical necessity of episodes of care rather than how individual visits are coded. The screen sized the lead at an estimated $169,200 above the peer pattern, which is a sizing figure and not an overpayment finding.",
+    "alternative_explanations": [
+      "The provider may treat a patient mix that needs long courses of therapy, such as post-surgical, neurological or chronic conditions. Diagnosis codes and referral sources in the sampled records would confirm this if they show a higher-acuity mix than typical outpatient therapy, or rule it out if the conditions match those seen by peers.",
+      "The practice may provide therapy in a setting where ongoing care is expected, such as a rehabilitation program or maintenance therapy permitted under the plan's policy. Place of service, program enrollment and documented maintenance goals would confirm or rule this out.",
+      "Patient counting may be affected by how members are identified, for example a small number of long-term patients or data issues that merge patients, which would raise visits per patient. Reviewing the distribution of visits across individual patients and checking member identifiers would show whether a few patients drive the figure or whether it is spread broadly.",
+      "Visits may be continuing under valid plans of care with documented progress and recertifications. Plans of care, physician signatures, progress notes and objective functional measures would confirm ongoing necessity, or show whether care continued without documented progress or updated goals."
+    ],
+    "next_steps": [
+      "Open a records review as directed by the screen tier and request a sample of 30 claims.",
+      "Weight the sample toward patients with the highest visit counts in the period, while including some typical-volume patients for comparison.",
+      "For each sampled patient, review the initial evaluation, plan of care, recertifications, progress notes and discharge status to assess whether continued visits were supported by documented goals and progress.",
+      "Pull the patient-level distribution of visits and diagnosis mix for this provider and compare it with peers to see whether the high visits per patient reflects case mix or a broad pattern.",
+      "Note the 24.0% share of visits with 4 or more timed units (peer median 17.6%, not flagged) and check timed-unit documentation in the sampled notes as a secondary item.",
+      "Document findings for the decision-makers without drawing conclusions about the provider's conduct before the records review is complete."
+    ],
+    "cited_fact_ids": [
+      "F-COHORT",
+      "F-VOLUME",
+      "F-units_per_visit",
+      "F-four_plus_unit_share",
+      "F-visits_per_patient",
+      "F-modifier59_rate",
+      "F-peak_day_hours",
+      "F-EXPOSURE",
+      "F-TIER",
+      "F-SAMPLE"
+    ]
+  },
+  "facts": [
+    {
+      "id": "F-COHORT",
+      "text": "Review period 2026 Q3. Peer group: 40 Physical Therapy providers.",
+      "flagged": false
+    },
+    {
+      "id": "F-VOLUME",
+      "text": "Visits in the period: 2,976.",
+      "flagged": false
+    },
+    {
+      "id": "F-units_per_visit",
+      "text": "Timed units per visit: 3.01 (peer median 3.09, robust z-score -0.4). Not flagged.",
+      "flagged": false
+    },
+    {
+      "id": "F-four_plus_unit_share",
+      "text": "Visits with 4 or more timed units: 24.0% (peer median 17.6%, robust z-score 2.1). Not flagged.",
+      "flagged": false
+    },
+    {
+      "id": "F-visits_per_patient",
+      "text": "Visits per patient: 31.0 (peer median 12.4, robust z-score 10.9). Flagged by the screen.",
+      "flagged": true
+    },
+    {
+      "id": "F-modifier59_rate",
+      "text": "Visits billed with modifier 59: 11.8% (peer median 12.5%, robust z-score -0.3). Not flagged.",
+      "flagged": false
+    },
+    {
+      "id": "F-peak_day_hours",
+      "text": "Busiest day, billed time implied by codes: 9.2 hours (peer median 8.9 hours, robust z-score 0.3). Not flagged.",
+      "flagged": false
+    },
+    {
+      "id": "F-EXPOSURE",
+      "text": "Estimated billing above the peer pattern: $169,200. This sizes the lead and is not an overpayment finding.",
+      "flagged": false
+    },
+    {
+      "id": "F-TIER",
+      "text": "Screen tier: high. Screen score: 52. Action: Open a records review.",
+      "flagged": false
+    },
+    {
+      "id": "F-SAMPLE",
+      "text": "Record sample to request: 30 claims.",
+      "flagged": false
+    }
+  ],
+  "trace": [
+    {
+      "name": "Screen results to facts",
+      "detail": "10 facts, 1 flagged; aggregates only, no member data"
+    },
+    {
+      "name": "Lead brief (replay)",
+      "detail": "Loaded recorded live output"
+    },
+    {
+      "name": "Number + language + citation check",
+      "detail": "23 figures, 0 unsupported; 0 flagged words; 10 citations"
+    }
+  ],
+  "raw": {
+    "headline": "PRV-SYN-2027 billed 31.0 physical therapy visits per patient in 2026 Q3, well above the peer median of 12.4, while per-visit billing measures sit near peers.",
+    "pattern": "Across 2,976 visits in 2026 Q3, this provider averaged 31.0 visits per patient against a peer median of 12.4 among 40 Physical Therapy providers (robust z-score 10.9), the only measure the screen flagged. Per-visit measures such as timed units per visit (3.01 vs. peer median 3.09), modifier 59 use (11.8% vs. 12.5%) and busiest-day billed hours (9.2 vs. 8.9) are close to peers, so the question for review is mainly the length and medical necessity of episodes of care rather than how individual visits are coded. The screen sized the lead at an estimated $169,200 above the peer pattern, which is a sizing figure and not an overpayment finding.",
+    "alternative_explanations": [
+      "The provider may treat a patient mix that needs long courses of therapy, such as post-surgical, neurological or chronic conditions. Diagnosis codes and referral sources in the sampled records would confirm this if they show a higher-acuity mix than typical outpatient therapy, or rule it out if the conditions match those seen by peers.",
+      "The practice may provide therapy in a setting where ongoing care is expected, such as a rehabilitation program or maintenance therapy permitted under the plan's policy. Place of service, program enrollment and documented maintenance goals would confirm or rule this out.",
+      "Patient counting may be affected by how members are identified, for example a small number of long-term patients or data issues that merge patients, which would raise visits per patient. Reviewing the distribution of visits across individual patients and checking member identifiers would show whether a few patients drive the figure or whether it is spread broadly.",
+      "Visits may be continuing under valid plans of care with documented progress and recertifications. Plans of care, physician signatures, progress notes and objective functional measures would confirm ongoing necessity, or show whether care continued without documented progress or updated goals."
+    ],
+    "next_steps": [
+      "Open a records review as directed by the screen tier and request a sample of 30 claims.",
+      "Weight the sample toward patients with the highest visit counts in the period, while including some typical-volume patients for comparison.",
+      "For each sampled patient, review the initial evaluation, plan of care, recertifications, progress notes and discharge status to assess whether continued visits were supported by documented goals and progress.",
+      "Pull the patient-level distribution of visits and diagnosis mix for this provider and compare it with peers to see whether the high visits per patient reflects case mix or a broad pattern.",
+      "Note the 24.0% share of visits with 4 or more timed units (peer median 17.6%, not flagged) and check timed-unit documentation in the sampled notes as a secondary item.",
+      "Document findings for the decision-makers without drawing conclusions about the provider's conduct before the records review is complete."
+    ],
+    "cited_fact_ids": [
+      "F-COHORT",
+      "F-VOLUME",
+      "F-units_per_visit",
+      "F-four_plus_unit_share",
+      "F-visits_per_patient",
+      "F-modifier59_rate",
+      "F-peak_day_hours",
+      "F-EXPOSURE",
+      "F-TIER",
+      "F-SAMPLE"
+    ]
+  }
+}

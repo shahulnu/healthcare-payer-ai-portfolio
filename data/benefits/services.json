@@ -1,0 +1,10 @@
+[
+  { "id": "pcp_visit", "name": "Primary care office visit", "code": "CPT 99213", "category": "primary_care", "allowed": { "in": 140, "out": 150 } },
+  { "id": "specialist_visit", "name": "Specialist office visit", "code": "CPT 99214", "category": "specialist", "allowed": { "in": 210, "out": 230 } },
+  { "id": "mri_knee", "name": "MRI of the knee", "code": "CPT 73721", "category": "imaging", "allowed": { "in": 1020, "out": 1100 } },
+  { "id": "urgent_care", "name": "Urgent care visit", "code": "CPT 99214 + S9088", "category": "urgent_care", "allowed": { "in": 180, "out": 190 } },
+  { "id": "er_visit", "name": "Emergency room visit", "code": "CPT 99284", "category": "emergency", "allowed": { "in": 1450, "out": 1450 } },
+  { "id": "pt_visit", "name": "Physical therapy visit", "code": "CPT 97110 x2", "category": "rehab", "allowed": { "in": 160, "out": 170 } },
+  { "id": "preventive_visit", "name": "Annual preventive visit", "code": "CPT 99396", "category": "preventive", "allowed": { "in": 245, "out": 260 } },
+  { "id": "acupuncture", "name": "Acupuncture session", "code": "CPT 97810", "category": "excluded", "allowed": { "in": 95, "out": 110 } }
+]

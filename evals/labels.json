@@ -1,0 +1,17 @@
+{
+  "note": "Reviewer labels for the synthetic demo cases. Expand to 150-300 cases with labels from a UM nurse before quoting results.",
+  "cases": {
+    "PA-2026-01487": {
+      "route": "recommend_approve",
+      "criteria": { "C1": "met", "C2": "met", "C3": "met", "C4": "met" }
+    },
+    "PA-2026-01502": {
+      "route": "nurse_review",
+      "criteria": { "C1": "met", "C2": "not_met", "C3": "met", "C4": "met", "C5": "met" }
+    },
+    "PA-2026-01519": {
+      "route": "request_info",
+      "criteria": { "C1": "met", "C2": "insufficient", "C3": "met" }
+    }
+  }
+}

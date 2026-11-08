@@ -1,0 +1,256 @@
+{
+  "memberId": "M-20431",
+  "planName": "SilverChoice PPO 3500 (sample)",
+  "questionId": "Q-PPO-MRI",
+  "question": "My doctor wants me to get an MRI of my knee. Is it covered, and what will I pay?",
+  "mode": "replay",
+  "replaySource": "live",
+  "model": "claude-opus-5-5",
+  "status": "answered",
+  "answer": "Yes, a knee MRI is covered, but you need prior authorization first. If you use an in-network provider, they will ask the plan for approval for you. If you go out of network, you have to get the approval yourself. Without it, the plan may pay less or not pay at all.\n\nThese estimates are based on the plan's allowed amount and your totals as of October 31, 2026:\n- In network: you pay about $586 ($400 toward your deductible plus $186 in coinsurance). The plan pays about $434.\n- Out of network: you pay about $1,100, and the plan pays $0. The provider can also bill you for the gap between their charge and the allowed amount. That extra amount doesn't count toward your deductible or out-of-pocket limit.",
+  "escalationReason": null,
+  "citations": [
+    {
+      "sectionId": "SBC-3",
+      "doc": "SBC",
+      "page": 2,
+      "title": "Diagnostic tests and imaging",
+      "quote": "Imaging such as CT, PET and MRI scans: 30% coinsurance after the deductible in-network; 50% coinsurance after the deductible out-of-network.",
+      "verified": true
+    },
+    {
+      "sectionId": "SBC-3",
+      "doc": "SBC",
+      "page": 2,
+      "title": "Diagnostic tests and imaging",
+      "quote": "Prior authorization is required for CT, PET and MRI scans.",
+      "verified": true
+    },
+    {
+      "sectionId": "EOC-4.2",
+      "doc": "EOC",
+      "page": 38,
+      "title": "Prior authorization",
+      "quote": "If you use an out-of-network provider, you are responsible for getting prior authorization. Without it, the plan may reduce or deny payment.",
+      "verified": true
+    },
+    {
+      "sectionId": "EOC-6.1",
+      "doc": "EOC",
+      "page": 52,
+      "title": "Out-of-network providers and balance billing",
+      "quote": "Balance-billed amounts do not count toward your deductible or out-of-pocket limit.",
+      "verified": true
+    },
+    {
+      "sectionId": "SBC-1",
+      "doc": "SBC",
+      "page": 1,
+      "title": "Deductible and out-of-pocket limit",
+      "quote": "Your in-network deductible is $3,500 per person.",
+      "verified": true
+    }
+  ],
+  "estimates": [
+    {
+      "serviceId": "mri_knee",
+      "serviceName": "MRI of the knee",
+      "network": "in",
+      "allowedAmount": 1020,
+      "covered": true,
+      "deductiblePortion": 400,
+      "coinsurancePortion": 186,
+      "copay": 0,
+      "memberPays": 586,
+      "planPays": 434,
+      "notes": [
+        "Prior authorization is required."
+      ]
+    },
+    {
+      "serviceId": "mri_knee",
+      "serviceName": "MRI of the knee",
+      "network": "out",
+      "allowedAmount": 1100,
+      "covered": true,
+      "deductiblePortion": 1100,
+      "coinsurancePortion": 0,
+      "copay": 0,
+      "memberPays": 1100,
+      "planPays": 0,
+      "notes": [
+        "Prior authorization is required.",
+        "The provider may also balance bill the difference between their charge and the allowed amount."
+      ]
+    }
+  ],
+  "numberCheck": {
+    "found": [
+      "$586",
+      "$400",
+      "$186",
+      "$434",
+      "$1,100",
+      "$0"
+    ],
+    "unsupported": []
+  },
+  "toolCalls": [
+    {
+      "name": "get_plan_sections",
+      "input": {
+        "section_ids": [
+          "SBC-1",
+          "SBC-3",
+          "EOC-4.2",
+          "EOC-6.1"
+        ]
+      },
+      "output": [
+        {
+          "id": "SBC-1",
+          "doc": "SBC",
+          "page": 1,
+          "title": "Deductible and out-of-pocket limit",
+          "text": "Your in-network deductible is $3,500 per person. Your out-of-network deductible is $7,000 per person. The deductible does not apply to preventive care or to primary care, specialist and urgent care copays. Your in-network out-of-pocket limit is $8,000 per person, and the out-of-network limit is $16,000. Copays, coinsurance and amounts you pay toward the deductible count toward the out-of-pocket limit. Premiums, balance-billed charges and services this plan doesn't cover do not."
+        },
+        {
+          "id": "SBC-3",
+          "doc": "SBC",
+          "page": 2,
+          "title": "Diagnostic tests and imaging",
+          "text": "Diagnostic tests such as x-rays and blood work: 30% coinsurance after the deductible in-network; 50% coinsurance after the deductible out-of-network. Imaging such as CT, PET and MRI scans: 30% coinsurance after the deductible in-network; 50% coinsurance after the deductible out-of-network. Prior authorization is required for CT, PET and MRI scans."
+        },
+        {
+          "id": "EOC-4.2",
+          "doc": "EOC",
+          "page": 38,
+          "title": "Prior authorization",
+          "text": "Some services need approval from the plan before you receive them. Your in-network provider requests prior authorization for you. Services that need prior authorization include CT, PET and MRI scans, inpatient admissions that are not emergencies, and outpatient surgery. If you use an out-of-network provider, you are responsible for getting prior authorization. Without it, the plan may reduce or deny payment."
+        },
+        {
+          "id": "EOC-6.1",
+          "doc": "EOC",
+          "page": 52,
+          "title": "Out-of-network providers and balance billing",
+          "text": "Out-of-network providers have no contract with the plan and may bill you for the difference between their charge and the plan's allowed amount. This is called balance billing. Balance-billed amounts do not count toward your deductible or out-of-pocket limit. The No Surprises Act protects you from balance billing for emergency care and for certain care at in-network facilities."
+        }
+      ]
+    },
+    {
+      "name": "estimate_cost",
+      "input": {
+        "service_id": "mri_knee",
+        "network": "in"
+      },
+      "output": {
+        "serviceId": "mri_knee",
+        "serviceName": "MRI of the knee",
+        "network": "in",
+        "allowedAmount": 1020,
+        "covered": true,
+        "deductiblePortion": 400,
+        "coinsurancePortion": 186,
+        "copay": 0,
+        "memberPays": 586,
+        "planPays": 434,
+        "notes": [
+          "Prior authorization is required."
+        ]
+      }
+    },
+    {
+      "name": "estimate_cost",
+      "input": {
+        "service_id": "mri_knee",
+        "network": "out"
+      },
+      "output": {
+        "serviceId": "mri_knee",
+        "serviceName": "MRI of the knee",
+        "network": "out",
+        "allowedAmount": 1100,
+        "covered": true,
+        "deductiblePortion": 1100,
+        "coinsurancePortion": 0,
+        "copay": 0,
+        "memberPays": 1100,
+        "planPays": 0,
+        "notes": [
+          "Prior authorization is required.",
+          "The provider may also balance bill the difference between their charge and the allowed amount."
+        ]
+      }
+    }
+  ],
+  "trace": [
+    {
+      "name": "Member + plan lookup",
+      "detail": "SilverChoice PPO 3500 (sample), 8 sections"
+    },
+    {
+      "name": "Agent loop (replay)",
+      "detail": "Re-ran 3 recorded tool calls; loaded recorded live answer"
+    },
+    {
+      "name": "Citation + number check",
+      "detail": "5 of 5 quotes verified; 6 dollar amounts, 0 unsupported"
+    }
+  ],
+  "raw": {
+    "toolCalls": [
+      {
+        "name": "get_plan_sections",
+        "input": {
+          "section_ids": [
+            "SBC-1",
+            "SBC-3",
+            "EOC-4.2",
+            "EOC-6.1"
+          ]
+        }
+      },
+      {
+        "name": "estimate_cost",
+        "input": {
+          "service_id": "mri_knee",
+          "network": "in"
+        }
+      },
+      {
+        "name": "estimate_cost",
+        "input": {
+          "service_id": "mri_knee",
+          "network": "out"
+        }
+      }
+    ],
+    "submission": {
+      "answer": "Yes, a knee MRI is covered, but you need prior authorization first. If you use an in-network provider, they will ask the plan for approval for you. If you go out of network, you have to get the approval yourself. Without it, the plan may pay less or not pay at all.\n\nThese estimates are based on the plan's allowed amount and your totals as of October 31, 2026:\n- In network: you pay about $586 ($400 toward your deductible plus $186 in coinsurance). The plan pays about $434.\n- Out of network: you pay about $1,100, and the plan pays $0. The provider can also bill you for the gap between their charge and the allowed amount. That extra amount doesn't count toward your deductible or out-of-pocket limit.",
+      "citations": [
+        {
+          "section_id": "SBC-3",
+          "quote": "Imaging such as CT, PET and MRI scans: 30% coinsurance after the deductible in-network; 50% coinsurance after the deductible out-of-network."
+        },
+        {
+          "section_id": "SBC-3",
+          "quote": "Prior authorization is required for CT, PET and MRI scans."
+        },
+        {
+          "section_id": "EOC-4.2",
+          "quote": "If you use an out-of-network provider, you are responsible for getting prior authorization. Without it, the plan may reduce or deny payment."
+        },
+        {
+          "section_id": "EOC-6.1",
+          "quote": "Balance-billed amounts do not count toward your deductible or out-of-pocket limit."
+        },
+        {
+          "section_id": "SBC-1",
+          "quote": "Your in-network deductible is $3,500 per person."
+        }
+      ],
+      "needs_human": false,
+      "escalation_reason": ""
+    }
+  }
+}

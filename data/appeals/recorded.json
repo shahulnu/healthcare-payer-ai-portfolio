@@ -1,0 +1,157 @@
+{
+  "source": "live",
+  "note": "Recorded from a live run on 2026-11-01.",
+  "model": "claude-opus-5-5",
+  "cases": {
+    "CLM-88310427": {
+      "analysis": {
+        "lines": [
+          {
+            "line": 2,
+            "category": "medical_necessity",
+            "explanation": "The payer denied therapeutic exercise as not medically necessary (CO-50). The policy covers 97110 when a current plan of care has measurable goals and the progress note shows measurable progress, and both are documented here.",
+            "action": "appeal",
+            "addresses_denial_reason": true,
+            "evidence": [
+              {
+                "doc_id": "DEMO-PT-001",
+                "quote": "Therapeutic exercise (CPT 97110) is medically necessary when a current plan of care documents measurable functional goals and the progress notes show measurable progress toward those goals."
+              },
+              {
+                "doc_id": "poc-1",
+                "quote": "1. Lift 25 lb from floor to waist without increase in pain, to return to warehouse work."
+              },
+              {
+                "doc_id": "poc-1",
+                "quote": "3. Oswestry Disability Index below 20%."
+              },
+              {
+                "doc_id": "note-14",
+                "quote": "Oswestry Disability Index 26% (42% at evaluation). Lifts 20 lb floor to waist with good mechanics and no pain increase. Sitting tolerance 45 minutes."
+              },
+              {
+                "doc_id": "note-14",
+                "quote": "Assessment: Measurable progress on all three goals."
+              },
+              {
+                "doc_id": "note-14",
+                "quote": "Therapeutic exercise 40 minutes (lifting progression, core stabilization)."
+              },
+              {
+                "doc_id": "DEMO-PT-001",
+                "quote": "three units for 38 to 52 minutes"
+              }
+            ],
+            "next_steps": "Submit an appeal with the 08/04/2026 plan of care and the 09/18/2026 visit 14 progress note, as the policy allows. Point out the measurable goals, the documented progress, and the 40 documented minutes that support 3 units."
+          },
+          {
+            "line": 3,
+            "category": "documentation",
+            "explanation": "The payer denied manual therapy as not medically necessary (CO-50). The policy requires the note to state the body region treated and the clinical finding that supports manual therapy, and the note records only the minutes.",
+            "action": "no_action",
+            "addresses_denial_reason": false,
+            "evidence": [
+              {
+                "doc_id": "DEMO-PT-001",
+                "quote": "Manual therapy (CPT 97140) requires documentation of the body region treated and the clinical finding that supports it, such as joint hypomobility or soft tissue restriction."
+              },
+              {
+                "doc_id": "note-14",
+                "quote": "Manual therapy 10 minutes."
+              }
+            ],
+            "next_steps": "Do not appeal, because the record does not support overturning the denial. For future visits, the note for any 97140 should name the body region treated and the supporting finding, such as joint hypomobility or soft tissue restriction."
+          }
+        ],
+        "summary": "Two lines totaling $203.00 billed were denied for medical necessity (CO-50). The $141.00 therapeutic exercise line looks recoverable by appeal: the plan of care has measurable goals, the 09/18 note shows measurable progress, and 40 documented minutes support 3 units. The $62.00 manual therapy line is not supported, because the note does not state the body region treated or a supporting clinical finding."
+      },
+      "letter": "[PRACTICE NAME]\n[DATE]\n\nHealth Plan Appeals Department\n\nRe: Appeal of Medical Necessity Denial\nMember ID: M-62018\nClaim number: CLM-88310427\nPayer claim number: 26261-004417\nDate of service: 2026-09-18\nRemit date: 2026-10-09\n\nAppealed line:\nLine 2: CPT 97110-GP x3, therapeutic exercise, billed $141.00, denied CO-50\n\nDear Appeals Department,\n\nWe are appealing the denial of Line 2 on the claim above. The service was denied under CO-50 as not medically necessary. The documentation meets the payer's own coverage criteria, so we ask that this line be reprocessed for payment.\n\nPolicy DEMO-PT-001, Outpatient physical therapy documentation, states: \"Therapeutic exercise (CPT 97110) is medically necessary when a current plan of care documents measurable functional goals and the progress notes show measurable progress toward those goals.\"\n\nBoth conditions are met.\n\nMeasurable functional goals: The current plan of care, dated 2026-08-04, sets these goals: \"1. Lift 25 lb from floor to waist without increase in pain, to return to warehouse work.\" and \"3. Oswestry Disability Index below 20%.\"\n\nMeasurable progress: The progress note for the date of service documents: \"Oswestry Disability Index 26% (42% at evaluation). Lifts 20 lb floor to waist with good mechanics and no pain increase. Sitting tolerance 45 minutes.\" The assessment states: \"Assessment: Measurable progress on all three goals.\"\n\nUnits billed: The note records \"Therapeutic exercise 40 minutes (lifting progression, core stabilization).\" Policy DEMO-PT-001 allows \"three units for 38 to 52 minutes,\" which supports the three units billed.\n\nThe plan of care and the progress note show that therapeutic exercise on 2026-09-18 met the criteria in Policy DEMO-PT-001. We respectfully request that Line 2, CPT 97110-GP x3, billed at $141.00, be overturned and paid.\n\nPlease contact our office with any questions.\n\nSincerely,\n\n[PROVIDER NAME, CREDENTIALS]\n[PRACTICE NAME]\n\nEnclosures:\n1. Remittance advice dated 2026-10-09\n2. Physical therapy plan of care dated 2026-08-04\n3. Progress note, visit 14, dated 2026-09-18"
+    },
+    "CLM-88412290": {
+      "analysis": {
+        "lines": [
+          {
+            "line": 2,
+            "category": "coding",
+            "explanation": "The office visit was billed on the same day as the knee joint injection without modifier 25, so the payer bundled it into the procedure (CO-97/M15). The note shows a separate diabetes visit beyond the pre-procedure knee evaluation, which supports modifier 25.",
+            "action": "corrected_claim",
+            "addresses_denial_reason": true,
+            "evidence": [
+              {
+                "doc_id": "DEMO-COD-004",
+                "quote": "The E/M line must carry modifier 25. Without modifier 25 the E/M service is bundled into the procedure and denied with CARC 97."
+              },
+              {
+                "doc_id": "DEMO-COD-004",
+                "quote": "To correct the denial, submit a replacement claim with modifier 25 on the E/M line. An appeal is not required."
+              },
+              {
+                "doc_id": "office-1",
+                "quote": "Type 2 diabetes with hyperglycemia, not at goal. A1c ordered. Metformin increased to 1000 mg twice daily. Diabetic foot exam completed. Follow-up in 3 months."
+              },
+              {
+                "doc_id": "office-1",
+                "quote": "Follow-up of type 2 diabetes. Reports home glucose readings of 180 to 220."
+              }
+            ],
+            "next_steps": "Submit a replacement claim with modifier 25 on line 2 (99214-25), linking E11.65 as the primary diagnosis for the visit. Keep the office note on file showing the separate diabetes management."
+          }
+        ],
+        "summary": "One line was denied: the $168.00 office visit (99214), which was bundled into the same-day knee arthrocentesis because modifier 25 was missing. The note documents separate diabetes management (A1c ordered, metformin increased, foot exam), so this looks recoverable through a replacement claim with modifier 25, with no appeal needed. Lines 1 and 3 were paid, and nothing denied appears unrecoverable."
+      },
+      "letter": null
+    },
+    "CLM-87990314": {
+      "analysis": {
+        "lines": [
+          {
+            "line": 1,
+            "category": "timely_filing",
+            "explanation": "The plan denied this preventive visit as filed too late. The claim it processed (26273-002950) was sent on 2026-09-30, after the 365-day limit that ended 2026-07-14 for the 2025-07-14 visit. The practice's history shows the plan accepted the original claim on 2025-07-22, which was inside the limit.",
+            "action": "appeal",
+            "addresses_denial_reason": true,
+            "evidence": [
+              {
+                "doc_id": "sub-1",
+                "quote": "277CA received from plan: claim accepted for adjudication. Payer claim control number 25203-114872."
+              },
+              {
+                "doc_id": "DEMO-ADM-010",
+                "quote": "The plan will reconsider a claim denied for timely filing when the provider submits proof that the original claim was received within the filing limit."
+              },
+              {
+                "doc_id": "DEMO-ADM-010",
+                "quote": "Acceptable proof is a claim acknowledgment (277CA) from the plan showing the payer claim control number and an acceptance date within the filing limit."
+              }
+            ],
+            "next_steps": "Submit a timely filing reconsideration with a copy of the plan's actual 277CA dated 2025-07-22 showing control number 25203-114872. The billing system log entry alone is not the acknowledgment. Do not use the clearinghouse batch 7731 send report, because the policy does not accept send-only reports."
+          },
+          {
+            "line": 2,
+            "category": "timely_filing",
+            "explanation": "The plan denied the venipuncture as filed too late for the same reason as line 1: the resubmitted claim arrived after the 365-day limit. The original claim was accepted by the plan on 2025-07-22, within the limit.",
+            "action": "appeal",
+            "addresses_denial_reason": true,
+            "evidence": [
+              {
+                "doc_id": "sub-1",
+                "quote": "277CA received from plan: claim accepted for adjudication. Payer claim control number 25203-114872."
+              },
+              {
+                "doc_id": "DEMO-ADM-010",
+                "quote": "Claims must be received within 365 days of the date of service."
+              },
+              {
+                "doc_id": "DEMO-ADM-010",
+                "quote": "Acceptable proof is a claim acknowledgment (277CA) from the plan showing the payer claim control number and an acceptance date within the filing limit."
+              }
+            ],
+            "next_steps": "Include this line in the same reconsideration as line 1, with the 2025-07-22 277CA for control number 25203-114872 attached as proof of timely receipt."
+          }
+        ],
+        "summary": "Both lines ($263.00 total) were denied for timely filing because the resubmission on 2026-09-30 came after the 2026-07-14 deadline. Both look recoverable by appeal: the plan's 277CA dated 2025-07-22 shows the original claim was accepted within the limit, and the policy names that document as acceptable proof. The practice needs to pull the actual 277CA report to attach, since the billing log entry alone is not the acknowledgment the policy asks for."
+      },
+      "letter": "[DATE]\n\nAppeals Department\n\nRe: Appeal of timely filing denial\nMember ID: M-71442\nClaim number: CLM-87990314\nPayer claim number: 26273-002950\nOriginal payer claim control number: 25203-114872\nDate of service: 2025-07-14\nRemittance date: 2026-10-16\n\nTo the Appeals Department:\n\n[PRACTICE NAME] requests reconsideration of the following lines, both denied for timely filing:\n\nLine 1: 99396, preventive visit, billed $245.00, denied CO-29\nLine 2: 36415, routine venipuncture, billed $18.00, denied CO-29\n\nThe plan's timely filing policy, DEMO-ADM-010, states: \"Claims must be received within 365 days of the date of service.\" For the 2025-07-14 date of service, that limit ended 2026-07-14. Claim 26273-002950 was resubmitted on 2026-09-30, after the limit. However, the original claim reached the plan well within the limit.\n\nOur submission history shows the claim was sent on 2025-07-18. On 2025-07-22 it records: \"277CA received from plan: claim accepted for adjudication. Payer claim control number 25203-114872.\" This acceptance date is inside the 365-day filing limit. On 2025-12-09, a status inquiry found that the plan had no claim on file under that control number. After follow-up, we resubmitted the claim, and it received the new number 26273-002950.\n\nPolicy DEMO-ADM-010 states: \"The plan will reconsider a claim denied for timely filing when the provider submits proof that the original claim was received within the filing limit.\" It also states: \"Acceptable proof is a claim acknowledgment (277CA) from the plan showing the payer claim control number and an acceptance date within the filing limit.\" The plan's 277CA acceptance of the original claim, dated 2025-07-22 under control number 25203-114872, is that proof. It shows the plan's own acceptance, not just a record that the claim was sent.\n\nWe ask the plan to reverse the CO-29 denials on lines 1 and 2 and process both lines for payment. Please contact our office if you need anything further.\n\nSincerely,\n\n[PROVIDER NAME, CREDENTIALS]\n[PRACTICE NAME]\n\nEnclosures:\n1. Remittance for claim CLM-87990314 / payer claim number 26273-002950, dated 2026-10-16\n2. Claim submission history (practice billing system), dated 2026-10-20"
+    }
+  }
+}

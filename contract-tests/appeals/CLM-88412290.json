@@ -1,0 +1,124 @@
+{
+  "claimId": "CLM-88412290",
+  "mode": "replay",
+  "replaySource": "live",
+  "model": "claude-opus-5-5",
+  "summary": "One line was denied: the $168.00 office visit (99214), which was bundled into the same-day knee arthrocentesis because modifier 25 was missing. The note documents separate diabetes management (A1c ordered, metformin increased, foot exam), so this looks recoverable through a replacement claim with modifier 25, with no appeal needed. Lines 1 and 3 were paid, and nothing denied appears unrecoverable.",
+  "findings": [
+    {
+      "line": 2,
+      "code": "99214",
+      "billed": 168,
+      "denialCodes": [
+        "CO-97",
+        "M15"
+      ],
+      "explanation": "The office visit was billed on the same day as the knee joint injection without modifier 25, so the payer bundled it into the procedure (CO-97/M15). The note shows a separate diabetes visit beyond the pre-procedure knee evaluation, which supports modifier 25.",
+      "category": "coding",
+      "modelAction": "corrected_claim",
+      "action": "corrected_claim",
+      "strength": "strong",
+      "evidence": [
+        {
+          "docId": "DEMO-COD-004",
+          "quote": "The E/M line must carry modifier 25. Without modifier 25 the E/M service is bundled into the procedure and denied with CARC 97.",
+          "fromRecord": false,
+          "verified": true
+        },
+        {
+          "docId": "DEMO-COD-004",
+          "quote": "To correct the denial, submit a replacement claim with modifier 25 on the E/M line. An appeal is not required.",
+          "fromRecord": false,
+          "verified": true
+        },
+        {
+          "docId": "office-1",
+          "quote": "Type 2 diabetes with hyperglycemia, not at goal. A1c ordered. Metformin increased to 1000 mg twice daily. Diabetic foot exam completed. Follow-up in 3 months.",
+          "fromRecord": true,
+          "verified": true
+        },
+        {
+          "docId": "office-1",
+          "quote": "Follow-up of type 2 diabetes. Reports home glucose readings of 180 to 220.",
+          "fromRecord": true,
+          "verified": true
+        }
+      ],
+      "nextSteps": "Submit a replacement claim with modifier 25 on line 2 (99214-25), linking E11.65 as the primary diagnosis for the visit. Keep the office note on file showing the separate diabetes management.",
+      "downgraded": false
+    }
+  ],
+  "recoverable": 168,
+  "correctedClaim": "Submit a replacement claim (claim frequency code 7) that references payer claim 26279-018832.\nLine 2 (99214): Submit a replacement claim with modifier 25 on line 2 (99214-25), linking E11.65 as the primary diagnosis for the visit. Keep the office note on file showing the separate diabetes management.",
+  "letter": null,
+  "redactions": [
+    {
+      "label": "Name",
+      "count": 1
+    },
+    {
+      "label": "Date of birth",
+      "count": 1
+    },
+    {
+      "label": "MRN",
+      "count": 1
+    },
+    {
+      "label": "Phone",
+      "count": 1
+    }
+  ],
+  "trace": [
+    {
+      "name": "Remittance + policy lookup",
+      "detail": "1 of 3 lines denied; DEMO-COD-004"
+    },
+    {
+      "name": "Identifier redaction",
+      "detail": "4 identifiers removed from 2 documents"
+    },
+    {
+      "name": "Denial analysis (replay)",
+      "detail": "Loaded recorded live output"
+    },
+    {
+      "name": "Evidence check + recommendation",
+      "detail": "4 of 4 quotes found verbatim; 0 lines downgraded"
+    }
+  ],
+  "raw": {
+    "analysis": {
+      "lines": [
+        {
+          "line": 2,
+          "category": "coding",
+          "explanation": "The office visit was billed on the same day as the knee joint injection without modifier 25, so the payer bundled it into the procedure (CO-97/M15). The note shows a separate diabetes visit beyond the pre-procedure knee evaluation, which supports modifier 25.",
+          "action": "corrected_claim",
+          "addresses_denial_reason": true,
+          "evidence": [
+            {
+              "doc_id": "DEMO-COD-004",
+              "quote": "The E/M line must carry modifier 25. Without modifier 25 the E/M service is bundled into the procedure and denied with CARC 97."
+            },
+            {
+              "doc_id": "DEMO-COD-004",
+              "quote": "To correct the denial, submit a replacement claim with modifier 25 on the E/M line. An appeal is not required."
+            },
+            {
+              "doc_id": "office-1",
+              "quote": "Type 2 diabetes with hyperglycemia, not at goal. A1c ordered. Metformin increased to 1000 mg twice daily. Diabetic foot exam completed. Follow-up in 3 months."
+            },
+            {
+              "doc_id": "office-1",
+              "quote": "Follow-up of type 2 diabetes. Reports home glucose readings of 180 to 220."
+            }
+          ],
+          "next_steps": "Submit a replacement claim with modifier 25 on line 2 (99214-25), linking E11.65 as the primary diagnosis for the visit. Keep the office note on file showing the separate diabetes management."
+        }
+      ],
+      "summary": "One line was denied: the $168.00 office visit (99214), which was bundled into the same-day knee arthrocentesis because modifier 25 was missing. The note documents separate diabetes management (A1c ordered, metformin increased, foot exam), so this looks recoverable through a replacement claim with modifier 25, with no appeal needed. Lines 1 and 3 were paid, and nothing denied appears unrecoverable."
+    },
+    "letter": null
+  }
+}

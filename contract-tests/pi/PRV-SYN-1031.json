@@ -1,0 +1,184 @@
+{
+  "providerId": "PRV-SYN-1031",
+  "mode": "replay",
+  "replaySource": "live",
+  "model": "claude-opus-5-5",
+  "status": "ready",
+  "holdReasons": [],
+  "numberCheck": {
+    "found": [
+      "25",
+      "41.0",
+      "8.0",
+      "2026",
+      "3",
+      "25",
+      "41.0",
+      "8.0",
+      "80",
+      "19.4",
+      "99215",
+      "7.0",
+      "6.8",
+      "8.7",
+      "442",
+      "25",
+      "40,800",
+      "1.29",
+      "99215",
+      "25",
+      "25",
+      "25",
+      "30",
+      "25",
+      "25",
+      "25"
+    ],
+    "unsupported": []
+  },
+  "languageCheck": {
+    "flagged": []
+  },
+  "citationCheck": {
+    "cited": [
+      "F-COHORT",
+      "F-VOLUME",
+      "F-RISK",
+      "F-level5_share",
+      "F-modifier25_rate",
+      "F-peak_day_hours",
+      "F-allowed_per_patient",
+      "F-EXPOSURE",
+      "F-TIER",
+      "F-SAMPLE"
+    ],
+    "unknown": [],
+    "citesFlagged": true
+  },
+  "tier": "high",
+  "action": "Open a records review",
+  "brief": {
+    "headline": "PRV-SYN-1031 bills modifier 25 on 41.0% of visits against a Family Medicine peer median of 8.0%, while other measured billing patterns sit near peers.",
+    "pattern": "In 2026 Q3 this provider appended modifier 25 to 41.0% of visits, compared with a peer median of 8.0% across 80 Family Medicine providers, a robust z-score of 19.4 and the only measure flagged by the screen. By contrast, the 99215 share (7.0% against an expected 6.8% for this panel's risk), busiest-day billed hours (8.7 hours) and allowed amount per patient ($442) are close to peers. Modifier 25 signals a significant, separately identifiable evaluation and management service on the same day as a procedure, so a records review should check whether documentation supports a distinct service on those visits. The $40,800 estimate sizes the lead and is not an overpayment finding.",
+    "alternative_explanations": [
+      "The practice may perform a high volume of same-day minor procedures, such as in-office injections or skin procedures, alongside separate problem-oriented visits. Confirm by reviewing whether the paired procedure codes and notes show a distinct complaint or condition addressed beyond the procedure itself; rule it out if notes describe only the pre-procedure assessment.",
+      "The panel may carry more chronic or complex conditions that are often managed during procedure visits. The average risk score of 1.29 and the near-expected 99215 share give some context. Confirm by checking whether sampled notes document separate chronic disease management on modifier 25 visits.",
+      "Preventive visits combined with problem-oriented visits on the same day may account for much of the modifier use. Confirm by checking how many modifier 25 claims pair a preventive service with a problem visit and whether the problem portion is separately documented.",
+      "A billing system, template or coding staff default may apply modifier 25 broadly. Confirm by checking whether the modifier appears uniformly regardless of visit content, and by asking which billing or coding process is used."
+    ],
+    "next_steps": [
+      "Open a records review per the high screen tier and request the 30-claim record sample, weighting it toward visits billed with modifier 25.",
+      "For each sampled modifier 25 claim, identify the procedure billed on the same date and assess whether the note documents a significant, separately identifiable evaluation and management service.",
+      "Tabulate which procedure types are most often paired with modifier 25 to see whether the pattern concentrates in particular services or is spread evenly.",
+      "Check whether the pattern is consistent across the review period or tied to a change in billing staff, software or templates.",
+      "Document findings on documentation support without conclusions on payment, and route them to the reviewers who decide on any further action."
+    ],
+    "cited_fact_ids": [
+      "F-COHORT",
+      "F-VOLUME",
+      "F-RISK",
+      "F-level5_share",
+      "F-modifier25_rate",
+      "F-peak_day_hours",
+      "F-allowed_per_patient",
+      "F-EXPOSURE",
+      "F-TIER",
+      "F-SAMPLE"
+    ]
+  },
+  "facts": [
+    {
+      "id": "F-COHORT",
+      "text": "Review period 2026 Q3. Peer group: 80 Family Medicine providers.",
+      "flagged": false
+    },
+    {
+      "id": "F-VOLUME",
+      "text": "Visits in the period: 1,123.",
+      "flagged": false
+    },
+    {
+      "id": "F-RISK",
+      "text": "Average patient risk score: 1.29.",
+      "flagged": false
+    },
+    {
+      "id": "F-level5_share",
+      "text": "Established visits billed at 99215: 7.0% (peer median 5.5%, expected for this panel's risk 6.8%, robust z-score 0.2). Not flagged.",
+      "flagged": false
+    },
+    {
+      "id": "F-modifier25_rate",
+      "text": "Visits billed with modifier 25: 41.0% (peer median 8.0%, robust z-score 19.4). Flagged by the screen.",
+      "flagged": true
+    },
+    {
+      "id": "F-peak_day_hours",
+      "text": "Busiest day, billed time implied by codes: 8.7 hours (peer median 8.4 hours, robust z-score 0.3). Not flagged.",
+      "flagged": false
+    },
+    {
+      "id": "F-allowed_per_patient",
+      "text": "Allowed amount per patient: $442 (peer median $404, robust z-score 0.9). Not flagged.",
+      "flagged": false
+    },
+    {
+      "id": "F-EXPOSURE",
+      "text": "Estimated billing above the peer pattern: $40,800. This sizes the lead and is not an overpayment finding.",
+      "flagged": false
+    },
+    {
+      "id": "F-TIER",
+      "text": "Screen tier: high. Screen score: 55. Action: Open a records review.",
+      "flagged": false
+    },
+    {
+      "id": "F-SAMPLE",
+      "text": "Record sample to request: 30 claims.",
+      "flagged": false
+    }
+  ],
+  "trace": [
+    {
+      "name": "Screen results to facts",
+      "detail": "10 facts, 1 flagged; aggregates only, no member data"
+    },
+    {
+      "name": "Lead brief (replay)",
+      "detail": "Loaded recorded live output"
+    },
+    {
+      "name": "Number + language + citation check",
+      "detail": "26 figures, 0 unsupported; 0 flagged words; 10 citations"
+    }
+  ],
+  "raw": {
+    "headline": "PRV-SYN-1031 bills modifier 25 on 41.0% of visits against a Family Medicine peer median of 8.0%, while other measured billing patterns sit near peers.",
+    "pattern": "In 2026 Q3 this provider appended modifier 25 to 41.0% of visits, compared with a peer median of 8.0% across 80 Family Medicine providers, a robust z-score of 19.4 and the only measure flagged by the screen. By contrast, the 99215 share (7.0% against an expected 6.8% for this panel's risk), busiest-day billed hours (8.7 hours) and allowed amount per patient ($442) are close to peers. Modifier 25 signals a significant, separately identifiable evaluation and management service on the same day as a procedure, so a records review should check whether documentation supports a distinct service on those visits. The $40,800 estimate sizes the lead and is not an overpayment finding.",
+    "alternative_explanations": [
+      "The practice may perform a high volume of same-day minor procedures, such as in-office injections or skin procedures, alongside separate problem-oriented visits. Confirm by reviewing whether the paired procedure codes and notes show a distinct complaint or condition addressed beyond the procedure itself; rule it out if notes describe only the pre-procedure assessment.",
+      "The panel may carry more chronic or complex conditions that are often managed during procedure visits. The average risk score of 1.29 and the near-expected 99215 share give some context. Confirm by checking whether sampled notes document separate chronic disease management on modifier 25 visits.",
+      "Preventive visits combined with problem-oriented visits on the same day may account for much of the modifier use. Confirm by checking how many modifier 25 claims pair a preventive service with a problem visit and whether the problem portion is separately documented.",
+      "A billing system, template or coding staff default may apply modifier 25 broadly. Confirm by checking whether the modifier appears uniformly regardless of visit content, and by asking which billing or coding process is used."
+    ],
+    "next_steps": [
+      "Open a records review per the high screen tier and request the 30-claim record sample, weighting it toward visits billed with modifier 25.",
+      "For each sampled modifier 25 claim, identify the procedure billed on the same date and assess whether the note documents a significant, separately identifiable evaluation and management service.",
+      "Tabulate which procedure types are most often paired with modifier 25 to see whether the pattern concentrates in particular services or is spread evenly.",
+      "Check whether the pattern is consistent across the review period or tied to a change in billing staff, software or templates.",
+      "Document findings on documentation support without conclusions on payment, and route them to the reviewers who decide on any further action."
+    ],
+    "cited_fact_ids": [
+      "F-COHORT",
+      "F-VOLUME",
+      "F-RISK",
+      "F-level5_share",
+      "F-modifier25_rate",
+      "F-peak_day_hours",
+      "F-allowed_per_patient",
+      "F-EXPOSURE",
+      "F-TIER",
+      "F-SAMPLE"
+    ]
+  }
+}

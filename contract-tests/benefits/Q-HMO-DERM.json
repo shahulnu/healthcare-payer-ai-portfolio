@@ -1,0 +1,195 @@
+{
+  "memberId": "M-58817",
+  "planName": "BronzeCare HMO 6500 (sample)",
+  "questionId": "Q-HMO-DERM",
+  "question": "Do I need a referral to see a dermatologist, and what would the visit cost?",
+  "mode": "replay",
+  "replaySource": "live",
+  "model": "claude-opus-5-5",
+  "status": "answered",
+  "answer": "Yes. You need a referral from your primary care provider (PCP) before you see a dermatologist. Without one, the visit is not covered. The dermatologist must also be in the plan's network. If they aren't, you pay the full cost, even with a referral. With a referral to an in-network dermatologist, a specialist visit costs 40% coinsurance after the deductible. Based on the plan's allowed amount of $210 and your totals as of October 31, 2026, we estimate you'd pay about $84 and the plan would pay $126. This is only an estimate. The final cost depends on the services you actually get.",
+  "escalationReason": null,
+  "citations": [
+    {
+      "sectionId": "SBC-2",
+      "doc": "SBC",
+      "page": 2,
+      "title": "Office visits",
+      "quote": "You need a referral from your primary care provider before you see a specialist. Without a referral, the visit is not covered.",
+      "verified": true
+    },
+    {
+      "sectionId": "SBC-2",
+      "doc": "SBC",
+      "page": 2,
+      "title": "Office visits",
+      "quote": "Specialist visit: 40% coinsurance after the deductible.",
+      "verified": true
+    },
+    {
+      "sectionId": "EOC-3.1",
+      "doc": "EOC",
+      "page": 21,
+      "title": "Your primary care provider and referrals",
+      "quote": "Your PCP coordinates your care and gives you referrals to in-network specialists.",
+      "verified": true
+    },
+    {
+      "sectionId": "EOC-3.4",
+      "doc": "EOC",
+      "page": 24,
+      "title": "Care outside the network",
+      "quote": "Except for emergency care, this plan does not pay for care from out-of-network providers, even with a referral.",
+      "verified": true
+    }
+  ],
+  "estimates": [
+    {
+      "serviceId": "specialist_visit",
+      "serviceName": "Specialist office visit",
+      "network": "in",
+      "allowedAmount": 210,
+      "covered": true,
+      "deductiblePortion": 0,
+      "coinsurancePortion": 84,
+      "copay": 0,
+      "memberPays": 84,
+      "planPays": 126,
+      "notes": [
+        "A referral from the primary care provider is required."
+      ]
+    }
+  ],
+  "numberCheck": {
+    "found": [
+      "$210",
+      "$84",
+      "$126"
+    ],
+    "unsupported": []
+  },
+  "toolCalls": [
+    {
+      "name": "get_plan_sections",
+      "input": {
+        "section_ids": [
+          "EOC-3.1",
+          "SBC-2",
+          "SBC-1",
+          "EOC-3.4"
+        ]
+      },
+      "output": [
+        {
+          "id": "EOC-3.1",
+          "doc": "EOC",
+          "page": 21,
+          "title": "Your primary care provider and referrals",
+          "text": "Each member chooses a primary care provider (PCP) from the plan's network. Your PCP coordinates your care and gives you referrals to in-network specialists. You do not need a referral for emergency care, urgent care, preventive care or in-network OB-GYN visits."
+        },
+        {
+          "id": "SBC-2",
+          "doc": "SBC",
+          "page": 2,
+          "title": "Office visits",
+          "text": "Primary care visit to treat an injury or illness: $50 copay. Specialist visit: 40% coinsurance after the deductible. You need a referral from your primary care provider before you see a specialist. Without a referral, the visit is not covered. Preventive care, screenings and immunizations: no charge."
+        },
+        {
+          "id": "SBC-1",
+          "doc": "SBC",
+          "page": 1,
+          "title": "Deductible and out-of-pocket limit",
+          "text": "Your deductible is $6,500 per person. The deductible does not apply to preventive care, primary care copays or urgent care copays. Your out-of-pocket limit is $8,500 per person. This plan does not cover out-of-network care except emergencies, so there is no separate out-of-network deductible or limit."
+        },
+        {
+          "id": "EOC-3.4",
+          "doc": "EOC",
+          "page": 24,
+          "title": "Care outside the network",
+          "text": "Except for emergency care, this plan does not pay for care from out-of-network providers, even with a referral. If you receive non-emergency care out of network, you pay the full cost, and it does not count toward your deductible or out-of-pocket limit."
+        }
+      ]
+    },
+    {
+      "name": "estimate_cost",
+      "input": {
+        "service_id": "specialist_visit",
+        "network": "in"
+      },
+      "output": {
+        "serviceId": "specialist_visit",
+        "serviceName": "Specialist office visit",
+        "network": "in",
+        "allowedAmount": 210,
+        "covered": true,
+        "deductiblePortion": 0,
+        "coinsurancePortion": 84,
+        "copay": 0,
+        "memberPays": 84,
+        "planPays": 126,
+        "notes": [
+          "A referral from the primary care provider is required."
+        ]
+      }
+    }
+  ],
+  "trace": [
+    {
+      "name": "Member + plan lookup",
+      "detail": "BronzeCare HMO 6500 (sample), 8 sections"
+    },
+    {
+      "name": "Agent loop (replay)",
+      "detail": "Re-ran 2 recorded tool calls; loaded recorded live answer"
+    },
+    {
+      "name": "Citation + number check",
+      "detail": "4 of 4 quotes verified; 3 dollar amounts, 0 unsupported"
+    }
+  ],
+  "raw": {
+    "toolCalls": [
+      {
+        "name": "get_plan_sections",
+        "input": {
+          "section_ids": [
+            "EOC-3.1",
+            "SBC-2",
+            "SBC-1",
+            "EOC-3.4"
+          ]
+        }
+      },
+      {
+        "name": "estimate_cost",
+        "input": {
+          "service_id": "specialist_visit",
+          "network": "in"
+        }
+      }
+    ],
+    "submission": {
+      "answer": "Yes. You need a referral from your primary care provider (PCP) before you see a dermatologist. Without one, the visit is not covered. The dermatologist must also be in the plan's network. If they aren't, you pay the full cost, even with a referral. With a referral to an in-network dermatologist, a specialist visit costs 40% coinsurance after the deductible. Based on the plan's allowed amount of $210 and your totals as of October 31, 2026, we estimate you'd pay about $84 and the plan would pay $126. This is only an estimate. The final cost depends on the services you actually get.",
+      "citations": [
+        {
+          "section_id": "SBC-2",
+          "quote": "You need a referral from your primary care provider before you see a specialist. Without a referral, the visit is not covered."
+        },
+        {
+          "section_id": "SBC-2",
+          "quote": "Specialist visit: 40% coinsurance after the deductible."
+        },
+        {
+          "section_id": "EOC-3.1",
+          "quote": "Your PCP coordinates your care and gives you referrals to in-network specialists."
+        },
+        {
+          "section_id": "EOC-3.4",
+          "quote": "Except for emergency care, this plan does not pay for care from out-of-network providers, even with a referral."
+        }
+      ],
+      "needs_human": false,
+      "escalation_reason": ""
+    }
+  }
+}

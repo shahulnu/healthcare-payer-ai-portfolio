@@ -1,0 +1,17 @@
+{
+  "groupCodes": {
+    "CO": "Contractual obligation: the provider can't bill the member for this amount.",
+    "PR": "Patient responsibility: the member owes this amount.",
+    "OA": "Other adjustment."
+  },
+  "carc": {
+    "29": "The time limit for filing the claim has expired.",
+    "45": "Charges exceed the contracted fee schedule; the difference is written off.",
+    "50": "Not covered because the payer did not consider the service medically necessary.",
+    "97": "Payment for this service is included in the payment for another service on the same day.",
+    "197": "Required precertification, authorization or notification was not obtained."
+  },
+  "rarc": {
+    "M15": "Separately billed services were bundled as parts of the same procedure; separate payment is not allowed."
+  }
+}

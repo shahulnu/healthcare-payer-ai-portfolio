@@ -1,0 +1,32 @@
+{
+  "note": "Injected patterns from scripts/generate-pi-data.mjs. The detector never reads this file. Real payment-integrity labels would come from closed SIU cases.",
+  "injected": {
+    "PRV-SYN-1017": {
+      "pattern": "level5_share",
+      "tier": "high"
+    },
+    "PRV-SYN-1042": {
+      "pattern": "level5_share",
+      "tier": "medium"
+    },
+    "PRV-SYN-1031": {
+      "pattern": "modifier25_rate",
+      "tier": "high"
+    },
+    "PRV-SYN-1058": {
+      "pattern": "peak_day_hours",
+      "tier": "high"
+    },
+    "PRV-SYN-2009": {
+      "pattern": "units_per_visit",
+      "tier": "high"
+    },
+    "PRV-SYN-2027": {
+      "pattern": "visits_per_patient",
+      "tier": "high"
+    }
+  },
+  "decoys": [
+    "PRV-SYN-1066"
+  ]
+}

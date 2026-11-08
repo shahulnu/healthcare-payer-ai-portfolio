@@ -1,0 +1,34 @@
+{
+  "model": "CMS-HCC V28",
+  "note": "A small demo subset. Checked against published coding guides, not the CMS mapping file itself. Verify against the CMS V28 mapping and hierarchy tables for the payment year before relying on it. I63.9 to HCC 249 could not be confirmed in those guides.",
+  "hccNames": {
+    "23": "Prostate, Breast, and Other Cancers and Tumors",
+    "37": "Diabetes with Chronic Complications",
+    "38": "Diabetes with Glycemic, Unspecified, or No Complications",
+    "48": "Morbid Obesity",
+    "155": "Major Depression, Moderate or Severe, without Psychosis",
+    "226": "Heart Failure, Except End-Stage and Acute",
+    "238": "Specified Heart Arrhythmias",
+    "249": "Ischemic or Unspecified Stroke",
+    "280": "Chronic Obstructive Pulmonary Disease and Other Chronic Lung Disorders",
+    "327": "Chronic Kidney Disease, Severe 4"
+  },
+  "codes": {
+    "E11.22": { "description": "Type 2 diabetes with diabetic chronic kidney disease", "hcc": "37" },
+    "E11.9": { "description": "Type 2 diabetes without complications", "hcc": "38" },
+    "N18.4": { "description": "Chronic kidney disease, stage 4", "hcc": "327" },
+    "I50.9": { "description": "Heart failure, unspecified", "hcc": "226" },
+    "J44.9": { "description": "COPD, unspecified", "hcc": "280" },
+    "F33.1": { "description": "Major depressive disorder, recurrent, moderate", "hcc": "155" },
+    "F32.9": { "description": "Major depressive disorder, single episode, unspecified", "hcc": null },
+    "F32.A": { "description": "Depression, unspecified", "hcc": null },
+    "I48.91": { "description": "Unspecified atrial fibrillation", "hcc": "238" },
+    "C50.911": { "description": "Malignant neoplasm of right female breast, active", "hcc": "23", "activeOnly": true },
+    "Z85.3": { "description": "Personal history of breast cancer", "hcc": null },
+    "I63.9": { "description": "Cerebral infarction, unspecified (acute stroke)", "hcc": "249", "activeOnly": true },
+    "Z86.73": { "description": "Personal history of stroke without residual deficits", "hcc": null },
+    "E66.01": { "description": "Morbid obesity due to excess calories", "hcc": "48" },
+    "E78.5": { "description": "Hyperlipidemia, unspecified", "hcc": null }
+  },
+  "hierarchies": { "37": ["38"] }
+}

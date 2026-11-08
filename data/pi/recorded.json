@@ -1,0 +1,180 @@
+{
+  "source": "live",
+  "note": "Recorded from a live run on 2026-11-07.",
+  "model": "claude-opus-5-5",
+  "cases": {
+    "PRV-SYN-2009": {
+      "headline": "PRV-SYN-2009 bills substantially more timed units per physical therapy visit than its 40 peers, with most visits carrying 4 or more timed units.",
+      "pattern": "In 2026 Q3, across 3,758 visits, this provider averaged 5.40 timed units per visit against a peer median of 3.09 (robust z-score 11.1). 78.0% of visits carried 4 or more timed units against a peer median of 17.6% (robust z-score 19.9). Visits per patient, modifier 59 use and busiest-day billed hours (8.9 hours, the same as the peer median) all sit close to peers, so the review question is narrowly whether documented treatment time and services support the unit counts on each visit, with an estimated $243,100 above the peer pattern sizing the lead rather than establishing any overpayment.",
+      "alternative_explanations": [
+        "The patient mix may involve higher-acuity cases, such as post-surgical, neurological or complex orthopedic patients, that clinically need longer sessions. Diagnoses, evaluations and plans of care in the sampled records showing severity that justifies extended treatment would support this. A case mix similar to typical outpatient therapy would weaken it.",
+        "The practice may schedule longer appointment slots by design, such as extended one-on-one sessions, so more timed units per visit are actually delivered. Scheduling templates and documented start and stop times or total timed minutes matching the billed units would confirm this. Recorded minutes that fall short of the billed units would rule it out.",
+        "The clinic may run a specialized program, such as intensive rehabilitation or work conditioning, that differs from the general peer group. Program descriptions, referral sources and treatment content in the notes would confirm this. Notes showing routine services similar to peers would weaken it."
+      ],
+      "next_steps": [
+        "Request the record sample of 30 claims from 2026 Q3, weighted toward visits billed with 4 or more timed units.",
+        "For each sampled visit, compare the documented total timed treatment minutes and the minutes for each timed service against the number of timed units billed.",
+        "Check whether the notes show one-on-one direct contact for timed services, and whether group or untimed services were separated out appropriately.",
+        "Review diagnoses, evaluations and plans of care to judge whether patient acuity or a specialized program explains the longer sessions.",
+        "Ask the provider for scheduling templates or a description of its session structure to compare against billed time.",
+        "Document findings for the decision-makers without drawing conclusions beyond what the records show."
+      ],
+      "cited_fact_ids": [
+        "F-COHORT",
+        "F-VOLUME",
+        "F-units_per_visit",
+        "F-four_plus_unit_share",
+        "F-visits_per_patient",
+        "F-modifier59_rate",
+        "F-peak_day_hours",
+        "F-EXPOSURE",
+        "F-TIER",
+        "F-SAMPLE"
+      ]
+    },
+    "PRV-SYN-1031": {
+      "headline": "PRV-SYN-1031 bills modifier 25 on 41.0% of visits against a Family Medicine peer median of 8.0%, while other measured billing patterns sit near peers.",
+      "pattern": "In 2026 Q3 this provider appended modifier 25 to 41.0% of visits, compared with a peer median of 8.0% across 80 Family Medicine providers, a robust z-score of 19.4 and the only measure flagged by the screen. By contrast, the 99215 share (7.0% against an expected 6.8% for this panel's risk), busiest-day billed hours (8.7 hours) and allowed amount per patient ($442) are close to peers. Modifier 25 signals a significant, separately identifiable evaluation and management service on the same day as a procedure, so a records review should check whether documentation supports a distinct service on those visits. The $40,800 estimate sizes the lead and is not an overpayment finding.",
+      "alternative_explanations": [
+        "The practice may perform a high volume of same-day minor procedures, such as in-office injections or skin procedures, alongside separate problem-oriented visits. Confirm by reviewing whether the paired procedure codes and notes show a distinct complaint or condition addressed beyond the procedure itself; rule it out if notes describe only the pre-procedure assessment.",
+        "The panel may carry more chronic or complex conditions that are often managed during procedure visits. The average risk score of 1.29 and the near-expected 99215 share give some context. Confirm by checking whether sampled notes document separate chronic disease management on modifier 25 visits.",
+        "Preventive visits combined with problem-oriented visits on the same day may account for much of the modifier use. Confirm by checking how many modifier 25 claims pair a preventive service with a problem visit and whether the problem portion is separately documented.",
+        "A billing system, template or coding staff default may apply modifier 25 broadly. Confirm by checking whether the modifier appears uniformly regardless of visit content, and by asking which billing or coding process is used."
+      ],
+      "next_steps": [
+        "Open a records review per the high screen tier and request the 30-claim record sample, weighting it toward visits billed with modifier 25.",
+        "For each sampled modifier 25 claim, identify the procedure billed on the same date and assess whether the note documents a significant, separately identifiable evaluation and management service.",
+        "Tabulate which procedure types are most often paired with modifier 25 to see whether the pattern concentrates in particular services or is spread evenly.",
+        "Check whether the pattern is consistent across the review period or tied to a change in billing staff, software or templates.",
+        "Document findings on documentation support without conclusions on payment, and route them to the reviewers who decide on any further action."
+      ],
+      "cited_fact_ids": [
+        "F-COHORT",
+        "F-VOLUME",
+        "F-RISK",
+        "F-level5_share",
+        "F-modifier25_rate",
+        "F-peak_day_hours",
+        "F-allowed_per_patient",
+        "F-EXPOSURE",
+        "F-TIER",
+        "F-SAMPLE"
+      ]
+    },
+    "PRV-SYN-1017": {
+      "headline": "PRV-SYN-1017 bills 99215 for 48.0% of established visits, against a peer median of 5.5% among Family Medicine providers in 2026 Q3.",
+      "pattern": "This provider billed 99215 on 48.0% of established visits, compared with a peer median of 5.5% and an expected 5.6% for a panel with an average risk score of 1.02, a robust z-score of 42.8 that the screen flagged. Other measures sit near peers: modifier 25 use is 6.3% against a peer median of 8.0%, and the busiest day implies 7.6 hours of billed time against a peer median of 8.4 hours. Because the patient risk score does not account for the high 99215 share, documentation should be reviewed to see whether it supports the level billed. The estimated $36,300 above the peer pattern sizes the lead and is not an overpayment finding.",
+      "alternative_explanations": [
+        "The provider may see a population with more complex needs than the risk score captures, such as patients with many chronic conditions or complicated medication management. Records showing high-complexity medical decision making or documented total time that meets the 99215 requirements would support this. Routine, single-problem visits would weigh against it.",
+        "The practice may use time-based coding, with long visits for counseling or care coordination. Documented total time on the date of service that meets the 99215 threshold would confirm this. Missing or templated time statements would not support it.",
+        "A billing system default, template, or coding staff practice may be assigning the code rather than clinical selection. A uniform code across visits of varying content, or a recent change in software or billing vendor, would point to this. Visit-by-visit variation that matches documentation would rule it out.",
+        "The provider may run a specialized clinic within family medicine, such as complex care or post-hospital follow-up, that differs from typical peers. Practice information or referral patterns showing a focus on complex patients would support this."
+      ],
+      "next_steps": [
+        "Request a sample of 30 claims for established visits billed at 99215 in 2026 Q3, with full visit documentation.",
+        "Assess each sampled note against 99215 requirements for medical decision making or documented total time, and record whether the level is supported.",
+        "Look for templated or cloned documentation and for time statements across the sample.",
+        "Compare patient diagnoses and comorbidities in the sample with the average risk score of 1.02 to judge whether case complexity is understated.",
+        "Ask the practice whether a billing system, template, coding vendor, or patient-population change affected code selection during the period.",
+        "Summarize the findings so reviewers can decide on any further action after the records review."
+      ],
+      "cited_fact_ids": [
+        "F-COHORT",
+        "F-VOLUME",
+        "F-RISK",
+        "F-level5_share",
+        "F-modifier25_rate",
+        "F-peak_day_hours",
+        "F-allowed_per_patient",
+        "F-EXPOSURE",
+        "F-TIER",
+        "F-SAMPLE"
+      ]
+    },
+    "PRV-SYN-1058": {
+      "headline": "PRV-SYN-1058's busiest day in 2026 Q3 carries 19.5 hours of billed time implied by codes, above the screen's plausibility limit of 16 hours.",
+      "pattern": "On this provider's busiest day, the codes billed imply 19.5 hours of time, against a peer median of 8.4 hours among 80 Family Medicine providers (robust z-score 12.5), and above the plausibility limit of 16 hours. Other measures sit close to peers: 99215 share is 4.6% versus a peer median of 5.5%, modifier 25 use is 8.2% versus 8.0%, and allowed amount per patient is $353 versus $404. The review question is therefore narrow: whether the services on that day were actually delivered by this provider in the time the codes imply, and whether they were correctly attributed and dated.",
+      "alternative_explanations": [
+        "Services delivered by other clinicians, such as supervised advanced practice providers or residents, may have been billed under this provider's number; staffing schedules and the rendering provider documented in the notes would confirm or rule this out.",
+        "Claims from several days may have been entered under a single date of service, for example during a backlog or after a system outage; comparing documented encounter dates and timestamps against billed dates would confirm or rule this out.",
+        "The day may include a legitimate high-volume event, such as a vaccination clinic or a group of short visits, whose codes overstate time when converted to typical durations; appointment logs and visit notes for that day would show whether the visits were brief and of that type.",
+        "A billing system or clearinghouse error may have duplicated claims for that day; checking for repeated claims with the same patient, code and date would confirm or rule this out."
+      ],
+      "next_steps": [
+        "Identify the busiest day in 2026 Q3 and pull the full list of claims billed for that date, including rendering provider, codes and patients.",
+        "Request a records sample of 30 claims, weighted toward the busiest day, and check the documentation for date, rendering clinician and documented time or service content.",
+        "Request the provider's appointment schedule and staffing roster for that day to compare scheduled encounters and clinicians present against billed volume.",
+        "Check the claims for that day for duplicates and for dates of service that differ from the documented encounter dates.",
+        "Record the findings for the reviewers who will decide any further action after the records review."
+      ],
+      "cited_fact_ids": [
+        "F-COHORT",
+        "F-peak_day_hours",
+        "F-level5_share",
+        "F-modifier25_rate",
+        "F-allowed_per_patient",
+        "F-TIER",
+        "F-SAMPLE"
+      ]
+    },
+    "PRV-SYN-2027": {
+      "headline": "PRV-SYN-2027 billed 31.0 physical therapy visits per patient in 2026 Q3, well above the peer median of 12.4, while per-visit billing measures sit near peers.",
+      "pattern": "Across 2,976 visits in 2026 Q3, this provider averaged 31.0 visits per patient against a peer median of 12.4 among 40 Physical Therapy providers (robust z-score 10.9), the only measure the screen flagged. Per-visit measures such as timed units per visit (3.01 vs. peer median 3.09), modifier 59 use (11.8% vs. 12.5%) and busiest-day billed hours (9.2 vs. 8.9) are close to peers, so the question for review is mainly the length and medical necessity of episodes of care rather than how individual visits are coded. The screen sized the lead at an estimated $169,200 above the peer pattern, which is a sizing figure and not an overpayment finding.",
+      "alternative_explanations": [
+        "The provider may treat a patient mix that needs long courses of therapy, such as post-surgical, neurological or chronic conditions. Diagnosis codes and referral sources in the sampled records would confirm this if they show a higher-acuity mix than typical outpatient therapy, or rule it out if the conditions match those seen by peers.",
+        "The practice may provide therapy in a setting where ongoing care is expected, such as a rehabilitation program or maintenance therapy permitted under the plan's policy. Place of service, program enrollment and documented maintenance goals would confirm or rule this out.",
+        "Patient counting may be affected by how members are identified, for example a small number of long-term patients or data issues that merge patients, which would raise visits per patient. Reviewing the distribution of visits across individual patients and checking member identifiers would show whether a few patients drive the figure or whether it is spread broadly.",
+        "Visits may be continuing under valid plans of care with documented progress and recertifications. Plans of care, physician signatures, progress notes and objective functional measures would confirm ongoing necessity, or show whether care continued without documented progress or updated goals."
+      ],
+      "next_steps": [
+        "Open a records review as directed by the screen tier and request a sample of 30 claims.",
+        "Weight the sample toward patients with the highest visit counts in the period, while including some typical-volume patients for comparison.",
+        "For each sampled patient, review the initial evaluation, plan of care, recertifications, progress notes and discharge status to assess whether continued visits were supported by documented goals and progress.",
+        "Pull the patient-level distribution of visits and diagnosis mix for this provider and compare it with peers to see whether the high visits per patient reflects case mix or a broad pattern.",
+        "Note the 24.0% share of visits with 4 or more timed units (peer median 17.6%, not flagged) and check timed-unit documentation in the sampled notes as a secondary item.",
+        "Document findings for the decision-makers without drawing conclusions about the provider's conduct before the records review is complete."
+      ],
+      "cited_fact_ids": [
+        "F-COHORT",
+        "F-VOLUME",
+        "F-units_per_visit",
+        "F-four_plus_unit_share",
+        "F-visits_per_patient",
+        "F-modifier59_rate",
+        "F-peak_day_hours",
+        "F-EXPOSURE",
+        "F-TIER",
+        "F-SAMPLE"
+      ]
+    },
+    "PRV-SYN-1042": {
+      "headline": "PRV-SYN-1042 bills 99215 for established visits at 12.5%, well above the Family Medicine peer median of 5.5%, while other measured patterns sit near peers.",
+      "pattern": "In 2026 Q3, 12.5% of this provider's established visits were billed at 99215, against a peer median of 5.5% among 80 Family Medicine providers and an expected 5.4% for a panel with an average risk score of 0.98, giving a robust z-score of 7.2. Modifier 25 use (11.0% vs 8.0%), busiest-day billed time (8.8 vs 8.4 hours) and allowed amount per patient ($375 vs $404) were not flagged, so the outlier is concentrated in the highest established-visit code rather than in overall volume or cost. The estimated billing above the peer pattern is $3,800, which sizes the lead and is not an overpayment finding; the screen tier is medium with a score of 38.",
+      "alternative_explanations": [
+        "The provider may see a subset of patients with more complex conditions than the average risk score of 0.98 captures, such as patients with conditions that are undercoded in risk data. This would be supported if sampled notes document high-complexity medical decision making or extensive problem management, and ruled out if notes describe routine, stable follow-ups.",
+        "The provider may be selecting 99215 based on total time spent on the date of service, including non-face-to-face work like reviewing outside records or coordinating care. This would be confirmed if notes record total time and the activities performed meeting the 99215 requirement, and ruled out if time is absent or insufficient.",
+        "The practice may have recently adopted a new documentation template, EHR coding prompt or coding guidance that shifts code selection upward without changing patient care. Comparing this provider's 99215 share in prior periods and checking with the practice about workflow changes would confirm or rule this out.",
+        "The provider may serve a specialized role within the practice, such as handling transitions of care, post-hospital follow-ups or complex chronic disease visits. Practice scheduling information or the mix of diagnoses on 99215 claims would show whether this role exists."
+      ],
+      "next_steps": [
+        "Request a record sample of 15 claims, drawn from established visits billed at 99215 in 2026 Q3.",
+        "Review each sampled record for whether documented medical decision making or total time on the date of service supports 99215.",
+        "Look at the diagnoses on the 99215 claims to see whether they cluster around complex or high-risk conditions that may not be reflected in the 0.98 average risk score.",
+        "Compare the provider's 99215 share across earlier review periods to see whether the pattern is longstanding or recent.",
+        "If the record review confirms the pattern is not supported by documentation, consider provider education as indicated by the medium screen tier."
+      ],
+      "cited_fact_ids": [
+        "F-COHORT",
+        "F-VOLUME",
+        "F-RISK",
+        "F-level5_share",
+        "F-modifier25_rate",
+        "F-peak_day_hours",
+        "F-allowed_per_patient",
+        "F-EXPOSURE",
+        "F-TIER",
+        "F-SAMPLE"
+      ]
+    }
+  }
+}

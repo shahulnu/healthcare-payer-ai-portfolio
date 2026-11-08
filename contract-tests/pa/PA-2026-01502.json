@@ -1,0 +1,220 @@
+{
+  "caseId": "PA-2026-01502",
+  "policyId": "DEMO-ORT-007",
+  "policyTitle": "Total knee arthroplasty",
+  "mode": "replay",
+  "model": "claude-opus-5-5",
+  "route": "nurse_review",
+  "routeReason": "C2 not met. A nurse reviewer decides; only a physician can issue an adverse determination.",
+  "summary": "This is a request for a right total knee arthroplasty (CPT 27447) for primary osteoarthritis in a 67-year-old male. Criteria C1 (KL grade 4 on X-ray), C3 (functional limitation), C4 (BMI 34.1) and C5 (no signs of infection) are met. C2 is not met: documented conservative treatment began 08/20/2026, about 8 weeks before the 10/15/2026 consult, so the reviewer may want to ask whether any earlier nonsurgical treatment was given during the 3-year pain history.",
+  "criteria": [
+    {
+      "id": "C1",
+      "text": "Radiographic evidence of advanced osteoarthritis (Kellgren-Lawrence grade 3 or 4) of the affected knee.",
+      "modelStatus": "met",
+      "status": "met",
+      "evidence": [
+        {
+          "docId": "xray-1",
+          "quote": "Kellgren-Lawrence grade 4.",
+          "verified": true
+        },
+        {
+          "docId": "xray-1",
+          "quote": "Severe medial joint-space narrowing with bone-on-bone contact.",
+          "verified": true
+        }
+      ],
+      "rationale": "The right knee X-ray report documents Kellgren-Lawrence grade 4 with bone-on-bone contact.",
+      "downgraded": false
+    },
+    {
+      "id": "C2",
+      "text": "At least 12 weeks of documented nonsurgical treatment (physical therapy, NSAIDs, injections, bracing or weight loss).",
+      "modelStatus": "not_met",
+      "status": "not_met",
+      "evidence": [
+        {
+          "docId": "note-1",
+          "quote": "Started physical therapy on 08/20/2026 and completed 6 weeks.",
+          "verified": true
+        },
+        {
+          "docId": "note-1",
+          "quote": "Meloxicam 15 mg daily since 08/20/2026.",
+          "verified": true
+        },
+        {
+          "docId": "note-1",
+          "quote": "One corticosteroid injection on 09/12/2026 with 2 weeks of relief.",
+          "verified": true
+        }
+      ],
+      "rationale": "The earliest documented nonsurgical treatment began 08/20/2026. From then to the 10/15/2026 note is 56 days, about 8 weeks. That is short of the required 12 weeks. No earlier conservative treatment is documented, even though pain is reported for 3 years.",
+      "downgraded": false
+    },
+    {
+      "id": "C3",
+      "text": "Pain or functional limitation that interferes with activities of daily living.",
+      "modelStatus": "met",
+      "status": "met",
+      "evidence": [
+        {
+          "docId": "note-1",
+          "quote": "can no longer walk more than 2 blocks or kneel at church.",
+          "verified": true
+        },
+        {
+          "docId": "note-1",
+          "quote": "Pain with stairs and standing",
+          "verified": true
+        }
+      ],
+      "rationale": "The note documents limits on walking distance, stairs, standing and kneeling, which interfere with daily activities.",
+      "downgraded": false
+    },
+    {
+      "id": "C4",
+      "text": "BMI below 40, or documented medical optimization if BMI is 40 or above.",
+      "modelStatus": "met",
+      "status": "met",
+      "evidence": [
+        {
+          "docId": "note-1",
+          "quote": "Vitals: BMI 34.1.",
+          "verified": true
+        }
+      ],
+      "rationale": "The most recent BMI is 34.1, which is below 40.",
+      "downgraded": false
+    },
+    {
+      "id": "C5",
+      "text": "No active infection in or around the knee.",
+      "modelStatus": "met",
+      "status": "met",
+      "evidence": [
+        {
+          "docId": "note-1",
+          "quote": "No erythema, warmth or effusion. Skin intact. No history of joint infection.",
+          "verified": true
+        }
+      ],
+      "rationale": "The exam shows no signs of infection, the skin is intact, and there is no history of joint infection. Fever is not explicitly addressed.",
+      "downgraded": false
+    }
+  ],
+  "redactions": [
+    {
+      "label": "Name",
+      "count": 1
+    },
+    {
+      "label": "Date of birth",
+      "count": 1
+    },
+    {
+      "label": "MRN",
+      "count": 1
+    },
+    {
+      "label": "Phone",
+      "count": 1
+    }
+  ],
+  "trace": [
+    {
+      "name": "Policy lookup",
+      "detail": "DEMO-ORT-007 matched on CPT 27447"
+    },
+    {
+      "name": "Identifier redaction",
+      "detail": "4 identifiers removed from 2 documents"
+    },
+    {
+      "name": "Criteria evaluation (replay)",
+      "detail": "Loaded recorded live output"
+    },
+    {
+      "name": "Citation check + routing",
+      "detail": "9 of 9 quotes found verbatim; 0 criteria downgraded"
+    }
+  ],
+  "decisionDueBy": "2026-11-04T09:40:00.000Z",
+  "raw": {
+    "criteria": [
+      {
+        "id": "C1",
+        "status": "met",
+        "evidence": [
+          {
+            "doc_id": "xray-1",
+            "quote": "Kellgren-Lawrence grade 4."
+          },
+          {
+            "doc_id": "xray-1",
+            "quote": "Severe medial joint-space narrowing with bone-on-bone contact."
+          }
+        ],
+        "rationale": "The right knee X-ray report documents Kellgren-Lawrence grade 4 with bone-on-bone contact."
+      },
+      {
+        "id": "C2",
+        "status": "not_met",
+        "evidence": [
+          {
+            "doc_id": "note-1",
+            "quote": "Started physical therapy on 08/20/2026 and completed 6 weeks."
+          },
+          {
+            "doc_id": "note-1",
+            "quote": "Meloxicam 15 mg daily since 08/20/2026."
+          },
+          {
+            "doc_id": "note-1",
+            "quote": "One corticosteroid injection on 09/12/2026 with 2 weeks of relief."
+          }
+        ],
+        "rationale": "The earliest documented nonsurgical treatment began 08/20/2026. From then to the 10/15/2026 note is 56 days, about 8 weeks. That is short of the required 12 weeks. No earlier conservative treatment is documented, even though pain is reported for 3 years."
+      },
+      {
+        "id": "C3",
+        "status": "met",
+        "evidence": [
+          {
+            "doc_id": "note-1",
+            "quote": "can no longer walk more than 2 blocks or kneel at church."
+          },
+          {
+            "doc_id": "note-1",
+            "quote": "Pain with stairs and standing"
+          }
+        ],
+        "rationale": "The note documents limits on walking distance, stairs, standing and kneeling, which interfere with daily activities."
+      },
+      {
+        "id": "C4",
+        "status": "met",
+        "evidence": [
+          {
+            "doc_id": "note-1",
+            "quote": "Vitals: BMI 34.1."
+          }
+        ],
+        "rationale": "The most recent BMI is 34.1, which is below 40."
+      },
+      {
+        "id": "C5",
+        "status": "met",
+        "evidence": [
+          {
+            "doc_id": "note-1",
+            "quote": "No erythema, warmth or effusion. Skin intact. No history of joint infection."
+          }
+        ],
+        "rationale": "The exam shows no signs of infection, the skin is intact, and there is no history of joint infection. Fever is not explicitly addressed."
+      }
+    ],
+    "summary": "This is a request for a right total knee arthroplasty (CPT 27447) for primary osteoarthritis in a 67-year-old male. Criteria C1 (KL grade 4 on X-ray), C3 (functional limitation), C4 (BMI 34.1) and C5 (no signs of infection) are met. C2 is not met: documented conservative treatment began 08/20/2026, about 8 weeks before the 10/15/2026 consult, so the reviewer may want to ask whether any earlier nonsurgical treatment was given during the 3-year pain history."
+  }
+}

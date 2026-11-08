@@ -1,0 +1,29 @@
+{
+  "note": "Labels for the synthetic charts. 'expected' lists the acceptable dispositions per code; 'forbidden' codes must never be suggested or confirmed. Replace with a certified coder's labels on real charts before quoting results.",
+  "members": {
+    "M-70112": {
+      "expected": {
+        "E11.22": ["add"],
+        "N18.4": ["add"],
+        "E11.9": ["superseded", "review_deletion"],
+        "I50.9": ["review_deletion"]
+      },
+      "forbidden": []
+    },
+    "M-81540": {
+      "expected": {
+        "C50.911": ["review_deletion"],
+        "I63.9": ["review_deletion"],
+        "J44.9": ["confirmed"]
+      },
+      "forbidden": []
+    },
+    "M-93027": {
+      "expected": {
+        "I48.91": ["add"],
+        "F33.1": ["query_provider", "review_deletion"]
+      },
+      "forbidden": ["E11.22", "E66.01"]
+    }
+  }
+}

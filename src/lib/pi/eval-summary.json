@@ -1,0 +1,13 @@
+{
+  "mode": "live",
+  "model": "claude-opus-5-5",
+  "runAt": "2026-11-07T17:35:26.849Z",
+  "leads": 6,
+  "precision": 1,
+  "recall": 1,
+  "tierAccuracy": 1,
+  "decoysCleared": 1,
+  "briefsPassed": 1,
+  "briefsCiteRightPattern": 1,
+  "totalCostUsd": 0.1474
+}

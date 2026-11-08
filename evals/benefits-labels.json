@@ -1,0 +1,14 @@
+{
+  "note": "Labels for the Benefits Navigator sample questions. 'status' is whether the assistant should answer or hand off; 'cost' is the calculator estimate a correct answer states. Expand with real call-center questions before quoting results.",
+  "questions": {
+    "Q-PPO-MRI": { "status": "answered", "cost": { "service": "mri_knee", "network": "in", "amount": 586 } },
+    "Q-PPO-PCP": { "status": "answered", "cost": { "service": "pcp_visit", "network": "in", "amount": 30 } },
+    "Q-PPO-ACU": { "status": "answered", "cost": null },
+    "Q-PPO-OON-PT": { "status": "answered", "cost": { "service": "pt_visit", "network": "out", "amount": 170 } },
+    "Q-PPO-CLAIM": { "status": "escalated", "cost": null },
+    "Q-PPO-INJECT": { "status": "answered", "cost": { "service": "mri_knee", "network": "in", "amount": 586 } },
+    "Q-HMO-DERM": { "status": "answered", "cost": { "service": "specialist_visit", "network": "in", "amount": 84 } },
+    "Q-HMO-MRI": { "status": "answered", "cost": { "service": "mri_knee", "network": "in", "amount": 408 } },
+    "Q-HMO-OON": { "status": "answered", "cost": null }
+  }
+}

@@ -1,0 +1,265 @@
+[
+  {
+    "id": "CLM-88310427",
+    "payerClaimId": "26261-004417",
+    "dateOfService": "2026-09-18",
+    "remitDate": "2026-10-09",
+    "member": {
+      "id": "M-62018",
+      "age": 58,
+      "sex": "F",
+      "plan": "Commercial PPO (sample)"
+    },
+    "provider": {
+      "name": "Lakeside Physical Therapy",
+      "specialty": "Physical therapy"
+    },
+    "diagnosis": [
+      "M54.50 Low back pain, unspecified"
+    ],
+    "policyIds": [
+      "DEMO-PT-001"
+    ],
+    "teaser": "Two therapy lines denied as not medically necessary",
+    "lines": [
+      {
+        "line": 1,
+        "code": "97164",
+        "modifiers": [
+          "GP"
+        ],
+        "units": 1,
+        "description": "PT re-evaluation",
+        "billed": 118,
+        "paid": 96.4,
+        "adjustments": [
+          {
+            "group": "CO",
+            "carc": "45",
+            "amount": 21.6
+          }
+        ],
+        "remarks": []
+      },
+      {
+        "line": 2,
+        "code": "97110",
+        "modifiers": [
+          "GP"
+        ],
+        "units": 3,
+        "description": "Therapeutic exercise, each 15 min",
+        "billed": 141,
+        "paid": 0,
+        "adjustments": [
+          {
+            "group": "CO",
+            "carc": "50",
+            "amount": 141
+          }
+        ],
+        "remarks": []
+      },
+      {
+        "line": 3,
+        "code": "97140",
+        "modifiers": [
+          "GP"
+        ],
+        "units": 1,
+        "description": "Manual therapy, each 15 min",
+        "billed": 62,
+        "paid": 0,
+        "adjustments": [
+          {
+            "group": "CO",
+            "carc": "50",
+            "amount": 62
+          }
+        ],
+        "remarks": []
+      }
+    ],
+    "documents": [
+      {
+        "id": "poc-1",
+        "kind": "plan_of_care",
+        "title": "Physical therapy plan of care",
+        "date": "2026-08-04",
+        "text": "Patient: Maria Alvarez   DOB: 02/11/1968   MRN: 00731842\nPhone: (555) 610-2284\n\nDiagnosis: M54.50 Low back pain.\nFunctional limitations: Unable to lift more than 10 lb from floor. Sitting tolerance 20 minutes. Oswestry Disability Index 42%.\n\nGoals (8 weeks):\n1. Lift 25 lb from floor to waist without increase in pain, to return to warehouse work.\n2. Sitting tolerance of 60 minutes.\n3. Oswestry Disability Index below 20%.\n\nPlan: Therapeutic exercise and manual therapy, 2 visits per week for 8 weeks (16 visits).\nCertified by: J. Brennan, PT, DPT, 08/04/2026."
+      },
+      {
+        "id": "note-14",
+        "kind": "progress_note",
+        "title": "Progress note, visit 14",
+        "date": "2026-09-18",
+        "text": "Patient: Maria Alvarez   DOB: 02/11/1968   MRN: 00731842\n\nVisit 14 of 16 in the current plan of care. Re-evaluation performed today.\n\nObjective: Oswestry Disability Index 26% (42% at evaluation). Lifts 20 lb floor to waist with good mechanics and no pain increase. Sitting tolerance 45 minutes.\n\nAssessment: Measurable progress on all three goals. Continued skilled therapeutic exercise is needed to reach the 25 lb lifting goal required for return to warehouse work.\n\nTreatment today: Therapeutic exercise 40 minutes (lifting progression, core stabilization). Manual therapy 10 minutes.\n\nPlan: Continue plan of care, 2 remaining visits."
+      }
+    ]
+  },
+  {
+    "id": "CLM-88412290",
+    "payerClaimId": "26279-018832",
+    "dateOfService": "2026-10-06",
+    "remitDate": "2026-10-24",
+    "member": {
+      "id": "M-30577",
+      "age": 63,
+      "sex": "M",
+      "plan": "Medicare Advantage PPO (sample)"
+    },
+    "provider": {
+      "name": "Northgate Orthopedics",
+      "specialty": "Orthopedic surgery"
+    },
+    "diagnosis": [
+      "M17.11 Primary osteoarthritis, right knee",
+      "E11.65 Type 2 diabetes with hyperglycemia"
+    ],
+    "policyIds": [
+      "DEMO-COD-004"
+    ],
+    "teaser": "Office visit bundled into a same-day knee injection",
+    "lines": [
+      {
+        "line": 1,
+        "code": "20610",
+        "modifiers": [
+          "RT"
+        ],
+        "units": 1,
+        "description": "Arthrocentesis, major joint",
+        "billed": 142,
+        "paid": 118.2,
+        "adjustments": [
+          {
+            "group": "CO",
+            "carc": "45",
+            "amount": 23.8
+          }
+        ],
+        "remarks": []
+      },
+      {
+        "line": 2,
+        "code": "99214",
+        "modifiers": [],
+        "units": 1,
+        "description": "Office visit, established, moderate",
+        "billed": 168,
+        "paid": 0,
+        "adjustments": [
+          {
+            "group": "CO",
+            "carc": "97",
+            "amount": 168
+          }
+        ],
+        "remarks": [
+          "M15"
+        ]
+      },
+      {
+        "line": 3,
+        "code": "J3301",
+        "modifiers": [],
+        "units": 4,
+        "description": "Triamcinolone acetonide, per 10 mg",
+        "billed": 12,
+        "paid": 9.6,
+        "adjustments": [
+          {
+            "group": "CO",
+            "carc": "45",
+            "amount": 2.4
+          }
+        ],
+        "remarks": []
+      }
+    ],
+    "documents": [
+      {
+        "id": "office-1",
+        "kind": "office_note",
+        "title": "Office visit note",
+        "date": "2026-10-06",
+        "text": "Patient: Thomas Reed   DOB: 05/27/1963   MRN: 00418806\nCallback: 555-904-3371\n\nChief complaints:\n1. Right knee pain and swelling for 3 weeks.\n2. Follow-up of type 2 diabetes. Reports home glucose readings of 180 to 220.\n\nExam: Right knee effusion, medial joint-line tenderness, range of motion 5 to 110 degrees. Feet: monofilament sensation intact bilaterally.\n\nAssessment and plan:\n1. Right knee osteoarthritis with effusion. Arthrocentesis with corticosteroid injection performed today (see procedure note).\n2. Type 2 diabetes with hyperglycemia, not at goal. A1c ordered. Metformin increased to 1000 mg twice daily. Diabetic foot exam completed. Follow-up in 3 months."
+      },
+      {
+        "id": "proc-1",
+        "kind": "procedure_note",
+        "title": "Procedure note",
+        "date": "2026-10-06",
+        "text": "Procedure: Right knee arthrocentesis with injection.\nIndication: Symptomatic effusion with osteoarthritis.\nConsent obtained. Aspirated 30 mL clear yellow fluid. Injected triamcinolone acetonide 40 mg with lidocaine. Tolerated well, no complications."
+      }
+    ]
+  },
+  {
+    "id": "CLM-87990314",
+    "payerClaimId": "26273-002950",
+    "dateOfService": "2025-07-14",
+    "remitDate": "2026-10-16",
+    "member": {
+      "id": "M-71442",
+      "age": 52,
+      "sex": "F",
+      "plan": "Commercial HMO (sample)"
+    },
+    "provider": {
+      "name": "Riverbend Primary Care",
+      "specialty": "Internal medicine"
+    },
+    "diagnosis": [
+      "Z00.00 General adult exam without abnormal findings"
+    ],
+    "policyIds": [
+      "DEMO-ADM-010"
+    ],
+    "teaser": "Preventive visit denied for timely filing",
+    "lines": [
+      {
+        "line": 1,
+        "code": "99396",
+        "modifiers": [],
+        "units": 1,
+        "description": "Preventive visit, age 40-64",
+        "billed": 245,
+        "paid": 0,
+        "adjustments": [
+          {
+            "group": "CO",
+            "carc": "29",
+            "amount": 245
+          }
+        ],
+        "remarks": []
+      },
+      {
+        "line": 2,
+        "code": "36415",
+        "modifiers": [],
+        "units": 1,
+        "description": "Routine venipuncture",
+        "billed": 18,
+        "paid": 0,
+        "adjustments": [
+          {
+            "group": "CO",
+            "carc": "29",
+            "amount": 18
+          }
+        ],
+        "remarks": []
+      }
+    ],
+    "documents": [
+      {
+        "id": "sub-1",
+        "kind": "submission_history",
+        "title": "Claim submission history (practice billing system)",
+        "date": "2026-10-20",
+        "text": "Patient: Linda Okoye   DOB: 09/03/1973   Account: 00266190\n\n2025-07-18  Claim sent to clearinghouse, batch 7731.\n2025-07-22  277CA received from plan: claim accepted for adjudication. Payer claim control number 25203-114872.\n2025-12-09  Status inquiry: plan reports no claim on file under 25203-114872.\n2026-09-30  Claim resubmitted after follow-up; plan assigned new claim number 26273-002950.\n2026-10-16  Remittance: lines 1 and 2 denied, CARC 29."
+      }
+    ]
+  }
+]

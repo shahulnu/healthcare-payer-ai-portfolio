@@ -1,0 +1,2953 @@
+{
+  "period": "2026 Q3",
+  "cohortSize": 120,
+  "leads": [
+    {
+      "providerId": "PRV-SYN-2009",
+      "specialty": "Physical Therapy",
+      "encounters": 3758,
+      "tier": "high",
+      "score": 79,
+      "features": [
+        {
+          "id": "units_per_visit",
+          "label": "Timed units per visit",
+          "value": 5.4,
+          "display": "5.40",
+          "peerMedian": 3.09,
+          "peerDisplay": "3.09",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 11.1,
+          "rawZ": 11.1,
+          "flagged": true,
+          "hardRule": false
+        },
+        {
+          "id": "four_plus_unit_share",
+          "label": "Visits with 4 or more timed units",
+          "value": 0.78,
+          "display": "78.0%",
+          "peerMedian": 0.176,
+          "peerDisplay": "17.6%",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 19.9,
+          "rawZ": 19.9,
+          "flagged": true,
+          "hardRule": false
+        },
+        {
+          "id": "visits_per_patient",
+          "label": "Visits per patient",
+          "value": 13.5,
+          "display": "13.5",
+          "peerMedian": 12.45,
+          "peerDisplay": "12.4",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 0.6,
+          "rawZ": 0.6,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "modifier59_rate",
+          "label": "Visits billed with modifier 59",
+          "value": 0.12,
+          "display": "12.0%",
+          "peerMedian": 0.125,
+          "peerDisplay": "12.5%",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": -0.2,
+          "rawZ": -0.2,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "peak_day_hours",
+          "label": "Busiest day, billed time implied by codes",
+          "value": 8.9,
+          "display": "8.9 hours",
+          "peerMedian": 8.95,
+          "peerDisplay": "8.9 hours",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": -0.1,
+          "rawZ": -0.1,
+          "flagged": false,
+          "hardRule": false
+        }
+      ],
+      "flaggedLabels": [
+        "Timed units per visit",
+        "Visits with 4 or more timed units"
+      ],
+      "exposure": 243100,
+      "clearedByAdjustment": false
+    },
+    {
+      "providerId": "PRV-SYN-1031",
+      "specialty": "Family Medicine",
+      "encounters": 1123,
+      "tier": "high",
+      "score": 55,
+      "features": [
+        {
+          "id": "level5_share",
+          "label": "Established visits billed at 99215",
+          "value": 0.07,
+          "display": "7.0%",
+          "peerMedian": 0.0555,
+          "peerDisplay": "5.5%",
+          "expected": 0.06756666666666666,
+          "expectedDisplay": "6.8%",
+          "z": 0.2,
+          "rawZ": 1,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "modifier25_rate",
+          "label": "Visits billed with modifier 25",
+          "value": 0.41,
+          "display": "41.0%",
+          "peerMedian": 0.0795,
+          "peerDisplay": "8.0%",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 19.4,
+          "rawZ": 19.4,
+          "flagged": true,
+          "hardRule": false
+        },
+        {
+          "id": "peak_day_hours",
+          "label": "Busiest day, billed time implied by codes",
+          "value": 8.7,
+          "display": "8.7 hours",
+          "peerMedian": 8.4,
+          "peerDisplay": "8.4 hours",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 0.3,
+          "rawZ": 0.3,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "allowed_per_patient",
+          "label": "Allowed amount per patient",
+          "value": 442,
+          "display": "$442",
+          "peerMedian": 403.5,
+          "peerDisplay": "$404",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 0.9,
+          "rawZ": 0.9,
+          "flagged": false,
+          "hardRule": false
+        }
+      ],
+      "flaggedLabels": [
+        "Visits billed with modifier 25"
+      ],
+      "exposure": 40800,
+      "clearedByAdjustment": false
+    },
+    {
+      "providerId": "PRV-SYN-1017",
+      "specialty": "Family Medicine",
+      "encounters": 1558,
+      "tier": "high",
+      "score": 55,
+      "features": [
+        {
+          "id": "level5_share",
+          "label": "Established visits billed at 99215",
+          "value": 0.48,
+          "display": "48.0%",
+          "peerMedian": 0.0555,
+          "peerDisplay": "5.5%",
+          "expected": 0.05586666666666667,
+          "expectedDisplay": "5.6%",
+          "z": 42.8,
+          "rawZ": 30.1,
+          "flagged": true,
+          "hardRule": false
+        },
+        {
+          "id": "modifier25_rate",
+          "label": "Visits billed with modifier 25",
+          "value": 0.063,
+          "display": "6.3%",
+          "peerMedian": 0.0795,
+          "peerDisplay": "8.0%",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": -1,
+          "rawZ": -1,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "peak_day_hours",
+          "label": "Busiest day, billed time implied by codes",
+          "value": 7.6,
+          "display": "7.6 hours",
+          "peerMedian": 8.4,
+          "peerDisplay": "8.4 hours",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": -0.9,
+          "rawZ": -0.9,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "allowed_per_patient",
+          "label": "Allowed amount per patient",
+          "value": 498,
+          "display": "$498",
+          "peerMedian": 403.5,
+          "peerDisplay": "$404",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 2.2,
+          "rawZ": 2.2,
+          "flagged": false,
+          "hardRule": false
+        }
+      ],
+      "flaggedLabels": [
+        "Established visits billed at 99215"
+      ],
+      "exposure": 36300,
+      "clearedByAdjustment": false
+    },
+    {
+      "providerId": "PRV-SYN-1058",
+      "specialty": "Family Medicine",
+      "encounters": 2580,
+      "tier": "high",
+      "score": 55,
+      "features": [
+        {
+          "id": "level5_share",
+          "label": "Established visits billed at 99215",
+          "value": 0.046,
+          "display": "4.6%",
+          "peerMedian": 0.0555,
+          "peerDisplay": "5.5%",
+          "expected": 0.052399999999999995,
+          "expectedDisplay": "5.2%",
+          "z": -0.6,
+          "rawZ": -0.7,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "modifier25_rate",
+          "label": "Visits billed with modifier 25",
+          "value": 0.082,
+          "display": "8.2%",
+          "peerMedian": 0.0795,
+          "peerDisplay": "8.0%",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 0.1,
+          "rawZ": 0.1,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "peak_day_hours",
+          "label": "Busiest day, billed time implied by codes",
+          "value": 19.5,
+          "display": "19.5 hours",
+          "peerMedian": 8.4,
+          "peerDisplay": "8.4 hours",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 12.5,
+          "rawZ": 12.5,
+          "flagged": true,
+          "hardRule": true
+        },
+        {
+          "id": "allowed_per_patient",
+          "label": "Allowed amount per patient",
+          "value": 353,
+          "display": "$353",
+          "peerMedian": 403.5,
+          "peerDisplay": "$404",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": -1.2,
+          "rawZ": -1.2,
+          "flagged": false,
+          "hardRule": false
+        }
+      ],
+      "flaggedLabels": [
+        "Busiest day, billed time implied by codes"
+      ],
+      "exposure": 0,
+      "clearedByAdjustment": false
+    },
+    {
+      "providerId": "PRV-SYN-2027",
+      "specialty": "Physical Therapy",
+      "encounters": 2976,
+      "tier": "high",
+      "score": 52,
+      "features": [
+        {
+          "id": "units_per_visit",
+          "label": "Timed units per visit",
+          "value": 3.01,
+          "display": "3.01",
+          "peerMedian": 3.09,
+          "peerDisplay": "3.09",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": -0.4,
+          "rawZ": -0.4,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "four_plus_unit_share",
+          "label": "Visits with 4 or more timed units",
+          "value": 0.24,
+          "display": "24.0%",
+          "peerMedian": 0.176,
+          "peerDisplay": "17.6%",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 2.1,
+          "rawZ": 2.1,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "visits_per_patient",
+          "label": "Visits per patient",
+          "value": 31,
+          "display": "31.0",
+          "peerMedian": 12.45,
+          "peerDisplay": "12.4",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 10.9,
+          "rawZ": 10.9,
+          "flagged": true,
+          "hardRule": false
+        },
+        {
+          "id": "modifier59_rate",
+          "label": "Visits billed with modifier 59",
+          "value": 0.118,
+          "display": "11.8%",
+          "peerMedian": 0.125,
+          "peerDisplay": "12.5%",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": -0.3,
+          "rawZ": -0.3,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "peak_day_hours",
+          "label": "Busiest day, billed time implied by codes",
+          "value": 9.2,
+          "display": "9.2 hours",
+          "peerMedian": 8.95,
+          "peerDisplay": "8.9 hours",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 0.3,
+          "rawZ": 0.3,
+          "flagged": false,
+          "hardRule": false
+        }
+      ],
+      "flaggedLabels": [
+        "Visits per patient"
+      ],
+      "exposure": 169200,
+      "clearedByAdjustment": false
+    },
+    {
+      "providerId": "PRV-SYN-1042",
+      "specialty": "Family Medicine",
+      "encounters": 968,
+      "tier": "medium",
+      "score": 38,
+      "features": [
+        {
+          "id": "level5_share",
+          "label": "Established visits billed at 99215",
+          "value": 0.125,
+          "display": "12.5%",
+          "peerMedian": 0.0555,
+          "peerDisplay": "5.5%",
+          "expected": 0.05413333333333333,
+          "expectedDisplay": "5.4%",
+          "z": 7.2,
+          "rawZ": 4.9,
+          "flagged": true,
+          "hardRule": false
+        },
+        {
+          "id": "modifier25_rate",
+          "label": "Visits billed with modifier 25",
+          "value": 0.11,
+          "display": "11.0%",
+          "peerMedian": 0.0795,
+          "peerDisplay": "8.0%",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 1.8,
+          "rawZ": 1.8,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "peak_day_hours",
+          "label": "Busiest day, billed time implied by codes",
+          "value": 8.8,
+          "display": "8.8 hours",
+          "peerMedian": 8.4,
+          "peerDisplay": "8.4 hours",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 0.4,
+          "rawZ": 0.4,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "allowed_per_patient",
+          "label": "Allowed amount per patient",
+          "value": 375,
+          "display": "$375",
+          "peerMedian": 403.5,
+          "peerDisplay": "$404",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": -0.7,
+          "rawZ": -0.7,
+          "flagged": false,
+          "hardRule": false
+        }
+      ],
+      "flaggedLabels": [
+        "Established visits billed at 99215"
+      ],
+      "exposure": 3800,
+      "clearedByAdjustment": false
+    }
+  ],
+  "cleared": [
+    {
+      "providerId": "PRV-SYN-1066",
+      "specialty": "Family Medicine",
+      "encounters": 1481,
+      "tier": "none",
+      "score": 0,
+      "features": [
+        {
+          "id": "level5_share",
+          "label": "Established visits billed at 99215",
+          "value": 0.109,
+          "display": "10.9%",
+          "peerMedian": 0.0555,
+          "peerDisplay": "5.5%",
+          "expected": 0.10266666666666667,
+          "expectedDisplay": "10.3%",
+          "z": 0.6,
+          "rawZ": 3.8,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "modifier25_rate",
+          "label": "Visits billed with modifier 25",
+          "value": 0.139,
+          "display": "13.9%",
+          "peerMedian": 0.0795,
+          "peerDisplay": "8.0%",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 3.5,
+          "rawZ": 3.5,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "peak_day_hours",
+          "label": "Busiest day, billed time implied by codes",
+          "value": 10.3,
+          "display": "10.3 hours",
+          "peerMedian": 8.4,
+          "peerDisplay": "8.4 hours",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": 2.1,
+          "rawZ": 2.1,
+          "flagged": false,
+          "hardRule": false
+        },
+        {
+          "id": "allowed_per_patient",
+          "label": "Allowed amount per patient",
+          "value": 392,
+          "display": "$392",
+          "peerMedian": 403.5,
+          "peerDisplay": "$404",
+          "expected": null,
+          "expectedDisplay": null,
+          "z": -0.3,
+          "rawZ": -0.3,
+          "flagged": false,
+          "hardRule": false
+        }
+      ],
+      "flaggedLabels": [],
+      "exposure": 0,
+      "clearedByAdjustment": true
+    }
+  ],
+  "peers": {
+    "Family Medicine": {
+      "level5_share": [
+        {
+          "id": "PRV-SYN-1001",
+          "value": 0.05,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1002",
+          "value": 0.044,
+          "risk": 0.83
+        },
+        {
+          "id": "PRV-SYN-1003",
+          "value": 0.078,
+          "risk": 1.16
+        },
+        {
+          "id": "PRV-SYN-1004",
+          "value": 0.044,
+          "risk": 0.9
+        },
+        {
+          "id": "PRV-SYN-1005",
+          "value": 0.059,
+          "risk": 1.03
+        },
+        {
+          "id": "PRV-SYN-1006",
+          "value": 0.041,
+          "risk": 1.01
+        },
+        {
+          "id": "PRV-SYN-1007",
+          "value": 0.048,
+          "risk": 1.3
+        },
+        {
+          "id": "PRV-SYN-1008",
+          "value": 0.061,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1009",
+          "value": 0.049,
+          "risk": 0.92
+        },
+        {
+          "id": "PRV-SYN-1010",
+          "value": 0.047,
+          "risk": 1.11
+        },
+        {
+          "id": "PRV-SYN-1011",
+          "value": 0.06,
+          "risk": 1.11
+        },
+        {
+          "id": "PRV-SYN-1012",
+          "value": 0.058,
+          "risk": 0.97
+        },
+        {
+          "id": "PRV-SYN-1013",
+          "value": 0.046,
+          "risk": 0.95
+        },
+        {
+          "id": "PRV-SYN-1014",
+          "value": 0.059,
+          "risk": 0.82
+        },
+        {
+          "id": "PRV-SYN-1015",
+          "value": 0.053,
+          "risk": 0.97
+        },
+        {
+          "id": "PRV-SYN-1016",
+          "value": 0.065,
+          "risk": 0.94
+        },
+        {
+          "id": "PRV-SYN-1017",
+          "value": 0.48,
+          "risk": 1.02
+        },
+        {
+          "id": "PRV-SYN-1018",
+          "value": 0.059,
+          "risk": 1.37
+        },
+        {
+          "id": "PRV-SYN-1019",
+          "value": 0.063,
+          "risk": 1.03
+        },
+        {
+          "id": "PRV-SYN-1020",
+          "value": 0.042,
+          "risk": 1.08
+        },
+        {
+          "id": "PRV-SYN-1021",
+          "value": 0.049,
+          "risk": 0.91
+        },
+        {
+          "id": "PRV-SYN-1022",
+          "value": 0.034,
+          "risk": 0.91
+        },
+        {
+          "id": "PRV-SYN-1023",
+          "value": 0.067,
+          "risk": 1.17
+        },
+        {
+          "id": "PRV-SYN-1024",
+          "value": 0.057,
+          "risk": 1.09
+        },
+        {
+          "id": "PRV-SYN-1025",
+          "value": 0.072,
+          "risk": 0.99
+        },
+        {
+          "id": "PRV-SYN-1026",
+          "value": 0.054,
+          "risk": 1.11
+        },
+        {
+          "id": "PRV-SYN-1027",
+          "value": 0.065,
+          "risk": 1.08
+        },
+        {
+          "id": "PRV-SYN-1028",
+          "value": 0.071,
+          "risk": 1.18
+        },
+        {
+          "id": "PRV-SYN-1029",
+          "value": 0.042,
+          "risk": 0.78
+        },
+        {
+          "id": "PRV-SYN-1030",
+          "value": 0.062,
+          "risk": 0.98
+        },
+        {
+          "id": "PRV-SYN-1031",
+          "value": 0.07,
+          "risk": 1.29
+        },
+        {
+          "id": "PRV-SYN-1032",
+          "value": 0.043,
+          "risk": 0.95
+        },
+        {
+          "id": "PRV-SYN-1033",
+          "value": 0.054,
+          "risk": 0.93
+        },
+        {
+          "id": "PRV-SYN-1034",
+          "value": 0.059,
+          "risk": 0.92
+        },
+        {
+          "id": "PRV-SYN-1035",
+          "value": 0.045,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1036",
+          "value": 0.054,
+          "risk": 0.98
+        },
+        {
+          "id": "PRV-SYN-1037",
+          "value": 0.057,
+          "risk": 1.23
+        },
+        {
+          "id": "PRV-SYN-1038",
+          "value": 0.044,
+          "risk": 1.02
+        },
+        {
+          "id": "PRV-SYN-1039",
+          "value": 0.065,
+          "risk": 1.21
+        },
+        {
+          "id": "PRV-SYN-1040",
+          "value": 0.05,
+          "risk": 0.71
+        },
+        {
+          "id": "PRV-SYN-1041",
+          "value": 0.074,
+          "risk": 1.22
+        },
+        {
+          "id": "PRV-SYN-1042",
+          "value": 0.125,
+          "risk": 0.98
+        },
+        {
+          "id": "PRV-SYN-1043",
+          "value": 0.072,
+          "risk": 1.2
+        },
+        {
+          "id": "PRV-SYN-1044",
+          "value": 0.059,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1045",
+          "value": 0.049,
+          "risk": 0.89
+        },
+        {
+          "id": "PRV-SYN-1046",
+          "value": 0.038,
+          "risk": 0.82
+        },
+        {
+          "id": "PRV-SYN-1047",
+          "value": 0.051,
+          "risk": 1.23
+        },
+        {
+          "id": "PRV-SYN-1048",
+          "value": 0.088,
+          "risk": 1.13
+        },
+        {
+          "id": "PRV-SYN-1049",
+          "value": 0.048,
+          "risk": 0.96
+        },
+        {
+          "id": "PRV-SYN-1050",
+          "value": 0.079,
+          "risk": 1.1
+        },
+        {
+          "id": "PRV-SYN-1051",
+          "value": 0.066,
+          "risk": 1.32
+        },
+        {
+          "id": "PRV-SYN-1052",
+          "value": 0.071,
+          "risk": 1.01
+        },
+        {
+          "id": "PRV-SYN-1053",
+          "value": 0.046,
+          "risk": 0.93
+        },
+        {
+          "id": "PRV-SYN-1054",
+          "value": 0.053,
+          "risk": 0.81
+        },
+        {
+          "id": "PRV-SYN-1055",
+          "value": 0.056,
+          "risk": 1.08
+        },
+        {
+          "id": "PRV-SYN-1056",
+          "value": 0.046,
+          "risk": 0.93
+        },
+        {
+          "id": "PRV-SYN-1057",
+          "value": 0.045,
+          "risk": 0.75
+        },
+        {
+          "id": "PRV-SYN-1058",
+          "value": 0.046,
+          "risk": 0.94
+        },
+        {
+          "id": "PRV-SYN-1059",
+          "value": 0.049,
+          "risk": 0.84
+        },
+        {
+          "id": "PRV-SYN-1060",
+          "value": 0.049,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1061",
+          "value": 0.067,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1062",
+          "value": 0.049,
+          "risk": 1.06
+        },
+        {
+          "id": "PRV-SYN-1063",
+          "value": 0.056,
+          "risk": 1.02
+        },
+        {
+          "id": "PRV-SYN-1064",
+          "value": 0.055,
+          "risk": 0.86
+        },
+        {
+          "id": "PRV-SYN-1065",
+          "value": 0.048,
+          "risk": 0.86
+        },
+        {
+          "id": "PRV-SYN-1066",
+          "value": 0.109,
+          "risk": 2.1
+        },
+        {
+          "id": "PRV-SYN-1067",
+          "value": 0.066,
+          "risk": 1.17
+        },
+        {
+          "id": "PRV-SYN-1068",
+          "value": 0.046,
+          "risk": 1.09
+        },
+        {
+          "id": "PRV-SYN-1069",
+          "value": 0.051,
+          "risk": 1.12
+        },
+        {
+          "id": "PRV-SYN-1070",
+          "value": 0.064,
+          "risk": 1.07
+        },
+        {
+          "id": "PRV-SYN-1071",
+          "value": 0.035,
+          "risk": 1.01
+        },
+        {
+          "id": "PRV-SYN-1072",
+          "value": 0.073,
+          "risk": 1.1
+        },
+        {
+          "id": "PRV-SYN-1073",
+          "value": 0.06,
+          "risk": 1.21
+        },
+        {
+          "id": "PRV-SYN-1074",
+          "value": 0.059,
+          "risk": 0.99
+        },
+        {
+          "id": "PRV-SYN-1075",
+          "value": 0.034,
+          "risk": 0.86
+        },
+        {
+          "id": "PRV-SYN-1076",
+          "value": 0.063,
+          "risk": 1.26
+        },
+        {
+          "id": "PRV-SYN-1077",
+          "value": 0.038,
+          "risk": 1.05
+        },
+        {
+          "id": "PRV-SYN-1078",
+          "value": 0.068,
+          "risk": 1.06
+        },
+        {
+          "id": "PRV-SYN-1079",
+          "value": 0.068,
+          "risk": 1.16
+        },
+        {
+          "id": "PRV-SYN-1080",
+          "value": 0.055,
+          "risk": 0.9
+        }
+      ],
+      "modifier25_rate": [
+        {
+          "id": "PRV-SYN-1001",
+          "value": 0.058,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1002",
+          "value": 0.082,
+          "risk": 0.83
+        },
+        {
+          "id": "PRV-SYN-1003",
+          "value": 0.077,
+          "risk": 1.16
+        },
+        {
+          "id": "PRV-SYN-1004",
+          "value": 0.062,
+          "risk": 0.9
+        },
+        {
+          "id": "PRV-SYN-1005",
+          "value": 0.112,
+          "risk": 1.03
+        },
+        {
+          "id": "PRV-SYN-1006",
+          "value": 0.052,
+          "risk": 1.01
+        },
+        {
+          "id": "PRV-SYN-1007",
+          "value": 0.061,
+          "risk": 1.3
+        },
+        {
+          "id": "PRV-SYN-1008",
+          "value": 0.081,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1009",
+          "value": 0.092,
+          "risk": 0.92
+        },
+        {
+          "id": "PRV-SYN-1010",
+          "value": 0.092,
+          "risk": 1.11
+        },
+        {
+          "id": "PRV-SYN-1011",
+          "value": 0.055,
+          "risk": 1.11
+        },
+        {
+          "id": "PRV-SYN-1012",
+          "value": 0.068,
+          "risk": 0.97
+        },
+        {
+          "id": "PRV-SYN-1013",
+          "value": 0.082,
+          "risk": 0.95
+        },
+        {
+          "id": "PRV-SYN-1014",
+          "value": 0.094,
+          "risk": 0.82
+        },
+        {
+          "id": "PRV-SYN-1015",
+          "value": 0.061,
+          "risk": 0.97
+        },
+        {
+          "id": "PRV-SYN-1016",
+          "value": 0.076,
+          "risk": 0.94
+        },
+        {
+          "id": "PRV-SYN-1017",
+          "value": 0.063,
+          "risk": 1.02
+        },
+        {
+          "id": "PRV-SYN-1018",
+          "value": 0.067,
+          "risk": 1.37
+        },
+        {
+          "id": "PRV-SYN-1019",
+          "value": 0.08,
+          "risk": 1.03
+        },
+        {
+          "id": "PRV-SYN-1020",
+          "value": 0.084,
+          "risk": 1.08
+        },
+        {
+          "id": "PRV-SYN-1021",
+          "value": 0.047,
+          "risk": 0.91
+        },
+        {
+          "id": "PRV-SYN-1022",
+          "value": 0.09,
+          "risk": 0.91
+        },
+        {
+          "id": "PRV-SYN-1023",
+          "value": 0.086,
+          "risk": 1.17
+        },
+        {
+          "id": "PRV-SYN-1024",
+          "value": 0.095,
+          "risk": 1.09
+        },
+        {
+          "id": "PRV-SYN-1025",
+          "value": 0.081,
+          "risk": 0.99
+        },
+        {
+          "id": "PRV-SYN-1026",
+          "value": 0.076,
+          "risk": 1.11
+        },
+        {
+          "id": "PRV-SYN-1027",
+          "value": 0.073,
+          "risk": 1.08
+        },
+        {
+          "id": "PRV-SYN-1028",
+          "value": 0.078,
+          "risk": 1.18
+        },
+        {
+          "id": "PRV-SYN-1029",
+          "value": 0.07,
+          "risk": 0.78
+        },
+        {
+          "id": "PRV-SYN-1030",
+          "value": 0.073,
+          "risk": 0.98
+        },
+        {
+          "id": "PRV-SYN-1031",
+          "value": 0.41,
+          "risk": 1.29
+        },
+        {
+          "id": "PRV-SYN-1032",
+          "value": 0.066,
+          "risk": 0.95
+        },
+        {
+          "id": "PRV-SYN-1033",
+          "value": 0.054,
+          "risk": 0.93
+        },
+        {
+          "id": "PRV-SYN-1034",
+          "value": 0.086,
+          "risk": 0.92
+        },
+        {
+          "id": "PRV-SYN-1035",
+          "value": 0.074,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1036",
+          "value": 0.066,
+          "risk": 0.98
+        },
+        {
+          "id": "PRV-SYN-1037",
+          "value": 0.092,
+          "risk": 1.23
+        },
+        {
+          "id": "PRV-SYN-1038",
+          "value": 0.068,
+          "risk": 1.02
+        },
+        {
+          "id": "PRV-SYN-1039",
+          "value": 0.072,
+          "risk": 1.21
+        },
+        {
+          "id": "PRV-SYN-1040",
+          "value": 0.078,
+          "risk": 0.71
+        },
+        {
+          "id": "PRV-SYN-1041",
+          "value": 0.086,
+          "risk": 1.22
+        },
+        {
+          "id": "PRV-SYN-1042",
+          "value": 0.11,
+          "risk": 0.98
+        },
+        {
+          "id": "PRV-SYN-1043",
+          "value": 0.078,
+          "risk": 1.2
+        },
+        {
+          "id": "PRV-SYN-1044",
+          "value": 0.082,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1045",
+          "value": 0.101,
+          "risk": 0.89
+        },
+        {
+          "id": "PRV-SYN-1046",
+          "value": 0.1,
+          "risk": 0.82
+        },
+        {
+          "id": "PRV-SYN-1047",
+          "value": 0.106,
+          "risk": 1.23
+        },
+        {
+          "id": "PRV-SYN-1048",
+          "value": 0.076,
+          "risk": 1.13
+        },
+        {
+          "id": "PRV-SYN-1049",
+          "value": 0.093,
+          "risk": 0.96
+        },
+        {
+          "id": "PRV-SYN-1050",
+          "value": 0.079,
+          "risk": 1.1
+        },
+        {
+          "id": "PRV-SYN-1051",
+          "value": 0.063,
+          "risk": 1.32
+        },
+        {
+          "id": "PRV-SYN-1052",
+          "value": 0.05,
+          "risk": 1.01
+        },
+        {
+          "id": "PRV-SYN-1053",
+          "value": 0.077,
+          "risk": 0.93
+        },
+        {
+          "id": "PRV-SYN-1054",
+          "value": 0.074,
+          "risk": 0.81
+        },
+        {
+          "id": "PRV-SYN-1055",
+          "value": 0.076,
+          "risk": 1.08
+        },
+        {
+          "id": "PRV-SYN-1056",
+          "value": 0.075,
+          "risk": 0.93
+        },
+        {
+          "id": "PRV-SYN-1057",
+          "value": 0.056,
+          "risk": 0.75
+        },
+        {
+          "id": "PRV-SYN-1058",
+          "value": 0.082,
+          "risk": 0.94
+        },
+        {
+          "id": "PRV-SYN-1059",
+          "value": 0.093,
+          "risk": 0.84
+        },
+        {
+          "id": "PRV-SYN-1060",
+          "value": 0.095,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1061",
+          "value": 0.088,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1062",
+          "value": 0.08,
+          "risk": 1.06
+        },
+        {
+          "id": "PRV-SYN-1063",
+          "value": 0.086,
+          "risk": 1.02
+        },
+        {
+          "id": "PRV-SYN-1064",
+          "value": 0.089,
+          "risk": 0.86
+        },
+        {
+          "id": "PRV-SYN-1065",
+          "value": 0.067,
+          "risk": 0.86
+        },
+        {
+          "id": "PRV-SYN-1066",
+          "value": 0.139,
+          "risk": 2.1
+        },
+        {
+          "id": "PRV-SYN-1067",
+          "value": 0.084,
+          "risk": 1.17
+        },
+        {
+          "id": "PRV-SYN-1068",
+          "value": 0.112,
+          "risk": 1.09
+        },
+        {
+          "id": "PRV-SYN-1069",
+          "value": 0.089,
+          "risk": 1.12
+        },
+        {
+          "id": "PRV-SYN-1070",
+          "value": 0.058,
+          "risk": 1.07
+        },
+        {
+          "id": "PRV-SYN-1071",
+          "value": 0.096,
+          "risk": 1.01
+        },
+        {
+          "id": "PRV-SYN-1072",
+          "value": 0.073,
+          "risk": 1.1
+        },
+        {
+          "id": "PRV-SYN-1073",
+          "value": 0.068,
+          "risk": 1.21
+        },
+        {
+          "id": "PRV-SYN-1074",
+          "value": 0.087,
+          "risk": 0.99
+        },
+        {
+          "id": "PRV-SYN-1075",
+          "value": 0.051,
+          "risk": 0.86
+        },
+        {
+          "id": "PRV-SYN-1076",
+          "value": 0.105,
+          "risk": 1.26
+        },
+        {
+          "id": "PRV-SYN-1077",
+          "value": 0.061,
+          "risk": 1.05
+        },
+        {
+          "id": "PRV-SYN-1078",
+          "value": 0.099,
+          "risk": 1.06
+        },
+        {
+          "id": "PRV-SYN-1079",
+          "value": 0.094,
+          "risk": 1.16
+        },
+        {
+          "id": "PRV-SYN-1080",
+          "value": 0.087,
+          "risk": 0.9
+        }
+      ],
+      "peak_day_hours": [
+        {
+          "id": "PRV-SYN-1001",
+          "value": 9.1,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1002",
+          "value": 7.3,
+          "risk": 0.83
+        },
+        {
+          "id": "PRV-SYN-1003",
+          "value": 9.6,
+          "risk": 1.16
+        },
+        {
+          "id": "PRV-SYN-1004",
+          "value": 7.5,
+          "risk": 0.9
+        },
+        {
+          "id": "PRV-SYN-1005",
+          "value": 8.2,
+          "risk": 1.03
+        },
+        {
+          "id": "PRV-SYN-1006",
+          "value": 9.5,
+          "risk": 1.01
+        },
+        {
+          "id": "PRV-SYN-1007",
+          "value": 7.8,
+          "risk": 1.3
+        },
+        {
+          "id": "PRV-SYN-1008",
+          "value": 8.4,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1009",
+          "value": 8.3,
+          "risk": 0.92
+        },
+        {
+          "id": "PRV-SYN-1010",
+          "value": 8.4,
+          "risk": 1.11
+        },
+        {
+          "id": "PRV-SYN-1011",
+          "value": 7.3,
+          "risk": 1.11
+        },
+        {
+          "id": "PRV-SYN-1012",
+          "value": 6.8,
+          "risk": 0.97
+        },
+        {
+          "id": "PRV-SYN-1013",
+          "value": 7.3,
+          "risk": 0.95
+        },
+        {
+          "id": "PRV-SYN-1014",
+          "value": 7.7,
+          "risk": 0.82
+        },
+        {
+          "id": "PRV-SYN-1015",
+          "value": 8.7,
+          "risk": 0.97
+        },
+        {
+          "id": "PRV-SYN-1016",
+          "value": 9.2,
+          "risk": 0.94
+        },
+        {
+          "id": "PRV-SYN-1017",
+          "value": 7.6,
+          "risk": 1.02
+        },
+        {
+          "id": "PRV-SYN-1018",
+          "value": 8.9,
+          "risk": 1.37
+        },
+        {
+          "id": "PRV-SYN-1019",
+          "value": 7.9,
+          "risk": 1.03
+        },
+        {
+          "id": "PRV-SYN-1020",
+          "value": 7.2,
+          "risk": 1.08
+        },
+        {
+          "id": "PRV-SYN-1021",
+          "value": 7.6,
+          "risk": 0.91
+        },
+        {
+          "id": "PRV-SYN-1022",
+          "value": 9,
+          "risk": 0.91
+        },
+        {
+          "id": "PRV-SYN-1023",
+          "value": 7.8,
+          "risk": 1.17
+        },
+        {
+          "id": "PRV-SYN-1024",
+          "value": 8.2,
+          "risk": 1.09
+        },
+        {
+          "id": "PRV-SYN-1025",
+          "value": 8.3,
+          "risk": 0.99
+        },
+        {
+          "id": "PRV-SYN-1026",
+          "value": 7.3,
+          "risk": 1.11
+        },
+        {
+          "id": "PRV-SYN-1027",
+          "value": 9.3,
+          "risk": 1.08
+        },
+        {
+          "id": "PRV-SYN-1028",
+          "value": 8.8,
+          "risk": 1.18
+        },
+        {
+          "id": "PRV-SYN-1029",
+          "value": 9,
+          "risk": 0.78
+        },
+        {
+          "id": "PRV-SYN-1030",
+          "value": 8.8,
+          "risk": 0.98
+        },
+        {
+          "id": "PRV-SYN-1031",
+          "value": 8.7,
+          "risk": 1.29
+        },
+        {
+          "id": "PRV-SYN-1032",
+          "value": 8.6,
+          "risk": 0.95
+        },
+        {
+          "id": "PRV-SYN-1033",
+          "value": 7.6,
+          "risk": 0.93
+        },
+        {
+          "id": "PRV-SYN-1034",
+          "value": 7.9,
+          "risk": 0.92
+        },
+        {
+          "id": "PRV-SYN-1035",
+          "value": 7.8,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1036",
+          "value": 7.9,
+          "risk": 0.98
+        },
+        {
+          "id": "PRV-SYN-1037",
+          "value": 9.4,
+          "risk": 1.23
+        },
+        {
+          "id": "PRV-SYN-1038",
+          "value": 7.2,
+          "risk": 1.02
+        },
+        {
+          "id": "PRV-SYN-1039",
+          "value": 8.6,
+          "risk": 1.21
+        },
+        {
+          "id": "PRV-SYN-1040",
+          "value": 7.4,
+          "risk": 0.71
+        },
+        {
+          "id": "PRV-SYN-1041",
+          "value": 9,
+          "risk": 1.22
+        },
+        {
+          "id": "PRV-SYN-1042",
+          "value": 8.8,
+          "risk": 0.98
+        },
+        {
+          "id": "PRV-SYN-1043",
+          "value": 8.9,
+          "risk": 1.2
+        },
+        {
+          "id": "PRV-SYN-1044",
+          "value": 9.9,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1045",
+          "value": 6.9,
+          "risk": 0.89
+        },
+        {
+          "id": "PRV-SYN-1046",
+          "value": 7.4,
+          "risk": 0.82
+        },
+        {
+          "id": "PRV-SYN-1047",
+          "value": 8.7,
+          "risk": 1.23
+        },
+        {
+          "id": "PRV-SYN-1048",
+          "value": 7.1,
+          "risk": 1.13
+        },
+        {
+          "id": "PRV-SYN-1049",
+          "value": 7.5,
+          "risk": 0.96
+        },
+        {
+          "id": "PRV-SYN-1050",
+          "value": 9.5,
+          "risk": 1.1
+        },
+        {
+          "id": "PRV-SYN-1051",
+          "value": 8.1,
+          "risk": 1.32
+        },
+        {
+          "id": "PRV-SYN-1052",
+          "value": 10.7,
+          "risk": 1.01
+        },
+        {
+          "id": "PRV-SYN-1053",
+          "value": 7.6,
+          "risk": 0.93
+        },
+        {
+          "id": "PRV-SYN-1054",
+          "value": 7.3,
+          "risk": 0.81
+        },
+        {
+          "id": "PRV-SYN-1055",
+          "value": 8,
+          "risk": 1.08
+        },
+        {
+          "id": "PRV-SYN-1056",
+          "value": 8.3,
+          "risk": 0.93
+        },
+        {
+          "id": "PRV-SYN-1057",
+          "value": 8.8,
+          "risk": 0.75
+        },
+        {
+          "id": "PRV-SYN-1058",
+          "value": 19.5,
+          "risk": 0.94
+        },
+        {
+          "id": "PRV-SYN-1059",
+          "value": 7.9,
+          "risk": 0.84
+        },
+        {
+          "id": "PRV-SYN-1060",
+          "value": 9.2,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1061",
+          "value": 7.8,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1062",
+          "value": 9.2,
+          "risk": 1.06
+        },
+        {
+          "id": "PRV-SYN-1063",
+          "value": 9.8,
+          "risk": 1.02
+        },
+        {
+          "id": "PRV-SYN-1064",
+          "value": 8.9,
+          "risk": 0.86
+        },
+        {
+          "id": "PRV-SYN-1065",
+          "value": 10.4,
+          "risk": 0.86
+        },
+        {
+          "id": "PRV-SYN-1066",
+          "value": 10.3,
+          "risk": 2.1
+        },
+        {
+          "id": "PRV-SYN-1067",
+          "value": 9.6,
+          "risk": 1.17
+        },
+        {
+          "id": "PRV-SYN-1068",
+          "value": 9.9,
+          "risk": 1.09
+        },
+        {
+          "id": "PRV-SYN-1069",
+          "value": 8.1,
+          "risk": 1.12
+        },
+        {
+          "id": "PRV-SYN-1070",
+          "value": 8.4,
+          "risk": 1.07
+        },
+        {
+          "id": "PRV-SYN-1071",
+          "value": 7.4,
+          "risk": 1.01
+        },
+        {
+          "id": "PRV-SYN-1072",
+          "value": 8.5,
+          "risk": 1.1
+        },
+        {
+          "id": "PRV-SYN-1073",
+          "value": 9.7,
+          "risk": 1.21
+        },
+        {
+          "id": "PRV-SYN-1074",
+          "value": 8.4,
+          "risk": 0.99
+        },
+        {
+          "id": "PRV-SYN-1075",
+          "value": 8,
+          "risk": 0.86
+        },
+        {
+          "id": "PRV-SYN-1076",
+          "value": 9,
+          "risk": 1.26
+        },
+        {
+          "id": "PRV-SYN-1077",
+          "value": 8.7,
+          "risk": 1.05
+        },
+        {
+          "id": "PRV-SYN-1078",
+          "value": 8.1,
+          "risk": 1.06
+        },
+        {
+          "id": "PRV-SYN-1079",
+          "value": 9.5,
+          "risk": 1.16
+        },
+        {
+          "id": "PRV-SYN-1080",
+          "value": 8.3,
+          "risk": 0.9
+        }
+      ],
+      "allowed_per_patient": [
+        {
+          "id": "PRV-SYN-1001",
+          "value": 374,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1002",
+          "value": 391,
+          "risk": 0.83
+        },
+        {
+          "id": "PRV-SYN-1003",
+          "value": 390,
+          "risk": 1.16
+        },
+        {
+          "id": "PRV-SYN-1004",
+          "value": 446,
+          "risk": 0.9
+        },
+        {
+          "id": "PRV-SYN-1005",
+          "value": 352,
+          "risk": 1.03
+        },
+        {
+          "id": "PRV-SYN-1006",
+          "value": 371,
+          "risk": 1.01
+        },
+        {
+          "id": "PRV-SYN-1007",
+          "value": 486,
+          "risk": 1.3
+        },
+        {
+          "id": "PRV-SYN-1008",
+          "value": 453,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1009",
+          "value": 418,
+          "risk": 0.92
+        },
+        {
+          "id": "PRV-SYN-1010",
+          "value": 412,
+          "risk": 1.11
+        },
+        {
+          "id": "PRV-SYN-1011",
+          "value": 343,
+          "risk": 1.11
+        },
+        {
+          "id": "PRV-SYN-1012",
+          "value": 306,
+          "risk": 0.97
+        },
+        {
+          "id": "PRV-SYN-1013",
+          "value": 433,
+          "risk": 0.95
+        },
+        {
+          "id": "PRV-SYN-1014",
+          "value": 378,
+          "risk": 0.82
+        },
+        {
+          "id": "PRV-SYN-1015",
+          "value": 392,
+          "risk": 0.97
+        },
+        {
+          "id": "PRV-SYN-1016",
+          "value": 375,
+          "risk": 0.94
+        },
+        {
+          "id": "PRV-SYN-1017",
+          "value": 498,
+          "risk": 1.02
+        },
+        {
+          "id": "PRV-SYN-1018",
+          "value": 333,
+          "risk": 1.37
+        },
+        {
+          "id": "PRV-SYN-1019",
+          "value": 443,
+          "risk": 1.03
+        },
+        {
+          "id": "PRV-SYN-1020",
+          "value": 457,
+          "risk": 1.08
+        },
+        {
+          "id": "PRV-SYN-1021",
+          "value": 451,
+          "risk": 0.91
+        },
+        {
+          "id": "PRV-SYN-1022",
+          "value": 471,
+          "risk": 0.91
+        },
+        {
+          "id": "PRV-SYN-1023",
+          "value": 385,
+          "risk": 1.17
+        },
+        {
+          "id": "PRV-SYN-1024",
+          "value": 384,
+          "risk": 1.09
+        },
+        {
+          "id": "PRV-SYN-1025",
+          "value": 409,
+          "risk": 0.99
+        },
+        {
+          "id": "PRV-SYN-1026",
+          "value": 478,
+          "risk": 1.11
+        },
+        {
+          "id": "PRV-SYN-1027",
+          "value": 429,
+          "risk": 1.08
+        },
+        {
+          "id": "PRV-SYN-1028",
+          "value": 430,
+          "risk": 1.18
+        },
+        {
+          "id": "PRV-SYN-1029",
+          "value": 397,
+          "risk": 0.78
+        },
+        {
+          "id": "PRV-SYN-1030",
+          "value": 467,
+          "risk": 0.98
+        },
+        {
+          "id": "PRV-SYN-1031",
+          "value": 442,
+          "risk": 1.29
+        },
+        {
+          "id": "PRV-SYN-1032",
+          "value": 454,
+          "risk": 0.95
+        },
+        {
+          "id": "PRV-SYN-1033",
+          "value": 402,
+          "risk": 0.93
+        },
+        {
+          "id": "PRV-SYN-1034",
+          "value": 334,
+          "risk": 0.92
+        },
+        {
+          "id": "PRV-SYN-1035",
+          "value": 423,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1036",
+          "value": 468,
+          "risk": 0.98
+        },
+        {
+          "id": "PRV-SYN-1037",
+          "value": 336,
+          "risk": 1.23
+        },
+        {
+          "id": "PRV-SYN-1038",
+          "value": 386,
+          "risk": 1.02
+        },
+        {
+          "id": "PRV-SYN-1039",
+          "value": 389,
+          "risk": 1.21
+        },
+        {
+          "id": "PRV-SYN-1040",
+          "value": 399,
+          "risk": 0.71
+        },
+        {
+          "id": "PRV-SYN-1041",
+          "value": 420,
+          "risk": 1.22
+        },
+        {
+          "id": "PRV-SYN-1042",
+          "value": 375,
+          "risk": 0.98
+        },
+        {
+          "id": "PRV-SYN-1043",
+          "value": 426,
+          "risk": 1.2
+        },
+        {
+          "id": "PRV-SYN-1044",
+          "value": 436,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1045",
+          "value": 393,
+          "risk": 0.89
+        },
+        {
+          "id": "PRV-SYN-1046",
+          "value": 322,
+          "risk": 0.82
+        },
+        {
+          "id": "PRV-SYN-1047",
+          "value": 385,
+          "risk": 1.23
+        },
+        {
+          "id": "PRV-SYN-1048",
+          "value": 387,
+          "risk": 1.13
+        },
+        {
+          "id": "PRV-SYN-1049",
+          "value": 410,
+          "risk": 0.96
+        },
+        {
+          "id": "PRV-SYN-1050",
+          "value": 387,
+          "risk": 1.1
+        },
+        {
+          "id": "PRV-SYN-1051",
+          "value": 340,
+          "risk": 1.32
+        },
+        {
+          "id": "PRV-SYN-1052",
+          "value": 434,
+          "risk": 1.01
+        },
+        {
+          "id": "PRV-SYN-1053",
+          "value": 413,
+          "risk": 0.93
+        },
+        {
+          "id": "PRV-SYN-1054",
+          "value": 366,
+          "risk": 0.81
+        },
+        {
+          "id": "PRV-SYN-1055",
+          "value": 391,
+          "risk": 1.08
+        },
+        {
+          "id": "PRV-SYN-1056",
+          "value": 402,
+          "risk": 0.93
+        },
+        {
+          "id": "PRV-SYN-1057",
+          "value": 468,
+          "risk": 0.75
+        },
+        {
+          "id": "PRV-SYN-1058",
+          "value": 353,
+          "risk": 0.94
+        },
+        {
+          "id": "PRV-SYN-1059",
+          "value": 434,
+          "risk": 0.84
+        },
+        {
+          "id": "PRV-SYN-1060",
+          "value": 371,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1061",
+          "value": 482,
+          "risk": 1.04
+        },
+        {
+          "id": "PRV-SYN-1062",
+          "value": 426,
+          "risk": 1.06
+        },
+        {
+          "id": "PRV-SYN-1063",
+          "value": 384,
+          "risk": 1.02
+        },
+        {
+          "id": "PRV-SYN-1064",
+          "value": 448,
+          "risk": 0.86
+        },
+        {
+          "id": "PRV-SYN-1065",
+          "value": 410,
+          "risk": 0.86
+        },
+        {
+          "id": "PRV-SYN-1066",
+          "value": 392,
+          "risk": 2.1
+        },
+        {
+          "id": "PRV-SYN-1067",
+          "value": 312,
+          "risk": 1.17
+        },
+        {
+          "id": "PRV-SYN-1068",
+          "value": 412,
+          "risk": 1.09
+        },
+        {
+          "id": "PRV-SYN-1069",
+          "value": 427,
+          "risk": 1.12
+        },
+        {
+          "id": "PRV-SYN-1070",
+          "value": 405,
+          "risk": 1.07
+        },
+        {
+          "id": "PRV-SYN-1071",
+          "value": 436,
+          "risk": 1.01
+        },
+        {
+          "id": "PRV-SYN-1072",
+          "value": 496,
+          "risk": 1.1
+        },
+        {
+          "id": "PRV-SYN-1073",
+          "value": 350,
+          "risk": 1.21
+        },
+        {
+          "id": "PRV-SYN-1074",
+          "value": 376,
+          "risk": 0.99
+        },
+        {
+          "id": "PRV-SYN-1075",
+          "value": 389,
+          "risk": 0.86
+        },
+        {
+          "id": "PRV-SYN-1076",
+          "value": 441,
+          "risk": 1.26
+        },
+        {
+          "id": "PRV-SYN-1077",
+          "value": 414,
+          "risk": 1.05
+        },
+        {
+          "id": "PRV-SYN-1078",
+          "value": 422,
+          "risk": 1.06
+        },
+        {
+          "id": "PRV-SYN-1079",
+          "value": 372,
+          "risk": 1.16
+        },
+        {
+          "id": "PRV-SYN-1080",
+          "value": 379,
+          "risk": 0.9
+        }
+      ]
+    },
+    "Physical Therapy": {
+      "units_per_visit": [
+        {
+          "id": "PRV-SYN-2001",
+          "value": 3.09
+        },
+        {
+          "id": "PRV-SYN-2002",
+          "value": 3.1
+        },
+        {
+          "id": "PRV-SYN-2003",
+          "value": 3.11
+        },
+        {
+          "id": "PRV-SYN-2004",
+          "value": 3.03
+        },
+        {
+          "id": "PRV-SYN-2005",
+          "value": 2.87
+        },
+        {
+          "id": "PRV-SYN-2006",
+          "value": 3.06
+        },
+        {
+          "id": "PRV-SYN-2007",
+          "value": 3.37
+        },
+        {
+          "id": "PRV-SYN-2008",
+          "value": 2.71
+        },
+        {
+          "id": "PRV-SYN-2009",
+          "value": 5.4
+        },
+        {
+          "id": "PRV-SYN-2010",
+          "value": 3.06
+        },
+        {
+          "id": "PRV-SYN-2011",
+          "value": 3.5
+        },
+        {
+          "id": "PRV-SYN-2012",
+          "value": 2.98
+        },
+        {
+          "id": "PRV-SYN-2013",
+          "value": 3.36
+        },
+        {
+          "id": "PRV-SYN-2014",
+          "value": 3.03
+        },
+        {
+          "id": "PRV-SYN-2015",
+          "value": 3.44
+        },
+        {
+          "id": "PRV-SYN-2016",
+          "value": 2.95
+        },
+        {
+          "id": "PRV-SYN-2017",
+          "value": 3.63
+        },
+        {
+          "id": "PRV-SYN-2018",
+          "value": 3.32
+        },
+        {
+          "id": "PRV-SYN-2019",
+          "value": 2.96
+        },
+        {
+          "id": "PRV-SYN-2020",
+          "value": 2.92
+        },
+        {
+          "id": "PRV-SYN-2021",
+          "value": 3.27
+        },
+        {
+          "id": "PRV-SYN-2022",
+          "value": 3.09
+        },
+        {
+          "id": "PRV-SYN-2023",
+          "value": 3.05
+        },
+        {
+          "id": "PRV-SYN-2024",
+          "value": 2.79
+        },
+        {
+          "id": "PRV-SYN-2025",
+          "value": 2.69
+        },
+        {
+          "id": "PRV-SYN-2026",
+          "value": 2.86
+        },
+        {
+          "id": "PRV-SYN-2027",
+          "value": 3.01
+        },
+        {
+          "id": "PRV-SYN-2028",
+          "value": 3.02
+        },
+        {
+          "id": "PRV-SYN-2029",
+          "value": 2.95
+        },
+        {
+          "id": "PRV-SYN-2030",
+          "value": 3.15
+        },
+        {
+          "id": "PRV-SYN-2031",
+          "value": 3.01
+        },
+        {
+          "id": "PRV-SYN-2032",
+          "value": 3.17
+        },
+        {
+          "id": "PRV-SYN-2033",
+          "value": 3.18
+        },
+        {
+          "id": "PRV-SYN-2034",
+          "value": 3.27
+        },
+        {
+          "id": "PRV-SYN-2035",
+          "value": 3.2
+        },
+        {
+          "id": "PRV-SYN-2036",
+          "value": 2.9
+        },
+        {
+          "id": "PRV-SYN-2037",
+          "value": 3.36
+        },
+        {
+          "id": "PRV-SYN-2038",
+          "value": 3.12
+        },
+        {
+          "id": "PRV-SYN-2039",
+          "value": 3.29
+        },
+        {
+          "id": "PRV-SYN-2040",
+          "value": 3.45
+        }
+      ],
+      "four_plus_unit_share": [
+        {
+          "id": "PRV-SYN-2001",
+          "value": 0.147
+        },
+        {
+          "id": "PRV-SYN-2002",
+          "value": 0.176
+        },
+        {
+          "id": "PRV-SYN-2003",
+          "value": 0.18
+        },
+        {
+          "id": "PRV-SYN-2004",
+          "value": 0.129
+        },
+        {
+          "id": "PRV-SYN-2005",
+          "value": 0.135
+        },
+        {
+          "id": "PRV-SYN-2006",
+          "value": 0.18
+        },
+        {
+          "id": "PRV-SYN-2007",
+          "value": 0.174
+        },
+        {
+          "id": "PRV-SYN-2008",
+          "value": 0.145
+        },
+        {
+          "id": "PRV-SYN-2009",
+          "value": 0.78
+        },
+        {
+          "id": "PRV-SYN-2010",
+          "value": 0.196
+        },
+        {
+          "id": "PRV-SYN-2011",
+          "value": 0.127
+        },
+        {
+          "id": "PRV-SYN-2012",
+          "value": 0.188
+        },
+        {
+          "id": "PRV-SYN-2013",
+          "value": 0.217
+        },
+        {
+          "id": "PRV-SYN-2014",
+          "value": 0.253
+        },
+        {
+          "id": "PRV-SYN-2015",
+          "value": 0.115
+        },
+        {
+          "id": "PRV-SYN-2016",
+          "value": 0.187
+        },
+        {
+          "id": "PRV-SYN-2017",
+          "value": 0.186
+        },
+        {
+          "id": "PRV-SYN-2018",
+          "value": 0.127
+        },
+        {
+          "id": "PRV-SYN-2019",
+          "value": 0.165
+        },
+        {
+          "id": "PRV-SYN-2020",
+          "value": 0.16
+        },
+        {
+          "id": "PRV-SYN-2021",
+          "value": 0.245
+        },
+        {
+          "id": "PRV-SYN-2022",
+          "value": 0.128
+        },
+        {
+          "id": "PRV-SYN-2023",
+          "value": 0.172
+        },
+        {
+          "id": "PRV-SYN-2024",
+          "value": 0.176
+        },
+        {
+          "id": "PRV-SYN-2025",
+          "value": 0.196
+        },
+        {
+          "id": "PRV-SYN-2026",
+          "value": 0.188
+        },
+        {
+          "id": "PRV-SYN-2027",
+          "value": 0.24
+        },
+        {
+          "id": "PRV-SYN-2028",
+          "value": 0.131
+        },
+        {
+          "id": "PRV-SYN-2029",
+          "value": 0.209
+        },
+        {
+          "id": "PRV-SYN-2030",
+          "value": 0.131
+        },
+        {
+          "id": "PRV-SYN-2031",
+          "value": 0.213
+        },
+        {
+          "id": "PRV-SYN-2032",
+          "value": 0.162
+        },
+        {
+          "id": "PRV-SYN-2033",
+          "value": 0.166
+        },
+        {
+          "id": "PRV-SYN-2034",
+          "value": 0.179
+        },
+        {
+          "id": "PRV-SYN-2035",
+          "value": 0.155
+        },
+        {
+          "id": "PRV-SYN-2036",
+          "value": 0.16
+        },
+        {
+          "id": "PRV-SYN-2037",
+          "value": 0.183
+        },
+        {
+          "id": "PRV-SYN-2038",
+          "value": 0.166
+        },
+        {
+          "id": "PRV-SYN-2039",
+          "value": 0.202
+        },
+        {
+          "id": "PRV-SYN-2040",
+          "value": 0.225
+        }
+      ],
+      "visits_per_patient": [
+        {
+          "id": "PRV-SYN-2001",
+          "value": 11.2
+        },
+        {
+          "id": "PRV-SYN-2002",
+          "value": 13.8
+        },
+        {
+          "id": "PRV-SYN-2003",
+          "value": 13.4
+        },
+        {
+          "id": "PRV-SYN-2004",
+          "value": 9.4
+        },
+        {
+          "id": "PRV-SYN-2005",
+          "value": 11.7
+        },
+        {
+          "id": "PRV-SYN-2006",
+          "value": 10.8
+        },
+        {
+          "id": "PRV-SYN-2007",
+          "value": 13.1
+        },
+        {
+          "id": "PRV-SYN-2008",
+          "value": 12.8
+        },
+        {
+          "id": "PRV-SYN-2009",
+          "value": 13.5
+        },
+        {
+          "id": "PRV-SYN-2010",
+          "value": 12.5
+        },
+        {
+          "id": "PRV-SYN-2011",
+          "value": 13.7
+        },
+        {
+          "id": "PRV-SYN-2012",
+          "value": 13.4
+        },
+        {
+          "id": "PRV-SYN-2013",
+          "value": 14.7
+        },
+        {
+          "id": "PRV-SYN-2014",
+          "value": 12.4
+        },
+        {
+          "id": "PRV-SYN-2015",
+          "value": 11.8
+        },
+        {
+          "id": "PRV-SYN-2016",
+          "value": 12.5
+        },
+        {
+          "id": "PRV-SYN-2017",
+          "value": 12.8
+        },
+        {
+          "id": "PRV-SYN-2018",
+          "value": 12.5
+        },
+        {
+          "id": "PRV-SYN-2019",
+          "value": 14.1
+        },
+        {
+          "id": "PRV-SYN-2020",
+          "value": 10.3
+        },
+        {
+          "id": "PRV-SYN-2021",
+          "value": 10.1
+        },
+        {
+          "id": "PRV-SYN-2022",
+          "value": 11.5
+        },
+        {
+          "id": "PRV-SYN-2023",
+          "value": 12.9
+        },
+        {
+          "id": "PRV-SYN-2024",
+          "value": 13.5
+        },
+        {
+          "id": "PRV-SYN-2025",
+          "value": 10.6
+        },
+        {
+          "id": "PRV-SYN-2026",
+          "value": 12.2
+        },
+        {
+          "id": "PRV-SYN-2027",
+          "value": 31
+        },
+        {
+          "id": "PRV-SYN-2028",
+          "value": 13.1
+        },
+        {
+          "id": "PRV-SYN-2029",
+          "value": 8.8
+        },
+        {
+          "id": "PRV-SYN-2030",
+          "value": 10.4
+        },
+        {
+          "id": "PRV-SYN-2031",
+          "value": 14.7
+        },
+        {
+          "id": "PRV-SYN-2032",
+          "value": 10
+        },
+        {
+          "id": "PRV-SYN-2033",
+          "value": 11.1
+        },
+        {
+          "id": "PRV-SYN-2034",
+          "value": 10.1
+        },
+        {
+          "id": "PRV-SYN-2035",
+          "value": 10.3
+        },
+        {
+          "id": "PRV-SYN-2036",
+          "value": 11.9
+        },
+        {
+          "id": "PRV-SYN-2037",
+          "value": 11.8
+        },
+        {
+          "id": "PRV-SYN-2038",
+          "value": 13.5
+        },
+        {
+          "id": "PRV-SYN-2039",
+          "value": 14.1
+        },
+        {
+          "id": "PRV-SYN-2040",
+          "value": 10.9
+        }
+      ],
+      "modifier59_rate": [
+        {
+          "id": "PRV-SYN-2001",
+          "value": 0.124
+        },
+        {
+          "id": "PRV-SYN-2002",
+          "value": 0.153
+        },
+        {
+          "id": "PRV-SYN-2003",
+          "value": 0.135
+        },
+        {
+          "id": "PRV-SYN-2004",
+          "value": 0.154
+        },
+        {
+          "id": "PRV-SYN-2005",
+          "value": 0.093
+        },
+        {
+          "id": "PRV-SYN-2006",
+          "value": 0.1
+        },
+        {
+          "id": "PRV-SYN-2007",
+          "value": 0.135
+        },
+        {
+          "id": "PRV-SYN-2008",
+          "value": 0.124
+        },
+        {
+          "id": "PRV-SYN-2009",
+          "value": 0.12
+        },
+        {
+          "id": "PRV-SYN-2010",
+          "value": 0.131
+        },
+        {
+          "id": "PRV-SYN-2011",
+          "value": 0.128
+        },
+        {
+          "id": "PRV-SYN-2012",
+          "value": 0.136
+        },
+        {
+          "id": "PRV-SYN-2013",
+          "value": 0.087
+        },
+        {
+          "id": "PRV-SYN-2014",
+          "value": 0.102
+        },
+        {
+          "id": "PRV-SYN-2015",
+          "value": 0.101
+        },
+        {
+          "id": "PRV-SYN-2016",
+          "value": 0.1
+        },
+        {
+          "id": "PRV-SYN-2017",
+          "value": 0.086
+        },
+        {
+          "id": "PRV-SYN-2018",
+          "value": 0.11
+        },
+        {
+          "id": "PRV-SYN-2019",
+          "value": 0.153
+        },
+        {
+          "id": "PRV-SYN-2020",
+          "value": 0.126
+        },
+        {
+          "id": "PRV-SYN-2021",
+          "value": 0.156
+        },
+        {
+          "id": "PRV-SYN-2022",
+          "value": 0.087
+        },
+        {
+          "id": "PRV-SYN-2023",
+          "value": 0.142
+        },
+        {
+          "id": "PRV-SYN-2024",
+          "value": 0.173
+        },
+        {
+          "id": "PRV-SYN-2025",
+          "value": 0.12
+        },
+        {
+          "id": "PRV-SYN-2026",
+          "value": 0.086
+        },
+        {
+          "id": "PRV-SYN-2027",
+          "value": 0.118
+        },
+        {
+          "id": "PRV-SYN-2028",
+          "value": 0.151
+        },
+        {
+          "id": "PRV-SYN-2029",
+          "value": 0.139
+        },
+        {
+          "id": "PRV-SYN-2030",
+          "value": 0.127
+        },
+        {
+          "id": "PRV-SYN-2031",
+          "value": 0.155
+        },
+        {
+          "id": "PRV-SYN-2032",
+          "value": 0.155
+        },
+        {
+          "id": "PRV-SYN-2033",
+          "value": 0.117
+        },
+        {
+          "id": "PRV-SYN-2034",
+          "value": 0.082
+        },
+        {
+          "id": "PRV-SYN-2035",
+          "value": 0.151
+        },
+        {
+          "id": "PRV-SYN-2036",
+          "value": 0.124
+        },
+        {
+          "id": "PRV-SYN-2037",
+          "value": 0.115
+        },
+        {
+          "id": "PRV-SYN-2038",
+          "value": 0.134
+        },
+        {
+          "id": "PRV-SYN-2039",
+          "value": 0.124
+        },
+        {
+          "id": "PRV-SYN-2040",
+          "value": 0.13
+        }
+      ],
+      "peak_day_hours": [
+        {
+          "id": "PRV-SYN-2001",
+          "value": 9.3
+        },
+        {
+          "id": "PRV-SYN-2002",
+          "value": 9
+        },
+        {
+          "id": "PRV-SYN-2003",
+          "value": 9.3
+        },
+        {
+          "id": "PRV-SYN-2004",
+          "value": 7.7
+        },
+        {
+          "id": "PRV-SYN-2005",
+          "value": 8.5
+        },
+        {
+          "id": "PRV-SYN-2006",
+          "value": 9.9
+        },
+        {
+          "id": "PRV-SYN-2007",
+          "value": 7.9
+        },
+        {
+          "id": "PRV-SYN-2008",
+          "value": 7.5
+        },
+        {
+          "id": "PRV-SYN-2009",
+          "value": 8.9
+        },
+        {
+          "id": "PRV-SYN-2010",
+          "value": 8.4
+        },
+        {
+          "id": "PRV-SYN-2011",
+          "value": 10.2
+        },
+        {
+          "id": "PRV-SYN-2012",
+          "value": 8
+        },
+        {
+          "id": "PRV-SYN-2013",
+          "value": 10.1
+        },
+        {
+          "id": "PRV-SYN-2014",
+          "value": 9
+        },
+        {
+          "id": "PRV-SYN-2015",
+          "value": 9.7
+        },
+        {
+          "id": "PRV-SYN-2016",
+          "value": 8.8
+        },
+        {
+          "id": "PRV-SYN-2017",
+          "value": 9.6
+        },
+        {
+          "id": "PRV-SYN-2018",
+          "value": 8.4
+        },
+        {
+          "id": "PRV-SYN-2019",
+          "value": 10.6
+        },
+        {
+          "id": "PRV-SYN-2020",
+          "value": 9.1
+        },
+        {
+          "id": "PRV-SYN-2021",
+          "value": 9
+        },
+        {
+          "id": "PRV-SYN-2022",
+          "value": 9.6
+        },
+        {
+          "id": "PRV-SYN-2023",
+          "value": 8.8
+        },
+        {
+          "id": "PRV-SYN-2024",
+          "value": 9.5
+        },
+        {
+          "id": "PRV-SYN-2025",
+          "value": 8.8
+        },
+        {
+          "id": "PRV-SYN-2026",
+          "value": 8
+        },
+        {
+          "id": "PRV-SYN-2027",
+          "value": 9.2
+        },
+        {
+          "id": "PRV-SYN-2028",
+          "value": 7.6
+        },
+        {
+          "id": "PRV-SYN-2029",
+          "value": 8.7
+        },
+        {
+          "id": "PRV-SYN-2030",
+          "value": 9.3
+        },
+        {
+          "id": "PRV-SYN-2031",
+          "value": 9.4
+        },
+        {
+          "id": "PRV-SYN-2032",
+          "value": 8.4
+        },
+        {
+          "id": "PRV-SYN-2033",
+          "value": 9
+        },
+        {
+          "id": "PRV-SYN-2034",
+          "value": 8
+        },
+        {
+          "id": "PRV-SYN-2035",
+          "value": 8.1
+        },
+        {
+          "id": "PRV-SYN-2036",
+          "value": 8.6
+        },
+        {
+          "id": "PRV-SYN-2037",
+          "value": 7.6
+        },
+        {
+          "id": "PRV-SYN-2038",
+          "value": 8.7
+        },
+        {
+          "id": "PRV-SYN-2039",
+          "value": 9
+        },
+        {
+          "id": "PRV-SYN-2040",
+          "value": 9.5
+        }
+      ]
+    }
+  },
+  "level5Line": {
+    "slope": 0.04333333333333333,
+    "intercept": 0.011666666666666672
+  }
+}
