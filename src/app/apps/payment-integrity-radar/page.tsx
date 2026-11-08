@@ -11,7 +11,7 @@ const pct = (x: number | null) => (x === null ? "—" : `${Math.round(x * 100)}%
 export default function RadarCaseStudy() {
   const s = evalSummary;
   return (
-    <div className="wrap">
+    <div className="wrap text-full">
       <section className="hero">
         <span className="eyebrow">Fraud, waste &amp; abuse · SIU triage · Peer analytics</span>
         <h1>Payment Integrity Radar</h1>

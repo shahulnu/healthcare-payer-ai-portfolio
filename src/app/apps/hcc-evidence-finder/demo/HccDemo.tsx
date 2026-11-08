@@ -94,7 +94,7 @@ export function HccDemo({ members, map, initialMemberId }: { members: ChartMembe
   );
 
   return (
-    <div className="wrap demo-page">
+    <div className="wrap demo-page text-full">
       <section className="demo-head">
         <div>
           <span className="eyebrow">HCC Evidence Finder · demo · {map.model}</span>

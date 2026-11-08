@@ -11,7 +11,7 @@ const pct = (x: number | null) => (x === null ? "—" : `${Math.round(x * 100)}%
 export default function AppealsCaseStudy() {
   const s = evalSummary;
   return (
-    <div className="wrap">
+    <div className="wrap text-full">
       <section className="hero">
         <span className="eyebrow">Claims · X12 835 · CARC / RARC</span>
         <h1>Denial &amp; Appeals Assistant</h1>

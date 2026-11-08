@@ -103,7 +103,7 @@ main { display: block; }
 /* Home page: headline and intro run the full content width, matching the Applications grid. */
 .hero-full h1 { text-wrap: pretty; }
 .hero-full .lede { max-width: none; }
-/* About, Architecture and Apps intros: paragraphs run the full content width, matching the grids below. */
+/* Full-width text: paragraphs and step lists span the content width, matching the grids and tables beside them. */
 .text-full p, .text-full .flow-steps { max-width: none; }
 
 .stats { display: flex; flex-wrap: wrap; gap: 12px 36px; color: var(--muted); font-size: 0.92rem; }

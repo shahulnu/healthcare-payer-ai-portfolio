@@ -95,7 +95,7 @@ export function BenefitsDemo({ members, plans, initialMemberId }: { members: Mem
   const acc = member.accumulators;
 
   return (
-    <div className="wrap demo-page">
+    <div className="wrap demo-page text-full">
       <section className="demo-head">
         <div>
           <span className="eyebrow">Benefits Navigator · demo</span>

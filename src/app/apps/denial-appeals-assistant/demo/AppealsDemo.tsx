@@ -121,7 +121,7 @@ export function AppealsDemo({ claims, codes, initialClaimId }: { claims: DeniedC
   }
 
   return (
-    <div className="wrap demo-page">
+    <div className="wrap demo-page text-full">
       <section className="demo-head">
         <div>
           <span className="eyebrow">Denial & Appeals Assistant · demo</span>

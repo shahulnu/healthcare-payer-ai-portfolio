@@ -12,7 +12,7 @@ export default function BenefitsCaseStudy() {
   const s = evalSummary;
   const sampleCount = MEMBERS.reduce((n, m) => n + m.sampleQuestions.length, 0);
   return (
-    <div className="wrap">
+    <div className="wrap text-full">
       <section className="hero">
         <span className="eyebrow">Member services · SBC / EOC · Cost estimates</span>
         <h1>Benefits Navigator</h1>

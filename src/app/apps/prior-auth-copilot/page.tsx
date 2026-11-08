@@ -11,7 +11,7 @@ const pct = (x: number | null) => (x === null ? "—" : `${Math.round(x * 100)}%
 export default function PriorAuthCaseStudy() {
   const s = evalSummary;
   return (
-    <div className="wrap">
+    <div className="wrap text-full">
       <section className="hero">
         <span className="eyebrow">Utilization management · X12 278 / FHIR Da Vinci PAS</span>
         <h1>Prior Auth Copilot</h1>

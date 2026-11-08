@@ -10,7 +10,7 @@ const pct = (x: number | null) => (x === null ? "—" : `${Math.round(x * 100)}%
 export default function HccCaseStudy() {
   const s = evalSummary;
   return (
-    <div className="wrap">
+    <div className="wrap text-full">
       <section className="hero">
         <span className="eyebrow">Risk adjustment · CMS-HCC V28 · MEAT</span>
         <h1>HCC Evidence Finder</h1>
