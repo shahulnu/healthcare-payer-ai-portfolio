@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Reference architecture" };
 export default function ArchitecturePage() {
   return (
     <div className="wrap">
-      <section className="section">
+      <section className="section text-full">
         <div className="section-head">
           <span className="eyebrow">Reference architecture</span>
           <h1>One platform behind every app</h1>
@@ -23,7 +23,7 @@ export default function ArchitecturePage() {
         </p>
       </section>
 
-      <section className="section">
+      <section className="section text-full">
         <div className="section-head">
           <span className="eyebrow">Request flow</span>
           <h2>One request, end to end</h2>

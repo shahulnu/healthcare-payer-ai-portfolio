@@ -47,7 +47,7 @@ const CAREER = [
 export default function AboutPage() {
   return (
     <div className="wrap">
-      <section className="section">
+      <section className="section text-full">
         <div className="section-head">
           <span className="eyebrow">About</span>
           <h1>{SITE.name}</h1>

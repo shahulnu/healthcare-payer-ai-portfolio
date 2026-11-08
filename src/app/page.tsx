@@ -5,7 +5,7 @@ import { APPS, SITE } from "@/lib/site";
 export default function Home() {
   return (
     <div className="wrap">
-      <section className="hero">
+      <section className="hero hero-full">
         <span className="eyebrow">{SITE.title}</span>
         <h1>
           I design AI systems that health plans can <em>actually put into production.</em>

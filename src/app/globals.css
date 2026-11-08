@@ -100,6 +100,11 @@ main { display: block; }
 .hero { padding-block: 64px 40px; display: grid; gap: 18px; border-bottom: 1px solid var(--line); }
 .hero .lede { font-size: 1.15rem; color: var(--muted); }
 .hero h1 em { font-style: normal; color: var(--accent); }
+/* Home page: headline and intro run the full content width, matching the Applications grid. */
+.hero-full h1 { text-wrap: pretty; }
+.hero-full .lede { max-width: none; }
+/* About, Architecture and Apps intros: paragraphs run the full content width, matching the grids below. */
+.text-full p, .text-full .flow-steps { max-width: none; }
 
 .stats { display: flex; flex-wrap: wrap; gap: 12px 36px; color: var(--muted); font-size: 0.92rem; }
 .stats b { display: block; font-family: var(--font-display), sans-serif; font-size: 1.35rem; color: var(--fg); }

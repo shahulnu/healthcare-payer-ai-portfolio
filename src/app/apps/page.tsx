@@ -8,7 +8,7 @@ export default function AppsPage() {
   return (
     <div className="wrap">
       <section className="section">
-        <div className="section-head">
+        <div className="section-head text-full">
           <span className="eyebrow">Applications</span>
           <h1>Payer AI apps</h1>
           <p className="muted">
